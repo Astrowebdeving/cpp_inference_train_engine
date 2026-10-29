@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "checks": [
+    "decode plan accepts the Gemma decoder and rejects position-dependent ones",
+    "incremental text equals whole-history decoding at 8391 prefixes",
+    "rewritten byte runs are withheld instead of stopping the scheduler",
+    "streamed text is never revised",
+    "stop strings, EOS and length limits match the whole-history handler (480)",
+    "decode window stays at one token for ordinary text over 2,000 tokens",
+    "gather window joins near-simultaneous requests without stalling a lone one"
+  ]
+}

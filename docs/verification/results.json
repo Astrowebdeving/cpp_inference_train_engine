@@ -1,0 +1,369 @@
+{
+  "recorded_utc": "2026-10-05T22:09:14.782704+00:00",
+  "release": {
+    "ctest_targets": 7,
+    "passed": 7,
+    "skipped": 0,
+    "cpp_cases": {
+      "test_files": 7,
+      "test_mps": 3,
+      "test_model": 3,
+      "test_ops": 3,
+      "test_training": 9,
+      "test_tensor": 31
+    },
+    "python_cases": 7,
+    "log": "final_release_tests.log"
+  },
+  "ubsan": {
+    "cpu_targets_passed": 6,
+    "gpu_disabled": true,
+    "loopback_unavailable_in_sandbox": false,
+    "log": "final_ubsan_tests.log",
+    "loopback_test_passed": true,
+    "execution": "CPU and loopback tests executed with required host access; MPS disabled."
+  },
+  "asan": {
+    "status": "unverified",
+    "reason": "Apple Clang AddressSanitizer runtime hangs before main, also reproduced in a one-line standalone program.",
+    "related_primary_reports": [
+      "https://github.com/llvm/llvm-project/issues/200447",
+      "https://github.com/python/cpython/issues/145199"
+    ]
+  },
+  "learning": {
+    "sft-cpu": {
+      "first": {
+        "grad_norm": 3.9179130294574342,
+        "kl": 0,
+        "lr": 0.003000000026077032,
+        "mode": "sft",
+        "reward": 0,
+        "step": 1,
+        "step_ms": 1.271583,
+        "supervised_tokens": 16,
+        "tokens_per_second": 150992.89625608397,
+        "tokens_seen": 192,
+        "train_loss": 5.608173569408349
+      },
+      "last": {
+        "grad_norm": 0.10359591806723525,
+        "kl": 0,
+        "lr": 0.0006021897424943745,
+        "mode": "sft",
+        "reward": 0,
+        "step": 80,
+        "step_ms": 1.006209,
+        "supervised_tokens": 16,
+        "tokens_per_second": 190815.22824780937,
+        "tokens_seen": 15360,
+        "train_loss": 0.02754298796447796
+      }
+    },
+    "sft-mps-fp16": {
+      "first": {
+        "grad_norm": 3.9186346530914307,
+        "kl": 0,
+        "lr": 0.003000000026077032,
+        "mode": "sft",
+        "reward": 0,
+        "step": 1,
+        "step_ms": 2627.5935,
+        "supervised_tokens": 16,
+        "tokens_per_second": 73.07066332748958,
+        "tokens_seen": 192,
+        "train_loss": 5.608182430267334
+      },
+      "last": {
+        "grad_norm": 0.10344965010881424,
+        "kl": 0,
+        "lr": 0.0006021897424943745,
+        "mode": "sft",
+        "reward": 0,
+        "step": 80,
+        "step_ms": 6.679916,
+        "supervised_tokens": 16,
+        "tokens_per_second": 28742.876407427877,
+        "tokens_seen": 15360,
+        "train_loss": 0.02743183821439743
+      }
+    },
+    "pretrain-cpu": {
+      "first": {
+        "grad_norm": 1.3652633762779562,
+        "kl": 0,
+        "lr": 0.0010000000474974513,
+        "mode": "pretrain",
+        "reward": 0,
+        "step": 1,
+        "step_ms": 0.940875,
+        "supervised_tokens": 128,
+        "tokens_per_second": 136043.57645808422,
+        "tokens_seen": 128,
+        "train_loss": 5.562606248401909
+      },
+      "last": {
+        "entropy": 5.212469390734234,
+        "grad_norm": 1.205407440003384,
+        "kl": 0,
+        "lr": 0.0002056590310530737,
+        "mode": "pretrain",
+        "perplexity": 52.27658376683151,
+        "reward": 0,
+        "step": 30,
+        "step_ms": 0.714125,
+        "supervised_tokens": 128,
+        "tokens_per_second": 179240.32907404166,
+        "tokens_seen": 3840,
+        "train_loss": 3.932206161637768,
+        "val_loss": 3.956548541686585
+      }
+    },
+    "dpo-mps-fp16": {
+      "first": {
+        "grad_norm": 3.0825445652008057,
+        "kl": 0,
+        "lr": 0.0010000000474974513,
+        "mode": "dpo",
+        "reward": 0,
+        "step": 1,
+        "step_ms": 1386.85625,
+        "supervised_tokens": 8,
+        "tokens_per_second": 46.14753692028283,
+        "tokens_seen": 64,
+        "train_loss": 0.6931471805599453
+      },
+      "last": {
+        "grad_norm": 1.0734692811965942,
+        "kl": 0,
+        "lr": 0.0001445640082238242,
+        "mode": "dpo",
+        "reward": 0,
+        "step": 8,
+        "step_ms": 7.83475,
+        "supervised_tokens": 8,
+        "tokens_per_second": 8168.735441462714,
+        "tokens_seen": 512,
+        "train_loss": 0.23453915779595916
+      }
+    },
+    "grpo-cpu": {
+      "first": {
+        "grad_norm": 0.510893817944017,
+        "kl": 0,
+        "lr": 0.0010000000474974513,
+        "mode": "grpo",
+        "reward": 0.0625,
+        "step": 1,
+        "step_ms": 15.455708,
+        "supervised_tokens": 256,
+        "tokens_per_second": 49690.379761315366,
+        "tokens_seen": 768,
+        "train_loss": -1.862645149230957e-09
+      },
+      "last": {
+        "grad_norm": 0.4633848453312795,
+        "kl": 0.20915617614680196,
+        "lr": 0.00020072991901542991,
+        "mode": "grpo",
+        "reward": 0.75,
+        "step": 80,
+        "step_ms": 8.54675,
+        "supervised_tokens": 246,
+        "tokens_per_second": 89858.71822622635,
+        "tokens_seen": 61440,
+        "train_loss": 0.009598362984097008,
+        "val_kl": 0.16936831450775114,
+        "val_reward": 0.5
+      }
+    },
+    "grpo-mps-fp16": {
+      "first": {
+        "grad_norm": 0.6867616772651672,
+        "kl": 0,
+        "lr": 0.0010000000474974513,
+        "mode": "grpo",
+        "reward": 0.0625,
+        "step": 1,
+        "step_ms": 2388.255625,
+        "supervised_tokens": 128,
+        "tokens_per_second": 214.3824114305185,
+        "tokens_seen": 512,
+        "train_loss": -1.862645149230957e-09
+      },
+      "last": {
+        "grad_norm": 0.7430950999259949,
+        "kl": 0.0007415309612847521,
+        "lr": 0.0001445640082238242,
+        "mode": "grpo",
+        "reward": 0.0625,
+        "step": 8,
+        "step_ms": 94.201208,
+        "supervised_tokens": 128,
+        "tokens_per_second": 5435.174461881636,
+        "tokens_seen": 4096,
+        "train_loss": -0.002427974853593572
+      }
+    },
+    "full-model-mps-fp32": {
+      "first": {
+        "grad_norm": 87.91172790527344,
+        "kl": 0,
+        "lr": 0.0001500000071246177,
+        "mode": "pretrain",
+        "reward": 0,
+        "step": 1,
+        "step_ms": 4753.987334,
+        "supervised_tokens": 32,
+        "tokens_per_second": 6.731191682219992,
+        "tokens_seen": 32,
+        "train_loss": 10.256629943847656
+      },
+      "last": {
+        "entropy": 8.202847261044262,
+        "grad_norm": 54.891719818115234,
+        "kl": 0,
+        "lr": 3.660737274913117e-05,
+        "mode": "pretrain",
+        "perplexity": 201.8865004883253,
+        "reward": 0,
+        "step": 12,
+        "step_ms": 21.31275,
+        "supervised_tokens": 32,
+        "tokens_per_second": 1501.4486633587876,
+        "tokens_seen": 384,
+        "train_loss": 5.402859687805176,
+        "val_loss": 5.307705660717507
+      }
+    }
+  },
+  "full_model_parameter_count": 35763840,
+  "source_sha256": {
+    "apps/app_utils.hpp": "3e29e27347f4b20c0f181ede6efba3cb0ddc5f6c8ff54e74ad5ddd9dd128b4af",
+    "apps/bench_main.cpp": "39a269de7b18bd068d1fc7354200694231c73fb508f99b004773787cb5ecd94f",
+    "apps/generate_main.cpp": "04b7973fcfba08cc593d88c28c851889d3c2ca98b577f707bd568d1f3850168e",
+    "apps/info_main.cpp": "648c7ae0465f31ec231d57b929601d7ce53a2df44da5d63a954034afe13908e0",
+    "apps/inspect_main.cpp": "c8e1f62baa1c4ce73b2056225b975df60a5f2c7fed2e2913d34e8870ddd52e06",
+    "apps/serve_main.cpp": "ec5fcc2bf617c8abede84978a3584741fa552da296b6a0061538c03bbb1f0789",
+    "apps/tokenize_main.cpp": "e002ed2de41beb51908f62b49decbdd603c0c61fb67d76255c7092ac0ae1760f",
+    "apps/train_main.cpp": "8e9ea5c8ed08ed260009045059c633bedbf13beab775dad02fe59ba804267063",
+    "config/mla36m-v1.json": "5a02506bf5bb2a0c9fab76fb5aaa8efb57ee5e118a71eca005d9fc20ceec87eb",
+    "config/pilot.json": "2422ec4c716f269c9c2b95cc284b456fb51b33ad9d86646b5ffa0fae6393bf6d",
+    "config/tiny-test.json": "1afe93c4afc8ff248de2b3efa0b8b5c98e02f37e48d14bcf3be8377ad14a5a87",
+    "examples/chat.jsonl": "8ef54243a178584d66bf127d30069b6c2822b4ebc0590992d3fb9513285141e4",
+    "examples/corpus.txt": "1ed26f592fa84536355d87e0b6d242ecadd58eccaeb27e8cbc8ef98803e87acd",
+    "examples/pilot-data/manifest.json": "574b00fbd7d501aa1eaa99ee9d35cd46a2411bc1c58e70cb12074432f61f19cd",
+    "examples/pilot-data/train-00000.tok": "ece709b65dcf4eef78ad5c463f92e46876e394e879cfd4095d2f4aac55ade93a",
+    "examples/pilot-data/train-00000.tok.json": "526b79b1238871de5a98e4b1cfe57f87ebb251f62de043035d4434bd3d68f595",
+    "examples/pilot-data/val-00000.tok": "3e1c6cbbd52e23bb314c3bc717cbdef8186c944d84ea0808964c7e64b9f68cf1",
+    "examples/pilot-data/val-00000.tok.json": "411806bb3e4e4c29a0fe19ca67779fae0a4ff53eae6d8045a0614c21dbc2d149",
+    "examples/pilot-tokenizer.json": "cb18a9e0f61134a117628990c5c26b88608dec368ad715b46c76811b987facca",
+    "examples/preferences.jsonl": "6b65c3be913f8d521095d52144a72b21488370f83486613d4a2f8dc83935ea32",
+    "examples/rewards.jsonl": "df2be2c397a0217a734ecad0acd83d9e50bb49435be21298e962a0b4651bdced",
+    "examples/tokenizer.json": "23c8f13ec96d53e8af288634117c26d684964ebb37db16700d07aa2f263a2dff",
+    "include/mini_mla/backend.hpp": "97bb6fe87750adb5bcc3ddb80717b0741f21579b7375a70310f6b36b24b95b36",
+    "include/mini_mla/buffer.hpp": "ce01079123a581b3eb961887e95d612649ecf6317204da33ee4984d3f8ee471c",
+    "include/mini_mla/checked_math.hpp": "b3f7e7925c09b15e738ce9a83e5b0f083d9ca567672679d84d9fc0fe9c0c3519",
+    "include/mini_mla/checkpoint.hpp": "b94ee9fa613d628715f3313b2811e0729db8b452a4e478fdda71034101b2c585",
+    "include/mini_mla/cli.hpp": "6a807f762b59ea82db0c479099d80e8cc29a0f8bae9214029cabacb56ea1f901",
+    "include/mini_mla/data.hpp": "9852c3a751d078fd4d7c3cd8465ec9bd0e63c3de5e837a938a78f742ffafa9d4",
+    "include/mini_mla/dtype.hpp": "0a792d05fc199ca21ff8a567b6cb727bb023f5ef8d5ff77377504bfb6276ecaa",
+    "include/mini_mla/execution.hpp": "19cfd7f464384ec3f0e66163ed3121ba04bb3d717778f035d080b816f9a3642b",
+    "include/mini_mla/inference.hpp": "15efa7ffa0d395a1bcbd8e506ae2c35babd5013b357c5f438abe9c9d642effcf",
+    "include/mini_mla/io.hpp": "63fcbe522868aa727d23c7b7e86c37cb820e2b8dfdaa3dab97d682364dbd7f86",
+    "include/mini_mla/json.hpp": "01956568bd2a7df661865de6e37785fb2dac7d96bc18cc55cc6b1e1b32145d66",
+    "include/mini_mla/model.hpp": "1966e2d75d4b2ea469e8ac0e7efd72a22c051e02062a31b6f82b3df47c277cf0",
+    "include/mini_mla/model_config.hpp": "51ea6bc3bc32a6b6ea5dc7f4b182900f342fe75a492c17734668d46405f9c5b5",
+    "include/mini_mla/ops.hpp": "f34644fcee65be701a21f41d5ab3887ceced2774fac50cfa097c1a6c03f55049",
+    "include/mini_mla/optimizer.hpp": "b8cb1004207e926cd1a06253fe75f56bdbbe70530a06819f568d38d8379e708f",
+    "include/mini_mla/result.hpp": "bc1e213aa99e2edc92eb7522aaa2ace329d10919856c8eb9fbdf7a61fd6672a4",
+    "include/mini_mla/rng.hpp": "31221057f0056939f0d745bcef4a784837e3872e6ab7a1b0a3b4cd83e32fe64e",
+    "include/mini_mla/server.hpp": "91a9c6a12f7b48142f4732a8b5162a201093508e0eb513a5370bc86da38bb5f6",
+    "include/mini_mla/shape.hpp": "1da0aadf786daca92fe55b1251fffab8249ff3320e11ca2de90b901804f09b18",
+    "include/mini_mla/tensor.hpp": "e493d1fb8652288d47c2d260e982bb0b2737750fa84d86a3be55079e0ea03e4f",
+    "include/mini_mla/testing.hpp": "99228ef8ce970f71fa503743e253e48ed2e3d1ed3f25f0d2a67bd176762eec5e",
+    "include/mini_mla/tokenizer.hpp": "153077195e809d8d073a5985dbfe1dab06b6374f5870899e25c84ef28c7cfc76",
+    "include/mini_mla/trainer.hpp": "d7289733ca9a9a50f1aa86f734c174c512910e1aea6e3903e5724861b76ac23a",
+    "include/mini_mla/workflow.hpp": "f799c99eab0423cb47690829b509fdf24c89ab6e58cb382b7ef437f123959229",
+    "src/backends/cpu_backend.cpp": "99cbd48b3bdcde122db2a8d5d6e92721fa4fbc220372d503c7816b1b7a8b0990",
+    "src/backends/mps_backend.mm": "a1bd59d03fa32976348ffe15fb29dfd863d169289136c154e953f88991933b5a",
+    "src/core/buffer.cpp": "74010046dc369b97bf2219f99ece009ad1d9e10a12443943c33566dafc7438b7",
+    "src/core/dtype.cpp": "44559c297cccc4ad58c0215527d6a84133354486bb92b32e82aa0fdafe4c9cc7",
+    "src/core/io.cpp": "74af00e4bf42bcbd5e011a741a1b3ac8116125e56bb834af1b311df7dd2cb733",
+    "src/core/json.cpp": "06c7d3f319ee43869287689da7c57b87a3eab04d8af9b991c4a91f4b8a3f4851",
+    "src/core/result.cpp": "caadc898e8079a9be2ec26c4e39856380fc35075522f02ec03d926f795ae8ea6",
+    "src/core/shape.cpp": "56753f9cdd4710ca8e282c35946088832502524198a27d054aee300ee4d1d75f",
+    "src/core/tensor.cpp": "cbe32f5fa65a1f9542a06b0c1ec752cb215686f534b74191a0af883eba84e947",
+    "src/infer/inference.cpp": "9c06c7dcd2a63cc23a69aa99d13f8b0a37e59ccd9a1075d860997bfeabf75cbd",
+    "src/infer/tokenizer.cpp": "cdff1d1b458cf062c235d6fc60c13719a32826dba1ca750553851760be60defc",
+    "src/model/config.cpp": "d9491e016aaf2dfdf3929b49ac458387cdeaba58ab53059c033d5f9b67d78ec2",
+    "src/model/model.cpp": "cec340758d885c1a69ae7a3a58102046f9f48bd8ddbcaa6e6855f9bf5529c9d0",
+    "src/model/ops.cpp": "a22150e42ecfb2f181bd1c267335a982a85688fa98e53f29462a6213dd5de601",
+    "src/serve/server.cpp": "10baf298a7a78e296f07d9ae863286471df1e9b5c166f93acf7324ca13167a63",
+    "src/train/checkpoint.cpp": "05ddb744d0424949e4fa7841c45433156510ae25c4af35a4320797df1df3811b",
+    "src/train/data.cpp": "36ec6abca79fce8a6516960eeb82e12f48cbce78bf2f40ee69b3ee59ddb62807",
+    "src/train/optimizer.cpp": "f61853df0c4cb32d92eb96ce69c5b4aec9a44152b2e1e991d33d6635782f31a4",
+    "src/train/trainer.cpp": "fd63e15e23e1f6dc60fb41fc5dec010ef334e3bbdf23150c27e5fb505b8a1fc4",
+    "tests/test_files.cpp": "efc8503f8e414bc725879ff680d9cef10da6c0dc87cd85da9c51393cfac9eabc",
+    "tests/test_model.cpp": "f45fe5621a21ad7f73f2e902a96033b1fcce12f7abd082cb173a93e24a55ba96",
+    "tests/test_mps.cpp": "a88eaeb5bd3f82deb4cfe5fb4950abb6c55e07eeac660d9e7d54c57f820dae57",
+    "tests/test_ops.cpp": "a1056e2b51809ca071037a952da467bec7ea3bcd3c80949b017653482a5d0f8c",
+    "tests/test_tensor.cpp": "e1daa651d9f1bf905a5e43a5698dbbe403c3c4ef821477bf213ebd8db5b48f54",
+    "tests/test_tools.py": "761868a59775fccaaa6a2c954475a85f775cdc239e2cab2771f94071189c8517",
+    "tests/test_training.cpp": "30589eea72c41eb43133146de872858bd1d45c92c601031d576aafd2b484d2fb",
+    "tools/common.py": "e21465eba95bd8ef2ca92cb08ff89c5ac15610c4ae55bfa0513da6bf553a33d8",
+    "tools/export_debug_state.py": "57f2c50607889376f41bbb4c0139c84cd05efe65bc7884edc91c458c2d76ffeb",
+    "tools/inspect_checkpoint.py": "f08833e6aeaf27f8fd7782c901c453c3fa0e085285074f6e198e60a54e146ced",
+    "tools/plot_metrics.py": "76240a1abc3f91ed0d34bd91000e8a00c532f5e96052b59245c8af6b33997440",
+    "tools/prepare_dataset.py": "144d8ee28f1896121a24451a3e846e4d6a971495f56af5355f5bd93a5440aad3",
+    "tools/reference_model.py": "0a5bfc083444697db4cfe9800e167bba803b72dc28b9443f39bc71e94d83b81e",
+    "tools/requirements-dev.txt": "54627f95718e7fdc8a5c4ea799528facf0362f5f1b2708f8047e381862b15a41",
+    "tools/smoke.py": "21723808d4039cf5edc93f37a233f5d7e78cdad7dbb70fdc3291ce485297ecef",
+    "tools/train_tokenizer.py": "61ce0b209b8602f82b8e5c0c2476d56a9bde2e6795b1fb7c53d27f8f7a76466f",
+    "CMakeLists.txt": "8edce6ce87dbee2917d1199ea9618aaf98b584b9cfed6543da44867d1ba3af92",
+    ".clang-format": "0d889ba527ae88754582abe0183af9a941bf52001c8794e244121f6789b7e691",
+    ".clang-tidy": "fab19a6f8247f3496264b25066cb80391a9c28b67b7722e3744ac0adb70edbb0",
+    "pyproject.toml": "8322a26373b13a9a913ee9bae6fa631051a173893260a33ed6236def29fd167a"
+  },
+  "cpu_replay": {
+    "sft": "bit exact weights and moments",
+    "dpo": "bit exact weights and moments; frozen reference unchanged",
+    "grpo": "bit exact weights and moments; frozen reference and fixed-seed evaluation unchanged"
+  },
+  "gpu_replay": {
+    "weights.bin": {
+      "max_abs_error": 1.1920928955078125e-07,
+      "different_elements": 1875300,
+      "elements": 35763840,
+      "passed_tolerance": true
+    },
+    "optimizer.bin": {
+      "max_abs_error": 3.725290298461914e-09,
+      "different_elements": 51675929,
+      "elements": 71527680,
+      "passed_tolerance": true
+    },
+    "trainer_state_differences": {
+      "best_validation": {
+        "before": 5.307705625240458,
+        "after": 5.307705660717507
+      }
+    },
+    "data_and_rng_exact": true,
+    "backend": "mps",
+    "precision": "fp32",
+    "replayed_steps": [
+      7,
+      12
+    ],
+    "bit_exact": false
+  },
+  "gpu_pytorch_oracle": "gpu_oracle_report.json",
+  "fp16_drift": "fp16-drift.json",
+  "portable_full_model_pilot": {
+    "config": "../../config/pilot.json",
+    "validated_native_cpu_one_step": true,
+    "log": "portable_pilot.log",
+    "data": "../../examples/pilot-data"
+  }
+}

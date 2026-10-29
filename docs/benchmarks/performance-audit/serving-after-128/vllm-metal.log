@@ -1,0 +1,116 @@
+objc[62774]: Class AVFFrameReceiver is implemented in both /opt/homebrew/Cellar/ffmpeg/9.0.1_1/lib/libavdevice.63.1.101.dylib (0x124e68328) and /Users/tu15/alex_cpp/CPP_Completed/.venv-serving/lib/python3.12/site-packages/cv2/.dylibs/libavdevice.61.3.100.dylib (0x12613c3a8). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+objc[62774]: Class AVFAudioReceiver is implemented in both /opt/homebrew/Cellar/ffmpeg/9.0.1_1/lib/libavdevice.63.1.101.dylib (0x124e68378) and /Users/tu15/alex_cpp/CPP_Completed/.venv-serving/lib/python3.12/site-packages/cv2/.dylibs/libavdevice.61.3.100.dylib (0x12613c3f8). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+/Users/tu15/alex_cpp/CPP_Completed/.venv-serving/lib/python3.12/site-packages/vllm/entrypoints/openai/api_server.py:24: DeprecationWarning: `vllm.entrypoints.openai.api_server` is deprecated and will likely beunsupported in a future version. Use the corresponding function from `vllm.entrypoints.launchers` instead.
+  warnings.warn(
+/Users/tu15/alex_cpp/CPP_Completed/.venv-serving/lib/python3.12/site-packages/vllm/entrypoints/openai/api_server.py:51: DeprecationWarning: The `python -m vllm.entrypoints.openai.api_server` command is deprecated and may be removed in a future release. Please use `vllm server` instead.
+  warnings.warn(
+(APIServer pid=62774) WARNING 10-09 00:22:55 [system_utils.py:299] Found ulimit of 2048 and failed to automatically increase with error current limit exceeds maximum limit. This can cause fd limit errors like `OSError: [Errno 24] Too many open files`. Consider increasing with ulimit -n
+(APIServer pid=62774) WARNING 10-09 00:22:55 [arg_utils.py:1812] The global random seed is set to 0. Since VLLM_ENABLE_V1_MULTIPROCESSING is set to False, this may affect the random state of the Python process that launched vLLM.
+(APIServer pid=62774) W1009 00:22:55.827000 62774 CPP_Completed/.venv-serving/lib/python3.12/site-packages/torch/_library/triton.py:53] Triton not available, find_triton_kernels = []
+(APIServer pid=62774) [transformers] `SiglipImageProcessorFast` is deprecated. The `Fast` suffix for image processors has been removed; use `SiglipImageProcessor` instead.
+(APIServer pid=62774) WARNING 10-09 00:22:59 [indexer_topk.py:29] Failed to import the DeepSelect extension (vllm._deepselect_C): No module named 'vllm._deepselect_C'
+(APIServer pid=62774) WARNING 10-09 00:23:00 [vllm.py:1547] Enforce eager set, disabling torch.compile and CUDAGraphs. This is equivalent to setting -cc.mode=none -cc.cudagraph_mode=none
+(APIServer pid=62774) WARNING 10-09 00:23:00 [vllm.py:1570] Inductor compilation was disabled by user settings, optimizations settings that are only active during inductor compilation will be ignored.
+objc[62823]: Class AVFFrameReceiver is implemented in both /opt/homebrew/Cellar/ffmpeg/9.0.1_1/lib/libavdevice.63.1.101.dylib (0x13cb9c328) and /Users/tu15/alex_cpp/CPP_Completed/.venv-serving/lib/python3.12/site-packages/cv2/.dylibs/libavdevice.61.3.100.dylib (0x13dc803a8). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+objc[62823]: Class AVFAudioReceiver is implemented in both /opt/homebrew/Cellar/ffmpeg/9.0.1_1/lib/libavdevice.63.1.101.dylib (0x13cb9c378) and /Users/tu15/alex_cpp/CPP_Completed/.venv-serving/lib/python3.12/site-packages/cv2/.dylibs/libavdevice.61.3.100.dylib (0x13dc803f8). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+(EngineCore pid=62823) W1009 00:23:13.853000 62823 CPP_Completed/.venv-serving/lib/python3.12/site-packages/torch/_library/triton.py:53] Triton not available, find_triton_kernels = []
+mx.metal.device_info is deprecated and will be removed in a future version. Use mx.device_info instead.
+[W1009 00:23:14.770285000 ProcessGroupGloo.cpp:555] Warning: Unable to resolve hostname to a (local) address. Using the loopback address as fallback. Manually set the network interface to bind to with GLOO_SOCKET_IFNAME. (function operator())
+(EngineCore pid=62823) WARNING 10-09 00:23:20 [vllm.py:1547] Enforce eager set, disabling torch.compile and CUDAGraphs. This is equivalent to setting -cc.mode=none -cc.cudagraph_mode=none
+(EngineCore pid=62823) WARNING 10-09 00:23:20 [vllm.py:1570] Inductor compilation was disabled by user settings, optimizations settings that are only active during inductor compilation will be ignored.
+(APIServer pid=62774) WARNING 10-09 00:23:24 [model.py:1772] Default vLLM sampling parameters have been overridden by the model's `generation_config.json`: `{'temperature': 1.0, 'top_k': 64, 'top_p': 0.95}`. If this is not intended, please relaunch vLLM instance with `--generation-config vllm`.
+(APIServer pid=62774) INFO:     Started server process [62774]
+(APIServer pid=62774) INFO:     Waiting for application startup.
+(APIServer pid=62774) INFO:     Application startup complete.
+(APIServer pid=62774) INFO:     127.0.0.1:51624 - "GET /health HTTP/1.1" 200 OK
+(APIServer pid=62774) INFO:     127.0.0.1:51625 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=62774) INFO:     127.0.0.1:51626 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=62774) INFO:     127.0.0.1:51627 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=62774) INFO:     127.0.0.1:51629 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=62774) INFO:     127.0.0.1:51630 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=62774) INFO:     127.0.0.1:51631 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=62774) INFO:     127.0.0.1:51632 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=62774) INFO:     127.0.0.1:51633 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=62774) INFO:     127.0.0.1:51634 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=62774) INFO:     127.0.0.1:51635 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=62774) INFO:     127.0.0.1:51636 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=62774) INFO:     127.0.0.1:51637 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=62774) INFO:     127.0.0.1:51638 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=62774) INFO:     127.0.0.1:51639 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=62774) INFO:     127.0.0.1:51640 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=62774) INFO:     127.0.0.1:51642 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=62774) INFO:     127.0.0.1:51643 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=62774) INFO:     127.0.0.1:51641 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=62774) INFO:     127.0.0.1:51645 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=62774) INFO:     127.0.0.1:51644 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=62774) INFO:     127.0.0.1:51646 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=62774) INFO:     127.0.0.1:51647 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=62774) INFO:     127.0.0.1:51650 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=62774) INFO:     127.0.0.1:51648 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=62774) INFO:     127.0.0.1:51649 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=62774) INFO:     127.0.0.1:51651 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=62774) INFO:     127.0.0.1:51652 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=62774) INFO:     127.0.0.1:51653 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=62774) INFO:     127.0.0.1:51654 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=62774) INFO:     127.0.0.1:51655 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=62774) INFO:     127.0.0.1:51660 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=62774) INFO:     127.0.0.1:51661 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=62774) INFO:     127.0.0.1:51662 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=62774) INFO:     127.0.0.1:51663 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=62774) INFO:     127.0.0.1:51669 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=62774) INFO:     127.0.0.1:51670 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=62774) INFO:     127.0.0.1:51671 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=62774) INFO:     127.0.0.1:51672 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=62774) INFO:     127.0.0.1:51673 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=62774) INFO:     127.0.0.1:51675 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=62774) INFO:     127.0.0.1:51674 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=62774) INFO:     127.0.0.1:51676 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=62774) INFO:     127.0.0.1:51677 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=62774) INFO:     127.0.0.1:51679 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=62774) INFO:     127.0.0.1:51678 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=62774) INFO:     127.0.0.1:51680 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=62774) INFO:     127.0.0.1:51681 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=62774) INFO:     127.0.0.1:51682 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=62774) INFO:     127.0.0.1:51684 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=62774) INFO:     127.0.0.1:51683 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=62774) INFO:     127.0.0.1:51685 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=62774) INFO:     127.0.0.1:51687 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=62774) INFO:     127.0.0.1:51686 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=62774) INFO:     127.0.0.1:51688 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=62774) INFO:     127.0.0.1:51689 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=62774) INFO:     127.0.0.1:51690 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=62774) INFO:     127.0.0.1:51691 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=62774) INFO:     127.0.0.1:51692 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=62774) INFO:     127.0.0.1:51693 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=62774) INFO:     127.0.0.1:51694 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=62774) INFO:     127.0.0.1:51695 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=62774) INFO:     127.0.0.1:51696 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=62774) INFO:     127.0.0.1:51698 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=62774) INFO:     127.0.0.1:51699 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=62774) INFO:     127.0.0.1:51700 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=62774) INFO:     127.0.0.1:51701 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=62774) INFO:     127.0.0.1:51702 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=62774) INFO:     127.0.0.1:51703 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=62774) INFO:     127.0.0.1:51705 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=62774) INFO:     127.0.0.1:51704 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=62774) INFO:     127.0.0.1:51706 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=62774) INFO:     127.0.0.1:51707 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=62774) INFO:     127.0.0.1:51708 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=62774) INFO:     127.0.0.1:51710 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=62774) INFO:     127.0.0.1:51711 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=62774) INFO:     127.0.0.1:51709 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=62774) INFO:     127.0.0.1:51712 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=62774) INFO:     127.0.0.1:51713 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=62774) INFO:     127.0.0.1:51715 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=62774) INFO:     127.0.0.1:51716 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=62774) INFO:     127.0.0.1:51717 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=62774) INFO:     127.0.0.1:51718 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=62774) INFO:     127.0.0.1:51719 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=62774) INFO:     127.0.0.1:51720 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=62774) INFO:     127.0.0.1:51721 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=62774) INFO:     127.0.0.1:51722 - "POST /v1/completions HTTP/1.1" 200 OK
+(APIServer pid=62774) WARNING 10-09 00:23:56 [utils.py:652] [shutdown] Process manager: force killing remaining processes count=1
+(APIServer pid=62774) WARNING 10-09 00:23:56 [utils.py:657] [shutdown] Process manager: force killing remaining process EngineCore pid 62823
+(APIServer pid=62774) INFO:     Shutting down
+(APIServer pid=62774) INFO:     Waiting for application shutdown.
+(APIServer pid=62774) INFO:     Application shutdown complete.

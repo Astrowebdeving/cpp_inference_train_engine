@@ -1,0 +1,2 @@
+Working directory: /Users/tu15/alex_cpp/CPP_Completed
+build/bin/mini_mla_bench --config config/mla36m-v1.json --kind train --backend mps --precision fp16 --warmup 3 --repetitions 30 --attention reference --submission-window 4 --sequence-length 128 --microbatch 2 --grad-accum 4 --output /private/tmp/mla-attention-work/window-accum-128.json

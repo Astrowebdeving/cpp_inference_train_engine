@@ -1,0 +1,10 @@
+{"bytes":704,"documents":8,"documents_by_split":{"train":8,"val":0},"format":"mini-mla-dataset-v1","mode":"sft","sources":[{"path":"/Users/tu15/alex_cpp/CPP_Completed/examples/chat.jsonl","sha256":"8ef54243a178584d66bf127d30069b6c2822b4ebc0590992d3fb9513285141e4"}],"split_rule":"sha256-document-first64-v1","tokenizer_sha256":"23c8f13ec96d53e8af288634117c26d684964ebb37db16700d07aa2f263a2dff","tokens_by_split":{"train":0,"val":0},"truncated_samples":0,"validation_fraction":0.0}
+Apple M2 Max / MPSGraph / fp16; 26704 parameters; mode=sft; optimizer=hybrid_muon_adamw
+step=1 loss=5.608182 lr=0.003 grad=3.9186 tok/s=173.5
+step=20 loss=1.203032 lr=0.00539143 grad=1.3313 tok/s=26645.2
+step=40 loss=0.476733 lr=0.00351726 grad=1.9288 tok/s=33036.5
+step=60 loss=0.209235 lr=0.00150957 grad=0.5113 tok/s=28444.3
+step=80 loss=0.131295 lr=0.00060219 grad=0.3666 tok/s=25323.6
+Apple M2 Max / MPSGraph / fp16; 26704 parameters; mode=sft; optimizer=hybrid_muon_adamw
+Model: /Users/tu15/alex_cpp/CPP_Completed/artifacts/performance-audit/muon-learning-final/run/model-latest
+Say hi. -> Hi!

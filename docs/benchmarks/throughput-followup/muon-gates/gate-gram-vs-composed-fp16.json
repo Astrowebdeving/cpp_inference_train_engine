@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "compared": [
+    "gram",
+    "composed"
+  ],
+  "precision": "fp16",
+  "parameters": 132,
+  "initial_weights_and_gradients": "bitwise equal",
+  "max_update_relative_l2": 0.00025102821143760764,
+  "min_update_cosine": 0.9999999684925643,
+  "max_absolute_weight_difference": 1.0058283805847168e-07,
+  "worst_parameter": "layers.5.attn.w_uv",
+  "gates": {
+    "update_relative_l2": 0.001,
+    "update_cosine": 0.99999,
+    "absolute_weight_difference": 2e-06
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "description": "Fresh process, trained 35.8M FP16 export, greedy raw-text prompt; includes graph compilation in engine timing.",
+  "prompt": "Explain caching.",
+  "results": {
+    "fp32": {
+      "completion_tokens": 1,
+      "decode_ms": 0,
+      "decode_tokens_per_second": 0,
+      "finish_reason": "stop",
+      "prefill_ms": 408.745709,
+      "prefill_tokens_per_second": 39.14414181654443,
+      "prompt_tokens": 16,
+      "time_to_first_token_ms": 408.979209
+    },
+    "fp16": {
+      "completion_tokens": 1,
+      "decode_ms": 0,
+      "decode_tokens_per_second": 0,
+      "finish_reason": "stop",
+      "prefill_ms": 823.764541,
+      "prefill_tokens_per_second": 19.423025881372574,
+      "prompt_tokens": 16,
+      "time_to_first_token_ms": 824.015458
+    }
+  }
+}

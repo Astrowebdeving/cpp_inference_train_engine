@@ -1,0 +1,9 @@
+{
+  "apps/app_utils.hpp": "94f2bf8a4e12181195e67ca999f67c63997c184993096802d614b4c77d764a4c",
+  "include/mini_mla/optimizer.hpp": "b8cb1004207e926cd1a06253fe75f56bdbbe70530a06819f568d38d8379e708f",
+  "src/backends/adamw.metal": "b56628f4a4864af1550d411fb79b730f3ef4d8a0477fd235136d36e8515cee25",
+  "src/backends/adamw_source.hpp.in": "0c9fe166fe0ff0a395f81426b75c439425f3a1fdd1b5cc01bc703c7b3d1ada25",
+  "src/backends/flash_attention.metal": "dd211216bc69d92bd16dc72cf4204a60ec6f510cedb5c8f017be9426ff30a623",
+  "src/backends/flash_attention_source.hpp.in": "36a4b1e8ec48d74c19b9bb869e33b269379e9974e98e5ee5cd761f2867e40e2f",
+  "CMakeLists.txt": "681c435d2ff902577aa85b3fc3a32e785d4a97c4dc856a1c172c38a33044cf9c"
+}

@@ -1,0 +1,19 @@
+Test project /Users/tu15/alex_cpp/CPP_Completed/build
+    Start 1: tensor
+1/7 Test #1: tensor ...........................   Passed    0.25 sec
+    Start 2: ops
+2/7 Test #2: ops ..............................   Passed    0.16 sec
+    Start 3: model
+3/7 Test #3: model ............................   Passed    0.17 sec
+    Start 4: files
+4/7 Test #4: files ............................   Passed    0.26 sec
+    Start 5: training
+5/7 Test #5: training .........................   Passed    0.18 sec
+    Start 6: mps
+6/7 Test #6: mps ..............................   Passed   43.71 sec
+    Start 7: tools
+7/7 Test #7: tools ............................   Passed   26.98 sec
+
+100% tests passed, 0 tests failed out of 7
+
+Total Test time (real) =  71.80 sec

@@ -1,0 +1,96 @@
+INFO:     Started server process [63345]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:51953 (Press CTRL+C to quit)
+INFO:     127.0.0.1:51977 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51978 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51979 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51980 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51981 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51982 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51983 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51984 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51985 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51987 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51988 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51989 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51990 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51991 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51992 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51993 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51994 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51995 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51996 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51998 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52000 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51997 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51999 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52002 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52001 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52004 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52003 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52006 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52007 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52008 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52009 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52011 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52010 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52013 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52012 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52015 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52014 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52016 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52017 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52018 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52019 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52020 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52021 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52022 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52023 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52025 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52024 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52027 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52028 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52029 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52030 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52031 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52032 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52033 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52034 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52035 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52036 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52037 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52039 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52038 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52040 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52041 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52042 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52045 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52047 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52048 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52049 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52046 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52051 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52052 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52050 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52055 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52056 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52057 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52059 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52060 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52058 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52061 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52062 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52063 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52065 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52064 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52066 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52067 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52068 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52069 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52070 - "POST /v1/completions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52074 - "GET /health HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [63345]

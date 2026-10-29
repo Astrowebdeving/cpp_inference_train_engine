@@ -1,0 +1,10 @@
+case \ N                                           1024     1100     1536     2048
+A  loss only: d loss / d logits(f32)               1.56     1.85     2.16     2.92
+B  cast f32->f16 of [N,V]                          0.47     0.47     0.64     0.74
+C  dh = dl @ E          [N,V]@[V,512]              1.99     2.00    20.79    27.62
+D  dEt = h^T @ dl       [512,N]@[N,V]              2.32     1.92     2.40     5.53
+E  dE  = (h^T @ dl)^T   materialised               1.92     1.98     2.58     3.29
+F  dE  = dl^T @ h       [V,N]@[N,512]              1.71     1.92     2.48     3.18
+G  head autodiff: grads wrt h and E (f16 mm)       6.69     6.98    39.66    57.39
+H  head forward only (logits f32)                  1.94     2.00     2.75     3.49
+I  embedding gather grad (scatter into [V,512])     0.62     0.62     0.76     0.80

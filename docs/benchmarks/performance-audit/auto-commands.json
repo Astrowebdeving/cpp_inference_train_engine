@@ -1,0 +1,47 @@
+{
+  "gemma-auto": [
+    "/Users/tu15/alex_cpp/CPP_Completed/.venv-serving/bin/python",
+    "/Users/tu15/alex_cpp/CPP_Completed/tests/test_gemma.py",
+    "--binary",
+    "/Users/tu15/alex_cpp/CPP_Completed/build/bin/mini_mla_gemma",
+    "--model",
+    "/Users/tu15/alex_cpp/CPP_Completed/artifacts/gemma-4-E2B-it-4bit",
+    "--output",
+    "/Users/tu15/alex_cpp/CPP_Completed/artifacts/performance-audit/gemma-auto.json"
+  ],
+  "gemma-http-auto": [
+    "/Users/tu15/alex_cpp/CPP_Completed/.venv-serving/bin/python",
+    "/Users/tu15/alex_cpp/CPP_Completed/tests/test_gemma_http.py",
+    "--binary",
+    "/Users/tu15/alex_cpp/CPP_Completed/build/bin/mini_mla_gemma",
+    "--model",
+    "/Users/tu15/alex_cpp/CPP_Completed/artifacts/gemma-4-E2B-it-4bit",
+    "--output",
+    "/Users/tu15/alex_cpp/CPP_Completed/artifacts/performance-audit/gemma-http-auto.json"
+  ],
+  "cache-policy-audit": [
+    "/Users/tu15/alex_cpp/CPP_Completed/.venv-serving/bin/python",
+    "/private/tmp/mla_kv_policy_audit.py"
+  ],
+  "serving-auto-128": [
+    "/Users/tu15/alex_cpp/CPP_Completed/.venv-serving/bin/python",
+    "/Users/tu15/alex_cpp/CPP_Completed/tools/compare_serving.py",
+    "--model",
+    "/Users/tu15/alex_cpp/CPP_Completed/artifacts/gemma-4-E2B-it-4bit",
+    "--output",
+    "/Users/tu15/alex_cpp/CPP_Completed/artifacts/performance-audit/serving-auto-128",
+    "--concurrency",
+    "1",
+    "4",
+    "8",
+    "--prompt-length",
+    "128",
+    "--max-tokens",
+    "64",
+    "--warmup",
+    "1",
+    "--repetitions",
+    "5",
+    "--vllm-first"
+  ]
+}

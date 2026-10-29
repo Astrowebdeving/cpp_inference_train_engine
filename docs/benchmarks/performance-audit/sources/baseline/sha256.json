@@ -1,0 +1,17 @@
+{
+  "build/bin/mini_mla_gemma": "2e8567475d7b929b741c1612bccdb8a31491418516eaa03cfca8d3a8b56435c9",
+  "build/bin/mini_mla_bench": "28aa47b449859d685d67c2d99af3d27a15a258bfd6dc99a63e4da9a4ef36e1aa",
+  "tools/gemma_runtime.py": "dd31f840edfda80e179dcadb67e3b8b1f4e7a726787d885c062245f4c03eddf2",
+  "tools/gemma_server.py": "e5a5a6bda408539e763c55079d7be5d385cf96aada9ff8e9fa0a9aa30c069456",
+  "src/infer/gemma.cpp": "40d5a98b1ee7006a7180d6c588d9e9f3ed08a6acf102053b0265f9c8348ce31a",
+  "apps/gemma_main.cpp": "7430ff18b5cb10ac762c3f99c654520afca1b7938ae94f270bee870eb7577e34",
+  "include/mini_mla/gemma.hpp": "9de68be6c1ce140b1a238b91e66356d25468ca62940079da5d90f035d83a06c7",
+  "src/backends/mps_backend.mm": "fd349d560f381a81eaafa0c6273fec0158f8adf8f038ec9c134e6711a0d07ca5",
+  "src/train/optimizer.cpp": "f61853df0c4cb32d92eb96ce69c5b4aec9a44152b2e1e991d33d6635782f31a4",
+  "include/mini_mla/execution.hpp": "6168b7d727a30e203df254e5f75c86c99061ff4b69cf2073ed9903b92b686171",
+  "include/mini_mla/trainer.hpp": "65a651b3d537971a1abcd028e668dd593381e12732de459e92d4f72ca3e99cac",
+  "src/train/trainer.cpp": "2a2277243a5fcd5a6317be94843f6a294077f5d9b398fe3029b66f710336d4aa",
+  "apps/train_main.cpp": "e76d3d838febc2e95e22da08fe57abd3b17cfa6edc3e17b0dd61a84e3369158a",
+  "apps/bench_main.cpp": "896e12525b68057826e0728cc16c401a3013da7e656d48f7d03a98f4ecafb517",
+  "apps/app_utils.hpp": "94f2bf8a4e12181195e67ca999f67c63997c184993096802d614b4c77d764a4c"
+}

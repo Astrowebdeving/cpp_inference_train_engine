@@ -1,0 +1,23 @@
+{
+  "model_config": "config/mla36m-v1.json",
+  "output": "runs/mla36m-muon",
+  "backend": "mps",
+  "precision": "fp16",
+  "attention": "auto",
+  "submission_window": 4,
+  "muon_layout": "batched",
+  "muon_ns_order": "gram",
+  "learning_rate": 0.0003,
+  "optimizer": {
+    "kind": "hybrid_muon_adamw",
+    "beta1": 0.9,
+    "beta2": 0.95,
+    "epsilon": 1e-8,
+    "weight_decay": 0.1,
+    "clip_norm": 1.0,
+    "momentum": 0.95,
+    "nesterov": true,
+    "ns_steps": 5,
+    "muon_variant": "moonlight-fp32-v1"
+  }
+}

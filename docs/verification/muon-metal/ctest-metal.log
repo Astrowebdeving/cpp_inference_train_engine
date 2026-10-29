@@ -1,0 +1,273 @@
+Start testing: Oct 07 22:38 EDT
+----------------------------------------------------------
+1/7 Testing: tensor
+1/7 Test: tensor
+Command: "/Users/tu15/alex_cpp/CPP_Completed/build/bin/test_tensor"
+Directory: /Users/tu15/alex_cpp/CPP_Completed
+"tensor" start time: Oct 07 22:38 EDT
+Output:
+----------------------------------------------------------
+RUN  shape_make_accepts_valid_ranks
+ok   shape_make_accepts_valid_ranks
+RUN  shape_make_rejects_excess_rank
+ok   shape_make_rejects_excess_rank
+RUN  shape_make_rejects_negative_dims
+ok   shape_make_rejects_negative_dims
+RUN  shape_numel_is_the_product_of_dims
+ok   shape_numel_is_the_product_of_dims
+RUN  shape_numel_of_scalar_is_one
+ok   shape_numel_of_scalar_is_one
+RUN  shape_numel_allows_zero_sized_dims
+ok   shape_numel_allows_zero_sized_dims
+RUN  shape_numel_detects_overflow
+ok   shape_numel_detects_overflow
+RUN  strides_are_row_major
+ok   strides_are_row_major
+RUN  strides_of_rank_one_is_unit
+ok   strides_of_rank_one_is_unit
+RUN  strides_of_rank_zero_does_not_underflow
+ok   strides_of_rank_zero_does_not_underflow
+RUN  desc_make_contiguous_fills_strides_and_metadata
+ok   desc_make_contiguous_fills_strides_and_metadata
+RUN  desc_make_contiguous_propagates_byte_offset
+ok   desc_make_contiguous_propagates_byte_offset
+RUN  required_bytes_of_dense_tensor
+ok   required_bytes_of_dense_tensor
+RUN  required_bytes_includes_byte_offset
+ok   required_bytes_includes_byte_offset
+RUN  required_bytes_of_strided_view_exceeds_numel_times_itemsize
+ok   required_bytes_of_strided_view_exceeds_numel_times_itemsize
+RUN  required_bytes_of_empty_tensor_is_just_the_offset
+ok   required_bytes_of_empty_tensor_is_just_the_offset
+RUN  buffer_allocate_returns_usable_memory
+ok   buffer_allocate_returns_usable_memory
+RUN  buffer_honours_requested_alignment
+ok   buffer_honours_requested_alignment
+RUN  buffer_rejects_bad_alignment
+ok   buffer_rejects_bad_alignment
+RUN  buffer_zero_bytes_is_a_valid_empty_buffer
+ok   buffer_zero_bytes_is_a_valid_empty_buffer
+RUN  buffer_default_constructed_is_empty_and_safe
+ok   buffer_default_constructed_is_empty_and_safe
+RUN  buffer_move_transfers_ownership
+ok   buffer_move_transfers_ownership
+RUN  buffer_move_assignment_releases_the_old_allocation
+ok   buffer_move_assignment_releases_the_old_allocation
+RUN  cpu_backend_reports_a_device
+ok   cpu_backend_reports_a_device
+RUN  cpu_backend_round_trips_data
+ok   cpu_backend_round_trips_data
+RUN  cpu_backend_rejects_oversized_transfers
+ok   cpu_backend_rejects_oversized_transfers
+RUN  contiguity_dense_tensor_is_contiguous
+ok   contiguity_dense_tensor_is_contiguous
+RUN  contiguity_strided_window_is_not_contiguous
+ok   contiguity_strided_window_is_not_contiguous
+RUN  contiguity_ignores_extent_one_dimensions
+ok   contiguity_ignores_extent_one_dimensions
+RUN  contiguity_empty_tensor_is_vacuously_contiguous
+ok   contiguity_empty_tensor_is_vacuously_contiguous
+RUN  mutable_views_alias_owned_storage_and_check_layout
+ok   mutable_views_alias_owned_storage_and_check_layout
+
+31/31 tests passed
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"tensor" end time: Oct 07 22:38 EDT
+"tensor" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/7 Testing: ops
+2/7 Test: ops
+Command: "/Users/tu15/alex_cpp/CPP_Completed/build/bin/test_ops"
+Directory: /Users/tu15/alex_cpp/CPP_Completed
+"ops" start time: Oct 07 22:38 EDT
+Output:
+----------------------------------------------------------
+RUN  blas_matches_naive_and_transposes
+ok   blas_matches_naive_and_transposes
+RUN  rope_inverse_preserves_vectors
+ok   rope_inverse_preserves_vectors
+RUN  stable_cross_entropy_and_prompt_mask
+ok   stable_cross_entropy_and_prompt_mask
+
+3/3 tests passed
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"ops" end time: Oct 07 22:38 EDT
+"ops" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/7 Testing: model
+3/7 Test: model
+Command: "/Users/tu15/alex_cpp/CPP_Completed/build/bin/test_model"
+Directory: /Users/tu15/alex_cpp/CPP_Completed
+"model" start time: Oct 07 22:38 EDT
+Output:
+----------------------------------------------------------
+RUN  exact_full_parameter_count
+ok   exact_full_parameter_count
+RUN  full_model_analytical_gradients_match_finite_differences
+ok   full_model_analytical_gradients_match_finite_differences
+RUN  causal_attention_has_no_future_leak
+ok   causal_attention_has_no_future_leak
+
+3/3 tests passed
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"model" end time: Oct 07 22:38 EDT
+"model" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/7 Testing: files
+4/7 Test: files
+Command: "/Users/tu15/alex_cpp/CPP_Completed/build/bin/test_files"
+Directory: /Users/tu15/alex_cpp/CPP_Completed
+"files" start time: Oct 07 22:38 EDT
+Output:
+----------------------------------------------------------
+RUN  json_rejects_malformed_and_round_trips_unicode
+ok   json_rejects_malformed_and_round_trips_unicode
+RUN  tokenizer_raw_bytes_and_specials_are_unambiguous
+ok   tokenizer_raw_bytes_and_specials_are_unambiguous
+RUN  bpe_merge_priority_and_invalid_tables
+ok   bpe_merge_priority_and_invalid_tables
+RUN  checkpoints_restore_weights_optimizer_and_state_exactly
+ok   checkpoints_restore_weights_optimizer_and_state_exactly
+RUN  checkpoint_checksum_completion_and_half_export
+ok   checkpoint_checksum_completion_and_half_export
+RUN  data_permutation_prefetch_and_resume_are_exact
+ok   data_permutation_prefetch_and_resume_are_exact
+RUN  sft_targets_have_assistant_and_eos_loss_only
+ok   sft_targets_have_assistant_and_eos_loss_only
+
+7/7 tests passed
+<end of output>
+Test time =   0.06 sec
+----------------------------------------------------------
+Test Passed.
+"files" end time: Oct 07 22:38 EDT
+"files" time elapsed: 00:00:00
+----------------------------------------------------------
+
+5/7 Testing: training
+5/7 Test: training
+Command: "/Users/tu15/alex_cpp/CPP_Completed/build/bin/test_training"
+Directory: /Users/tu15/alex_cpp/CPP_Completed
+"training" start time: Oct 07 22:38 EDT
+Output:
+----------------------------------------------------------
+RUN  full_decoder_overfits_a_small_sequence
+ok   full_decoder_overfits_a_small_sequence
+RUN  compressed_decode_matches_full_recomputation
+ok   compressed_decode_matches_full_recomputation
+RUN  sampling_is_seeded_and_respects_filters
+ok   sampling_is_seeded_and_respects_filters
+RUN  weight_changes_invalidate_decode_cache
+ok   weight_changes_invalidate_decode_cache
+RUN  dpo_loss_gradient_and_initial_baseline
+ok   dpo_loss_gradient_and_initial_baseline
+RUN  grpo_clipping_and_kl_gradients
+ok   grpo_clipping_and_kl_gradients
+RUN  completion_masks_and_cosine_schedule
+ok   completion_masks_and_cosine_schedule
+RUN  muon_routes_only_hidden_matrices
+ok   muon_routes_only_hidden_matrices
+RUN  malformed_optimizer_state_cannot_mutate_weights
+ok   malformed_optimizer_state_cannot_mutate_weights
+RUN  execution_options_preserve_legacy_resume_and_reject_invalid_steps
+ok   execution_options_preserve_legacy_resume_and_reject_invalid_steps
+RUN  muon_settings_round_trip_and_reject_invalid_variants
+ok   muon_settings_round_trip_and_reject_invalid_variants
+RUN  cpu_inference_forks_preserve_independent_request_caches
+ok   cpu_inference_forks_preserve_independent_request_caches
+
+12/12 tests passed
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"training" end time: Oct 07 22:38 EDT
+"training" time elapsed: 00:00:00
+----------------------------------------------------------
+
+6/7 Testing: mps
+6/7 Test: mps
+Command: "/Users/tu15/alex_cpp/CPP_Completed/build/bin/test_mps"
+Directory: /Users/tu15/alex_cpp/CPP_Completed
+"mps" start time: Oct 07 22:38 EDT
+Output:
+----------------------------------------------------------
+{"attention":["reference","flash"],"device":"Apple M2 Max","flash_head_width_limit":128,"os":"Version 26.7.1 (Build 25G241)","precision":["fp32","fp16"],"submission_window_limit":16,"unified_memory":true,"working_set_bytes":55662788608}
+RUN  mps_inference_forks_share_graphs_with_independent_request_caches
+ok   mps_inference_forks_share_graphs_with_independent_request_caches
+RUN  mps_lazy_zero_and_empty_updates_match_cpu
+ok   mps_lazy_zero_and_empty_updates_match_cpu
+RUN  mps_forward_gradients_and_adamw_match_cpu
+Checking GPU forward
+Checking GPU backward step 0
+Checking GPU backward step 1
+Checking GPU backward step 2
+ok   mps_forward_gradients_and_adamw_match_cpu
+RUN  mps_cached_decode_and_fp16_match_full_recomputation
+ok   mps_cached_decode_and_fp16_match_full_recomputation
+RUN  mps_muon_matches_cpu_and_half_training_learns
+ok   mps_muon_matches_cpu_and_half_training_learns
+RUN  mps_muon_zero_gradients_keep_orthogonalization_finite
+ok   mps_muon_zero_gradients_keep_orthogonalization_finite
+RUN  mps_batched_muon_matches_individual_and_checkpoint_resume
+ok   mps_batched_muon_matches_individual_and_checkpoint_resume
+RUN  flash_matches_cpu_and_submission_windows_preserve_every_gradient
+ok   flash_matches_cpu_and_submission_windows_preserve_every_gradient
+RUN  flash_matrix_heads_match_cpu_in_both_precisions
+ok   flash_matrix_heads_match_cpu_in_both_precisions
+RUN  mps_invalid_late_job_is_rejected_before_submission
+ok   mps_invalid_late_job_is_rejected_before_submission
+RUN  flash_prefill_cache_decode_and_shorter_replacement_match_cpu
+ok   flash_prefill_cache_decode_and_shorter_replacement_match_cpu
+
+11/11 tests passed
+<end of output>
+Test time =  20.62 sec
+----------------------------------------------------------
+Test Passed.
+"mps" end time: Oct 07 22:38 EDT
+"mps" time elapsed: 00:00:20
+----------------------------------------------------------
+
+7/7 Testing: tools
+7/7 Test: tools
+Command: "/opt/homebrew/Frameworks/Python.framework/Versions/3.14/bin/python3.14" "tests/test_tools.py" "/Users/tu15/alex_cpp/CPP_Completed/build/bin"
+Directory: /Users/tu15/alex_cpp/CPP_Completed
+"tools" start time: Oct 07 22:38 EDT
+Output:
+----------------------------------------------------------
+test_http_streaming_validation_and_concurrency (__main__.Server.test_http_streaming_validation_and_concurrency) ... ok
+test_dataset_splits_are_reproducible_and_content_based (__main__.Tools.test_dataset_splits_are_reproducible_and_content_based) ... ok
+test_grpo_improves_fixed_seed_rewards_and_resumes_exactly (__main__.Tools.test_grpo_improves_fixed_seed_rewards_and_resumes_exactly) ... ok
+test_muon_cli_settings_and_resume (__main__.Tools.test_muon_cli_settings_and_resume) ... ok
+test_native_debug_state_matches_independent_pytorch (__main__.Tools.test_native_debug_state_matches_independent_pytorch) ... ok
+test_preference_training_increases_margin (__main__.Tools.test_preference_training_increases_margin) ... ok
+test_sft_overfits_and_resume_matches_uninterrupted (__main__.Tools.test_sft_overfits_and_resume_matches_uninterrupted) ... ok
+test_tokenizers_match_heap_and_slow_reference (__main__.Tools.test_tokenizers_match_heap_and_slow_reference) ... ok
+test_training_comparison_checks_gradients_and_updates_before_timing (__main__.Tools.test_training_comparison_checks_gradients_and_updates_before_timing) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 13.118s
+
+OK
+<end of output>
+Test time =  13.21 sec
+----------------------------------------------------------
+Test Passed.
+"tools" end time: Oct 07 22:39 EDT
+"tools" time elapsed: 00:00:13
+----------------------------------------------------------
+
+End testing: Oct 07 22:39 EDT

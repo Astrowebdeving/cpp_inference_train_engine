@@ -1,0 +1,13 @@
+{"attention":"explicit causal softmax","device":"Apple M2 Max","os":"Version 26.7.1 (Build 25G241)","precision":["fp32","fp16"],"unified_memory":true,"working_set_bytes":55662788608}
+RUN  mps_forward_gradients_and_adamw_match_cpu
+Checking GPU forward
+Checking GPU backward step 0
+Checking GPU backward step 1
+Checking GPU backward step 2
+ok   mps_forward_gradients_and_adamw_match_cpu
+RUN  mps_cached_decode_and_fp16_match_full_recomputation
+ok   mps_cached_decode_and_fp16_match_full_recomputation
+RUN  mps_muon_matches_cpu_and_half_training_learns
+ok   mps_muon_matches_cpu_and_half_training_learns
+
+3/3 tests passed

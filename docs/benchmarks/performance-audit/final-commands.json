@@ -1,0 +1,91 @@
+{
+  "serving-packed-1024": [
+    "/Users/tu15/alex_cpp/CPP_Completed/.venv-serving/bin/python",
+    "/Users/tu15/alex_cpp/CPP_Completed/tools/compare_serving.py",
+    "--native-only",
+    "--model",
+    "/Users/tu15/alex_cpp/CPP_Completed/artifacts/gemma-4-E2B-it-4bit",
+    "--max-tokens",
+    "64",
+    "--warmup",
+    "1",
+    "--independent-kv-baseline",
+    "--output",
+    "/Users/tu15/alex_cpp/CPP_Completed/artifacts/performance-audit/serving-packed-1024",
+    "--concurrency",
+    "1",
+    "4",
+    "8",
+    "--prompt-length",
+    "1024",
+    "--repetitions",
+    "5"
+  ],
+  "serving-packed-mixed": [
+    "/Users/tu15/alex_cpp/CPP_Completed/.venv-serving/bin/python",
+    "/Users/tu15/alex_cpp/CPP_Completed/tools/compare_serving.py",
+    "--native-only",
+    "--model",
+    "/Users/tu15/alex_cpp/CPP_Completed/artifacts/gemma-4-E2B-it-4bit",
+    "--max-tokens",
+    "64",
+    "--warmup",
+    "1",
+    "--independent-kv-baseline",
+    "--output",
+    "/Users/tu15/alex_cpp/CPP_Completed/artifacts/performance-audit/serving-packed-mixed",
+    "--concurrency",
+    "4",
+    "8",
+    "--prompt-length",
+    "128",
+    "--repetitions",
+    "3",
+    "--mixed-lengths"
+  ],
+  "gemma-final": [
+    "/Users/tu15/alex_cpp/CPP_Completed/.venv-serving/bin/python",
+    "/Users/tu15/alex_cpp/CPP_Completed/tests/test_gemma.py",
+    "--binary",
+    "/Users/tu15/alex_cpp/CPP_Completed/build/bin/mini_mla_gemma",
+    "--model",
+    "/Users/tu15/alex_cpp/CPP_Completed/artifacts/gemma-4-E2B-it-4bit",
+    "--output",
+    "/Users/tu15/alex_cpp/CPP_Completed/artifacts/performance-audit/gemma-final.json"
+  ],
+  "gemma-http-final": [
+    "/Users/tu15/alex_cpp/CPP_Completed/.venv-serving/bin/python",
+    "/Users/tu15/alex_cpp/CPP_Completed/tests/test_gemma_http.py",
+    "--binary",
+    "/Users/tu15/alex_cpp/CPP_Completed/build/bin/mini_mla_gemma",
+    "--model",
+    "/Users/tu15/alex_cpp/CPP_Completed/artifacts/gemma-4-E2B-it-4bit",
+    "--output",
+    "/Users/tu15/alex_cpp/CPP_Completed/artifacts/performance-audit/gemma-http-final.json"
+  ],
+  "muon-learning-final": [
+    "/Users/tu15/alex_cpp/CPP_Completed/.venv-serving/bin/python",
+    "/Users/tu15/alex_cpp/CPP_Completed/tools/smoke.py",
+    "--backend",
+    "mps",
+    "--precision",
+    "fp16",
+    "--optimizer",
+    "muon",
+    "--output",
+    "/Users/tu15/alex_cpp/CPP_Completed/artifacts/performance-audit/muon-learning-final"
+  ],
+  "ubsan-build": [
+    "cmake",
+    "--build",
+    "/Users/tu15/alex_cpp/CPP_Completed/build-ubsan",
+    "-j",
+    "8"
+  ],
+  "ubsan-final": [
+    "ctest",
+    "--test-dir",
+    "/Users/tu15/alex_cpp/CPP_Completed/build-ubsan",
+    "--output-on-failure"
+  ]
+}

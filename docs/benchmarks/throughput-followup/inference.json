@@ -1,0 +1,44 @@
+{
+  "decode fp16 ctx 256": {
+    "original_ms": 3.292,
+    "final_ms": 2.901,
+    "error_original": 0.003641784191131592,
+    "error_final": 0.003544420003890991
+  },
+  "decode fp32 ctx 256": {
+    "original_ms": 3.246,
+    "final_ms": 2.913,
+    "error_original": 3.948807716369629e-06,
+    "error_final": 3.948807716369629e-06
+  },
+  "decode fp16 ctx 1024": {
+    "original_ms": 4.159,
+    "final_ms": 3.583,
+    "error_original": 0.003931179642677307,
+    "error_final": 0.003935337066650391
+  },
+  "prefill fp16 ctx 128": {
+    "original_ms": 4.83,
+    "final_ms": 4.549,
+    "error_original": 0.003594517707824707,
+    "error_final": 0.0036661475896835327
+  },
+  "prefill fp32 ctx 128": {
+    "original_ms": 5.645,
+    "final_ms": 5.265,
+    "error_original": 3.7550926208496094e-06,
+    "error_final": 3.3974647521972656e-06
+  },
+  "prefill fp16 ctx 512": {
+    "original_ms": 8.308,
+    "final_ms": 7.353,
+    "error_original": 0.003819286823272705,
+    "error_final": 0.0038143396377563477
+  },
+  "prefill fp16 ctx 1024": {
+    "original_ms": 15.016,
+    "final_ms": 13.488,
+    "error_original": 0.0038092732429504395,
+    "error_final": 0.003935337066650391
+  }
+}

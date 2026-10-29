@@ -1,0 +1,154 @@
+{
+  "binary_sha256": "2e8567475d7b929b741c1612bccdb8a31491418516eaa03cfca8d3a8b56435c9",
+  "method": "Native command wall time, native engine elapsed time and scheduler token handling; one warmup then one fixed-length burst per shape; diagnostic, not a final speed comparison.",
+  "results": [
+    {
+      "prompt_length": 128,
+      "concurrency": 1,
+      "tokens_per_second": 115.72497484617445,
+      "phases": {
+        "release": {
+          "calls": 2,
+          "wall_total_ms": 0.1527909771539271,
+          "wall_median_ms": 0.07639548857696354,
+          "native_total_ms": 0
+        },
+        "token": {
+          "calls": 65,
+          "wall_total_ms": 2.357162826228887,
+          "wall_median_ms": 0.02879102248698473,
+          "native_total_ms": 0
+        },
+        "info": {
+          "calls": 64,
+          "wall_total_ms": 2.442499971948564,
+          "wall_median_ms": 0.03614553133957088,
+          "native_total_ms": 0
+        },
+        "prefill_batch": {
+          "calls": 1,
+          "wall_total_ms": 32.26945799542591,
+          "wall_median_ms": 32.26945799542591,
+          "native_total_ms": 32.161792
+        },
+        "decode": {
+          "calls": 63,
+          "wall_total_ms": 514.928714139387,
+          "wall_median_ms": 8.05345899425447,
+          "native_total_ms": 512.332419
+        }
+      }
+    },
+    {
+      "prompt_length": 128,
+      "concurrency": 4,
+      "tokens_per_second": 205.562327901772,
+      "phases": {
+        "release": {
+          "calls": 5,
+          "wall_total_ms": 0.7647910388186574,
+          "wall_median_ms": 0.19275001250207424,
+          "native_total_ms": 0
+        },
+        "token": {
+          "calls": 257,
+          "wall_total_ms": 9.372172295115888,
+          "wall_median_ms": 0.02920802216976881,
+          "native_total_ms": 0
+        },
+        "info": {
+          "calls": 64,
+          "wall_total_ms": 4.831663973163813,
+          "wall_median_ms": 0.07327101775445044,
+          "native_total_ms": 0
+        },
+        "prefill_batch": {
+          "calls": 1,
+          "wall_total_ms": 106.91299999598414,
+          "wall_median_ms": 106.91299999598414,
+          "native_total_ms": 106.634292
+        },
+        "decode": {
+          "calls": 63,
+          "wall_total_ms": 1122.5759177468717,
+          "wall_median_ms": 17.799708992242813,
+          "native_total_ms": 1111.533247
+        }
+      }
+    },
+    {
+      "prompt_length": 128,
+      "concurrency": 8,
+      "tokens_per_second": 230.70183727034404,
+      "phases": {
+        "release": {
+          "calls": 9,
+          "wall_total_ms": 2.1228340337984264,
+          "wall_median_ms": 0.18824997823685408,
+          "native_total_ms": 0
+        },
+        "token": {
+          "calls": 513,
+          "wall_total_ms": 16.243536258116364,
+          "wall_median_ms": 0.024874985683709383,
+          "native_total_ms": 0
+        },
+        "info": {
+          "calls": 64,
+          "wall_total_ms": 4.886167123913765,
+          "wall_median_ms": 0.07622898556292057,
+          "native_total_ms": 0
+        },
+        "prefill_batch": {
+          "calls": 1,
+          "wall_total_ms": 203.75687500927597,
+          "wall_median_ms": 203.75687500927597,
+          "native_total_ms": 203.255667
+        },
+        "decode": {
+          "calls": 63,
+          "wall_total_ms": 1992.4797939602286,
+          "wall_median_ms": 31.577707966789603,
+          "native_total_ms": 1977.83538
+        }
+      }
+    },
+    {
+      "prompt_length": 1024,
+      "concurrency": 8,
+      "tokens_per_second": 132.0221723876959,
+      "phases": {
+        "release": {
+          "calls": 9,
+          "wall_total_ms": 2.919916936662048,
+          "wall_median_ms": 0.23383396910503507,
+          "native_total_ms": 0
+        },
+        "token": {
+          "calls": 513,
+          "wall_total_ms": 18.918546207714826,
+          "wall_median_ms": 0.02662499900907278,
+          "native_total_ms": 0
+        },
+        "info": {
+          "calls": 64,
+          "wall_total_ms": 5.675083200912923,
+          "wall_median_ms": 0.08479147800244391,
+          "native_total_ms": 0
+        },
+        "prefill_batch": {
+          "calls": 1,
+          "wall_total_ms": 1621.1436659796163,
+          "wall_median_ms": 1621.1436659796163,
+          "native_total_ms": 1618.571666
+        },
+        "decode": {
+          "calls": 63,
+          "wall_total_ms": 2230.270867992658,
+          "wall_median_ms": 35.45412496896461,
+          "native_total_ms": 2196.8335859999997
+        }
+      }
+    }
+  ]
+}

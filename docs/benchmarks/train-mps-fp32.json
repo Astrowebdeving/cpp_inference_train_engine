@@ -1,0 +1,1 @@
+{"backend":"mps","batch":2,"compiler":"Apple LLVM 17.0.0 (clang-1700.6.4.2)","correctness_error":7.6019511219271863e-07,"device":"Apple M2 Max / MPSGraph / fp32","kind":"train","median_ms":30.764125,"p95_ms":31.148624999999999,"peak_rss_bytes":2063335424,"precision":"fp32","repetitions":20,"sequence_length":128,"tokens_per_second":8321.3808291313344,"warmup":3}

@@ -1,0 +1,78 @@
+{
+  "AdamW FP16, 8 x 128": {
+    "original": {
+      "ms": 48.27,
+      "tokens_per_second": 21214,
+      "runs_ms": [
+        48.27,
+        48.14,
+        48.41
+      ]
+    },
+    "final, serial": {
+      "ms": 44.81,
+      "tokens_per_second": 22851,
+      "runs_ms": [
+        44.65,
+        45.99,
+        44.81
+      ]
+    },
+    "final (default, pipelined)": {
+      "ms": 41.79,
+      "tokens_per_second": 24506,
+      "runs_ms": [
+        41.69,
+        41.79,
+        41.82
+      ]
+    }
+  },
+  "Muon FP16, 8 x 128": {
+    "original (gram)": {
+      "ms": 88.54,
+      "tokens_per_second": 11566,
+      "runs_ms": [
+        88.49,
+        88.56,
+        88.54
+      ]
+    },
+    "final, gram order": {
+      "ms": 81.66,
+      "tokens_per_second": 12539,
+      "runs_ms": [
+        81.67,
+        81.52,
+        81.66
+      ]
+    },
+    "final (default, composed)": {
+      "ms": 73.64,
+      "tokens_per_second": 13906,
+      "runs_ms": [
+        73.5,
+        73.64,
+        75.02
+      ]
+    }
+  },
+  "AdamW FP32, 8 x 128": {
+    "original": {
+      "ms": 50.29,
+      "tokens_per_second": 20363,
+      "runs_ms": [
+        50.19,
+        50.38
+      ]
+    },
+    "final (default)": {
+      "ms": 45.29,
+      "tokens_per_second": 22607,
+      "runs_ms": [
+        45.21,
+        45.38
+      ]
+    }
+  }
+}

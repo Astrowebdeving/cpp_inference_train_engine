@@ -1,0 +1,28 @@
+{
+  "status": "passed",
+  "checks": [
+    "model discovery",
+    "chat generation and token usage",
+    "stream/nonstream token equality and SSE completion",
+    "stop strings withheld",
+    "invalid request rejected (400)",
+    "invalid request rejected (400)",
+    "invalid request rejected (404)",
+    "invalid request rejected (400)",
+    "disconnect cancellation releases cache"
+  ],
+  "command": [
+    "/Users/tu15/alex_cpp/CPP_Completed/.venv-serving/bin/python",
+    "/Users/tu15/alex_cpp/CPP_Completed/tools/gemma_server.py",
+    "--model",
+    "/Users/tu15/alex_cpp/CPP_Completed/artifacts/gemma-4-E2B-it-4bit",
+    "--binary",
+    "/Users/tu15/alex_cpp/CPP_Completed/build/bin/mini_mla_gemma",
+    "--port",
+    "54267",
+    "--context-limit",
+    "2048",
+    "--max-batch",
+    "4"
+  ]
+}

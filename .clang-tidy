@@ -1,0 +1,4 @@
+# Optional — enable selectively; do not accept every stylistic suggestion blindly.
+Checks: '-*,bugprone-*,performance-*,clang-analyzer-*,modernize-use-nullptr,readability-identifier-naming'
+WarningsAsErrors: ''
+HeaderFilterRegex: 'include/mini_mla/.*'

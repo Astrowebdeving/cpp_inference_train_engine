@@ -1,0 +1,283 @@
+{
+  "date": "2026-10-07",
+  "hardware": "Apple M2 Max",
+  "memory_bytes": 68719476736,
+  "macOS": "26.7.1",
+  "native_build": "Release / Apple Clang 17",
+  "pytorch": "2.10.0 MPS",
+  "ctest_targets_passed": 7,
+  "cpp_cases_passed": 61,
+  "python_cases_passed": 8,
+  "actual_metal": true,
+  "loopback_server_test": true,
+  "benchmark_records": {
+    "fp32-batch2": {
+      "failed_variants": [],
+      "variants": [
+        {
+          "attention": "reference",
+          "execution": "eager",
+          "verified": true,
+          "checked_tensors": 264,
+          "vector_errors": {
+            "gradient": {
+              "relative_l2_error": 2.2611459829476376e-06,
+              "cosine_similarity": 0.9999999999974442,
+              "relative_l2_limit": 0.005,
+              "cosine_limit": 0.99
+            },
+            "update": {
+              "relative_l2_error": 0.00010905241155070036,
+              "cosine_similarity": 0.999999994053786,
+              "relative_l2_limit": 0.02,
+              "cosine_limit": 0.99
+            }
+          }
+        },
+        {
+          "attention": "reference",
+          "execution": "compile-loss",
+          "verified": true,
+          "checked_tensors": 264,
+          "vector_errors": {
+            "gradient": {
+              "relative_l2_error": 2.181467814465065e-06,
+              "cosine_similarity": 0.9999999999976205,
+              "relative_l2_limit": 0.005,
+              "cosine_limit": 0.99
+            },
+            "update": {
+              "relative_l2_error": 0.00013193683423910329,
+              "cosine_similarity": 0.9999999912963361,
+              "relative_l2_limit": 0.02,
+              "cosine_limit": 0.99
+            }
+          }
+        },
+        {
+          "attention": "sdpa",
+          "execution": "eager",
+          "verified": true,
+          "checked_tensors": 264,
+          "vector_errors": {
+            "gradient": {
+              "relative_l2_error": 2.280405967076395e-06,
+              "cosine_similarity": 0.9999999999974029,
+              "relative_l2_limit": 0.005,
+              "cosine_limit": 0.99
+            },
+            "update": {
+              "relative_l2_error": 0.0001304051919825357,
+              "cosine_similarity": 0.9999999914972443,
+              "relative_l2_limit": 0.02,
+              "cosine_limit": 0.99
+            }
+          }
+        },
+        {
+          "attention": "sdpa",
+          "execution": "compile-loss",
+          "verified": true,
+          "checked_tensors": 264,
+          "vector_errors": {
+            "gradient": {
+              "relative_l2_error": 2.1949972749282852e-06,
+              "cosine_similarity": 0.9999999999975916,
+              "relative_l2_limit": 0.005,
+              "cosine_limit": 0.99
+            },
+            "update": {
+              "relative_l2_error": 0.00012830560585129762,
+              "cosine_similarity": 0.9999999917688361,
+              "relative_l2_limit": 0.02,
+              "cosine_limit": 0.99
+            }
+          }
+        }
+      ],
+      "parameter_count": 35763840,
+      "native_binary_sha256": "6e9c182c90781701ecd0ffe9f96c36651497099b3e32cace6d93634a0de06ee2"
+    },
+    "fp16-batch2": {
+      "failed_variants": [],
+      "variants": [
+        {
+          "attention": "reference",
+          "execution": "eager",
+          "verified": true,
+          "checked_tensors": 264,
+          "vector_errors": {
+            "gradient": {
+              "relative_l2_error": 0.003118480139200398,
+              "cosine_similarity": 0.9999951380026738,
+              "relative_l2_limit": 0.02,
+              "cosine_limit": 0.99
+            },
+            "update": {
+              "relative_l2_error": 0.09052090320650147,
+              "cosine_similarity": 0.995902998494715,
+              "relative_l2_limit": 0.15,
+              "cosine_limit": 0.985
+            }
+          }
+        },
+        {
+          "attention": "reference",
+          "execution": "compile-loss",
+          "verified": true,
+          "checked_tensors": 264,
+          "vector_errors": {
+            "gradient": {
+              "relative_l2_error": 0.0030616886610222538,
+              "cosine_similarity": 0.9999953157381896,
+              "relative_l2_limit": 0.02,
+              "cosine_limit": 0.99
+            },
+            "update": {
+              "relative_l2_error": 0.08929794726536484,
+              "cosine_similarity": 0.9960129659491473,
+              "relative_l2_limit": 0.15,
+              "cosine_limit": 0.985
+            }
+          }
+        },
+        {
+          "attention": "sdpa",
+          "execution": "eager",
+          "verified": true,
+          "checked_tensors": 264,
+          "vector_errors": {
+            "gradient": {
+              "relative_l2_error": 0.0031174871279757168,
+              "cosine_similarity": 0.9999951406425571,
+              "relative_l2_limit": 0.02,
+              "cosine_limit": 0.99
+            },
+            "update": {
+              "relative_l2_error": 0.09048275354670739,
+              "cosine_similarity": 0.9959064521441987,
+              "relative_l2_limit": 0.15,
+              "cosine_limit": 0.985
+            }
+          }
+        },
+        {
+          "attention": "sdpa",
+          "execution": "compile-loss",
+          "verified": true,
+          "checked_tensors": 264,
+          "vector_errors": {
+            "gradient": {
+              "relative_l2_error": 0.003075820597482456,
+              "cosine_similarity": 0.9999952719500785,
+              "relative_l2_limit": 0.02,
+              "cosine_limit": 0.99
+            },
+            "update": {
+              "relative_l2_error": 0.08927522435471519,
+              "cosine_similarity": 0.9960149895284973,
+              "relative_l2_limit": 0.15,
+              "cosine_limit": 0.985
+            }
+          }
+        }
+      ],
+      "parameter_count": 35763840,
+      "native_binary_sha256": "6e9c182c90781701ecd0ffe9f96c36651497099b3e32cace6d93634a0de06ee2"
+    },
+    "fp16-batch8": {
+      "failed_variants": [],
+      "variants": [
+        {
+          "attention": "reference",
+          "execution": "eager",
+          "verified": true,
+          "checked_tensors": 264,
+          "vector_errors": {
+            "gradient": {
+              "relative_l2_error": 0.006597773897570476,
+              "cosine_similarity": 0.9999782344541753,
+              "relative_l2_limit": 0.02,
+              "cosine_limit": 0.99
+            },
+            "update": {
+              "relative_l2_error": 0.0903835846421202,
+              "cosine_similarity": 0.9959154036702327,
+              "relative_l2_limit": 0.15,
+              "cosine_limit": 0.985
+            }
+          }
+        },
+        {
+          "attention": "reference",
+          "execution": "compile-loss",
+          "verified": true,
+          "checked_tensors": 264,
+          "vector_errors": {
+            "gradient": {
+              "relative_l2_error": 0.006559201342946146,
+              "cosine_similarity": 0.9999784896374795,
+              "relative_l2_limit": 0.02,
+              "cosine_limit": 0.99
+            },
+            "update": {
+              "relative_l2_error": 0.08906148014624506,
+              "cosine_similarity": 0.9960340284014099,
+              "relative_l2_limit": 0.15,
+              "cosine_limit": 0.985
+            }
+          }
+        },
+        {
+          "attention": "sdpa",
+          "execution": "eager",
+          "verified": true,
+          "checked_tensors": 264,
+          "vector_errors": {
+            "gradient": {
+              "relative_l2_error": 0.006561570066477771,
+              "cosine_similarity": 0.9999784732148357,
+              "relative_l2_limit": 0.02,
+              "cosine_limit": 0.99
+            },
+            "update": {
+              "relative_l2_error": 0.09035370952233311,
+              "cosine_similarity": 0.9959181257593057,
+              "relative_l2_limit": 0.15,
+              "cosine_limit": 0.985
+            }
+          }
+        },
+        {
+          "attention": "sdpa",
+          "execution": "compile-loss",
+          "verified": true,
+          "checked_tensors": 264,
+          "vector_errors": {
+            "gradient": {
+              "relative_l2_error": 0.006516094107558766,
+              "cosine_similarity": 0.9999787711480236,
+              "relative_l2_limit": 0.02,
+              "cosine_limit": 0.99
+            },
+            "update": {
+              "relative_l2_error": 0.08893716499270382,
+              "cosine_similarity": 0.9960450999437283,
+              "relative_l2_limit": 0.15,
+              "cosine_limit": 0.985
+            }
+          }
+        }
+      ],
+      "parameter_count": 35763840,
+      "native_binary_sha256": "6e9c182c90781701ecd0ffe9f96c36651497099b3e32cace6d93634a0de06ee2"
+    }
+  },
+  "new_regression": "Checks native export against both PyTorch attention paths, every gradient, one accumulated update, global gradient/update metrics, and corrupted tensor rejection.",
+  "format_checks": [
+    "Ruff lint",
+    "Black format",
+    "clang-format"
+  ],
+  "scope": "Matched synthetic pretraining updates; no held-out quality, DPO/GRPO stack throughput, CUDA, MLX or vLLM serving benchmark is implied."
+}

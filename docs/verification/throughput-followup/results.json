@@ -1,0 +1,193 @@
+{
+  "recorded_utc": "2026-10-09T17:01:34Z",
+  "platform": "macOS-26.7.1-arm64-arm-64bit",
+  "machine": "Apple M2 Max, 64 GiB",
+  "release": {
+    "ctest_targets": "7/7",
+    "cpp_cases": {
+      "tensor": 31,
+      "ops": 3,
+      "model": 3,
+      "files": 7,
+      "training": 12,
+      "mps": 15,
+      "total": 71
+    },
+    "python_tools_cases": 10,
+    "log": "release-ctest.log"
+  },
+  "ubsan": {
+    "ctest_targets": "6/6 enabled (Metal disabled in this build, so the mps target and the Metal tools case skip)",
+    "log": "ubsan-ctest.log"
+  },
+  "gemma": {
+    "engine_checks": 51,
+    "http_checks": 9,
+    "scheduler_checks": 7,
+    "records": [
+      "gemma-parity.json",
+      "gemma-http.json",
+      "gemma-scheduler.json"
+    ]
+  },
+  "new_tests": {
+    "tests/test_mps.cpp": [
+      "pipelined_updates_match_synchronous_updates_bit_for_bit",
+      "coalesced_passes_match_separate_passes_and_respect_the_budget",
+      "pipelined_failure_is_reported_late_and_disables_the_execution",
+      "muon_newton_schulz_orders_agree_across_matrix_shapes"
+    ],
+    "tests/test_tools.py": [
+      "test_metal_fp16_training_is_reproducible_and_pipeline_invariant"
+    ],
+    "tests/test_gemma_scheduler.py": "seven host-side checks, no GPU required",
+    "tests/test_training.cpp": "option round trip covers coalesce_tokens, the composed order and the unsaved pipeline flag"
+  },
+  "mutation_checks": {
+    "single staging bank instead of two": "pipelined_updates_match_synchronous_updates_bit_for_bit fails",
+    "embedding gathered from the FP32 table before the cast": "test_metal_fp16_training_is_reproducible_and_pipeline_invariant fails"
+  },
+  "reproducibility": {
+    "method": "scripts/det.sh: the same training run three times in separate processes; SHA-256 of checkpoint-latest/weights.bin",
+    "full_model_pilot_fp16_adamw": {
+      "original": "identical",
+      "final_defaults": "identical",
+      "final_pipeline_off": "identical",
+      "pipelined_equals_serial": true
+    },
+    "tiny_sft_fp16_adamw": {
+      "final_defaults": "identical",
+      "final_pipeline_off": "identical",
+      "pipelined_equals_serial": true,
+      "optimizer_state_equal": true
+    },
+    "full_model_pilot_fp16_muon": {
+      "original_gram": "identical",
+      "final_composed": "identical"
+    },
+    "fp32": "varies between processes for both the original and the final binary; not changed by this work"
+  },
+  "learning_runs": {
+    "method": "tools/smoke.py: 80-step SFT from random initialization, resume, export and greedy generation",
+    "cpu_fp32_adamw": {
+      "loss": [
+        5.608174,
+        0.027543
+      ],
+      "reply": "Hi!"
+    },
+    "metal_fp16_adamw": {
+      "loss": [
+        5.608191,
+        0.027518
+      ],
+      "reply": "Hi!"
+    },
+    "metal_fp16_muon_composed": {
+      "loss": [
+        5.608191,
+        0.131428
+      ],
+      "reply": "Hi!"
+    }
+  },
+  "muon_gates": "docs/benchmarks/throughput-followup/muon-gates",
+  "source_sha256": {
+    "apps/bench_main.cpp": "3a7c538922236e4c2b652f92a80e38ba3a828478bf48673c61f5fc2eb4e98912",
+    "apps/train_main.cpp": "149edfd933486bb786eaba71b48cf325b81b9cf03ca398d31d081cd8bcebc6cb",
+    "config/muon-metal.json": "a52118c53be2876cbc9304e559e5b815d9588ec2161a04e39ac89d8bb724d605",
+    "include/mini_mla/execution.hpp": "1a2697c5a562d08cfdd17816d6ed386a6fb51c7840f5c46420e1e8123de3ec85",
+    "include/mini_mla/trainer.hpp": "163b0e8fba1310665caf6a0c5dfa22c0359896c3122f25d69fc6c46ae4fbf73a",
+    "src/backends/mps_backend.mm": "7a5f7c6ffcb9d41fb0cc7a2095b64b060ea898014d22309a27803b4c2270b437",
+    "src/backends/mps_runtime.hpp": "01471e270d0e4d3a41771d77615871495831465f4d27aab8057c8c74c806356d",
+    "src/infer/inference.cpp": "767a473309a5c821e41de73c04592535a3a5920ee691a0a2dc80942fdb0d189c",
+    "src/train/trainer.cpp": "ea0ba7207d612fc8b39d35795875fac912148e08fd36faf1f6d13ca48cc204f8",
+    "tests/test_mps.cpp": "f6e873aba2490fe154c354a41f5eb188c8bc1e8d9af06ac012b9facd06d5f3f1",
+    "tests/test_tools.py": "15ccbc18227c77ddf2bd06e62120bbe57341a363cbb68e38ca6a3fe63c461616",
+    "tests/test_training.cpp": "b4f5cb2a40136c4bc45f8057edefe98eb7ad239dfdc91ead12ec3a020ff6b730",
+    "tools/benchmark_model.py": "778c4256e0cad14ab6cd74a079751f014f3b93878b5510f19a754cdb0f3f5388",
+    "tools/compare_training.py": "01173390b07850e548b32fc0f7812d079287601a9d9db07f2ed79c002a9ad6be",
+    "tools/gemma_runtime.py": "db0e857089e45340d5a6847a46e2f11e77d91c925cd76810f226b50480dc9c59",
+    "tools/gemma_server.py": "230a9f482a4feafbdd991b0df453604d64679db37bc33763b8843839267f5f01",
+    "tests/test_gemma_scheduler.py": "f45880aad68ba4b9073b3ddd01f71fe590bc443c87bf6533a733dae16d20f747"
+  },
+  "unchanged_engine_sources": {
+    "src/infer/gemma.cpp": true,
+    "apps/gemma_main.cpp": true,
+    "src/model/model.cpp": true,
+    "src/model/ops.cpp": true,
+    "src/train/optimizer.cpp": true,
+    "src/backends/adamw.metal": true,
+    "src/backends/flash_attention.metal": true
+  },
+  "binary_sha256": {
+    "mini_mla_bench": "d06a55319013fb7abb631741f3fd582d8a061e61dfeeada93c226287ff1403a7",
+    "mini_mla_train": "0fbb6c4a131fabcc03b327a1f36f71871d2dde4f0937390acea2a4f390ae9a33",
+    "mini_mla_gemma": "a3ab13c72520967267bf4f6f3a809330dc65c7fd911977f0202661fe9555622e"
+  },
+  "pytorch_fp16_first_update": {
+    "method": "tools/compare_training.py --device mps --precision fp16 --sequence-length 128 --microbatch 8, PyTorch 2.13, full model. Gates: gradient relative L2 <= 0.02 and cosine >= 0.99; update relative L2 <= 0.15 and cosine >= 0.985.",
+    "original_engine_original_reference": {
+      "gradient_relative_l2": 0.006598742041101236,
+      "gradient_cosine": 0.999978230406045,
+      "update_relative_l2": 0.09022947442920715,
+      "update_cosine": 0.9959293276677372
+    },
+    "final_engine_original_reference": {
+      "gradient_relative_l2": 0.007339122255197158,
+      "gradient_cosine": 0.9999730755683554,
+      "update_relative_l2": 0.13048237568107715,
+      "update_cosine": 0.9914890406799267
+    },
+    "final_engine_matching_reference": {
+      "gradient_relative_l2": 0.006626763202929164,
+      "gradient_cosine": 0.9999780471332924,
+      "update_relative_l2": 0.08348190581801064,
+      "update_cosine": 0.9965153812085595
+    },
+    "note": "The original reference rounds the vocabulary projection in FP16, as the original engine did. tools/benchmark_model.py now computes it in the master table's precision, as the engine does.",
+    "record": "pytorch-fp16-comparison.json"
+  },
+  "fp16_gradient_error_against_fp32": {
+    "method": "First-update gradients of the full model at 8 x 128; relative L2 error of each binary's FP16 gradient against the mean of the two FP32 gradients, which agree with each other to 5.9e-7.",
+    "all_parameters": {
+      "original": 0.00531,
+      "final": 0.00533
+    },
+    "token_embedding": {
+      "original": 0.00516,
+      "final": 0.00543
+    },
+    "final_norm": {
+      "original": 0.03992,
+      "final": 0.00148
+    },
+    "layer_matrices": {
+      "original": 0.00532,
+      "final": 0.00532
+    },
+    "loss": {
+      "fp32": 9.8037243,
+      "original_fp16": 9.8037491,
+      "final_fp16": 9.8037367
+    }
+  },
+  "original_source_sha256": {
+    "apps/bench_main.cpp": "d18036e3f43918ffba140932e47a22e769ffac39e77c26213a1f63e2504ca67c",
+    "apps/train_main.cpp": "fc5589bfc243939d038714a8459694011dbba1b1e89b2dacf081538447f64b48",
+    "config/muon-metal.json": "356ca6ff175fdc0b75530dde5f2f2263720c68e4d2b4469577efa7afa92b47ff",
+    "include/mini_mla/execution.hpp": "5cb95a811b517ad97880835054042d3e3a83cb3b5827e42cc51179f237df058a",
+    "include/mini_mla/trainer.hpp": "be8d3075baaa7dc8bf1f123a7678222cc139da2f90171ac05748f46d0e95b913",
+    "src/backends/mps_backend.mm": "591e5fd52066e80da2102234c39d0f50dc670e305e15f8dcb8606e6f8c563efb",
+    "src/backends/mps_runtime.hpp": "9b969b3bc8a2222acece1f431326f10172f68bb50177c37581ba6e4c1731b1d5",
+    "src/infer/inference.cpp": "2f35ab94580a0596e0817fcaee7a56adcda259613f69982c0182f73476cb93e1",
+    "src/train/trainer.cpp": "f0c53704f2aea073dc19b767b066f4b55022219def3a9f2bf7bca3238674c39a",
+    "tests/test_mps.cpp": "d292920b529948c0b11934cb7139eb388e0b3475fb59339ffeacfd55c90d0487",
+    "tests/test_tools.py": "84d59c559b90f9f36099a51822487c72954196e37ac25b5b23dd161935c9ae56",
+    "tests/test_training.cpp": "e70e1cbf6364f3c074bc5bcfa62097ce06ff2ceafc0d4c2d21a588b87aab91cb",
+    "tools/benchmark_model.py": "6a2a896cd479257cc33174deae5c766cec9e056c37ef6b43ad68be53dd6dc87b",
+    "tools/compare_training.py": "3a2ee720ca796cd368c8330deeca25782ba5872f3ad04c824bdb2da9080710db",
+    "tools/gemma_runtime.py": "93088932d7dae21b8ddc89e4c98462adc204af7451aabb3a546a6541b8043bf5",
+    "tools/gemma_server.py": "9724593a03a70f7e17683ff204738ff304341eef9b665b810e7aec354bdf601e"
+  }
+}

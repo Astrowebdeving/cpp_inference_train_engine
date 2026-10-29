@@ -1,0 +1,47 @@
+{
+  "backend": "mps",
+  "checkpoint_every": 6,
+  "clip_epsilon": 0.20000000298023224,
+  "completion_tokens": 32,
+  "dpo_beta": 0.10000000149011612,
+  "grad_accum": 1,
+  "gradient_epochs": 1,
+  "group_size": 4,
+  "initialize": "",
+  "kl_coefficient": 0.019999999552965164,
+  "learning_rate": 0.0003000000142492354,
+  "log_every": 3,
+  "microbatch": 1,
+  "minimum_lr_fraction": 0.10000000149011612,
+  "mode": "pretrain",
+  "model_config": "config/mla36m-v1.json",
+  "optimizer": {
+    "beta1": 0.8999999761581421,
+    "beta2": 0.949999988079071,
+    "clip_norm": 1,
+    "epsilon": 9.99999993922529e-09,
+    "kind": "adamw",
+    "momentum": 0.949999988079071,
+    "muon_variant": "moonlight-fp32-v1",
+    "nesterov": true,
+    "ns_steps": 5,
+    "weight_decay": 0.10000000149011612
+  },
+  "output": "runs/full-pilot",
+  "precision": "fp32",
+  "reference": "",
+  "reward": "exact",
+  "seed": "42",
+  "sequence_length": 32,
+  "steps": 12,
+  "tokenizer": "examples/pilot-tokenizer.json",
+  "train": [
+    "examples/pilot-data/train-00000.tok"
+  ],
+  "validate_every": 6,
+  "validation": [
+    "examples/pilot-data/val-00000.tok"
+  ],
+  "validation_batches": 1,
+  "warmup_steps": 2
+}

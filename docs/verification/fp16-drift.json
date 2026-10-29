@@ -1,0 +1,35 @@
+{
+  "parameter_count": 35763840,
+  "validation_tokens": 32,
+  "tokenizer_sha256": "cb18a9e0f61134a117628990c5c26b88608dec368ad715b46c76811b987facca",
+  "comparisons": {
+    "cpu-fp32-master": {
+      "loss": 5.30770563122257,
+      "perplexity": 201.88649453369575,
+      "loss_delta": 0.0,
+      "relative_perplexity_delta": 0.0,
+      "max_logit_abs_error": 0.0
+    },
+    "mps-fp32-master": {
+      "loss": 5.307705879211426,
+      "perplexity": 201.88654459930282,
+      "loss_delta": 2.479888561168764e-07,
+      "relative_perplexity_delta": 2.479888868661153e-07,
+      "max_logit_abs_error": 3.814697265625e-06
+    },
+    "cpu-fp16-export": {
+      "loss": 5.3076738924569105,
+      "perplexity": 201.88008700724004,
+      "loss_delta": -3.173876565920608e-05,
+      "relative_perplexity_delta": -3.173826198991192e-05,
+      "max_logit_abs_error": 0.0006435029208660126
+    },
+    "mps-fp16-master": {
+      "loss": 5.307708263397217,
+      "perplexity": 201.88702593490765,
+      "loss_delta": 2.6321746471325014e-06,
+      "relative_perplexity_delta": 2.632178111307227e-06,
+      "max_logit_abs_error": 0.0012430846691131592
+    }
+  }
+}

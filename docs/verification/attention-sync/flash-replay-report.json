@@ -1,0 +1,47 @@
+{
+  "flash-sft": {
+    "passed": true,
+    "resume_step": 40,
+    "max_weight_error": 0,
+    "max_optimizer_error": 0.0,
+    "state_matches": true,
+    "reference_unchanged": null,
+    "command": [
+      "/Users/tu15/alex_cpp/CPP_Completed/build/bin/mini_mla_train",
+      "--resume",
+      "/private/tmp/mla-attention-work/flash-sft/run/checkpoint-00000040"
+    ],
+    "atol": 2e-06,
+    "rtol": 1e-05
+  },
+  "flash-dpo": {
+    "passed": true,
+    "resume_step": 4,
+    "max_weight_error": 0,
+    "max_optimizer_error": 0.0,
+    "state_matches": true,
+    "reference_unchanged": true,
+    "command": [
+      "/Users/tu15/alex_cpp/CPP_Completed/build/bin/mini_mla_train",
+      "--resume",
+      "/private/tmp/mla-attention-work/flash-dpo/checkpoint-00000004"
+    ],
+    "atol": 2e-06,
+    "rtol": 1e-05
+  },
+  "flash-grpo": {
+    "passed": true,
+    "resume_step": 4,
+    "max_weight_error": 0,
+    "max_optimizer_error": 0.0,
+    "state_matches": true,
+    "reference_unchanged": true,
+    "command": [
+      "/Users/tu15/alex_cpp/CPP_Completed/build/bin/mini_mla_train",
+      "--resume",
+      "/private/tmp/mla-attention-work/flash-grpo/checkpoint-00000004"
+    ],
+    "atol": 2e-06,
+    "rtol": 1e-05
+  }
+}

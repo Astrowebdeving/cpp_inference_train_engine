@@ -1,0 +1,2 @@
+CPU / Accelerate; 35763840 parameters; mode=pretrain
+step=1 loss=10.256630 lr=0.0003 grad=87.9117 tok/s=215.7

@@ -1,0 +1,21 @@
+cmake -S /Users/tu15/alex_cpp/CPP_Completed -B /Users/tu15/alex_cpp/CPP_Completed/build -DCMAKE_BUILD_TYPE=Release -DMINI_MLA_ENABLE_GEMMA=ON -DMLX_DIR=/Users/tu15/alex_cpp/CPP_Completed/.venv-serving/lib/python3.12/site-packages/mlx/share/cmake/MLX
+-- Configuring done (0.5s)
+-- Generating done (0.3s)
+-- Build files have been written to: /Users/tu15/alex_cpp/CPP_Completed/build
+cmake --build /Users/tu15/alex_cpp/CPP_Completed/build -j 8
+[ 40%] Built target mini_mla
+[ 44%] Built target mini_mla_tokenize
+[ 48%] Built target mini_mla_info
+[ 57%] Built target mini_mla_train
+[ 59%] Built target mini_mla_serve
+[ 61%] Built target mini_mla_generate
+[ 67%] Built target mini_mla_inspect
+[ 69%] Built target mini_mla_bench
+[ 75%] Built target mini_mla_gemma
+[ 79%] Built target test_tensor
+[ 83%] Built target test_ops
+[ 87%] Built target test_model
+[ 91%] Built target test_training
+[ 95%] Built target test_files
+[100%] Built target test_mps
+Ready: /Users/tu15/alex_cpp/CPP_Completed/build/bin/mini_mla_gemma

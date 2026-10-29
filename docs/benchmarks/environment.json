@@ -1,0 +1,11 @@
+{
+  "utc": "2026-10-05T22:06:07.886542+00:00",
+  "machine": "arm64",
+  "macOS": "26.7.1",
+  "hardware": "Apple M2 Max",
+  "memory_bytes": 68719476736,
+  "cpu_count": 12,
+  "compiler": "Apple clang version 17.0.0 (clang-1700.6.4.2)",
+  "build": "Release",
+  "execution": "Serial runs; each has 3 warmups and 20 measured samples; native checks compare against CPU reference."
+}

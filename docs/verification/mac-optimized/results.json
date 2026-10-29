@@ -1,0 +1,303 @@
+{
+  "date": "2026-10-07",
+  "hardware": "Apple M2 Max",
+  "unified_memory_bytes": 68719476736,
+  "macOS": "26.7.1",
+  "release": {
+    "targets_passed": 7,
+    "cpp_cases_passed": 64,
+    "python_cases_passed": 8,
+    "actual_metal": true,
+    "shader_validation": true,
+    "loopback": true
+  },
+  "ubsan": {
+    "cpu_tools_targets_passed": 6,
+    "mps_skipped": true,
+    "loopback": true
+  },
+  "gemma": {
+    "checks": 23,
+    "http_checks": 9,
+    "max_relative_logit_error": 0.01129803080436406,
+    "cache_wrap_tested": true,
+    "batching_and_cancellation_tested": true
+  },
+  "training_torch210": {
+    "native_median_ms": 48.591208,
+    "failed_variants": [],
+    "parity": [
+      {
+        "variant": "torch-reference-compiled-parity.json",
+        "verified": true,
+        "vector_errors": {
+          "gradient": {
+            "relative_l2_error": 0.006559201342946146,
+            "cosine_similarity": 0.9999784896374795,
+            "relative_l2_limit": 0.02,
+            "cosine_limit": 0.99
+          },
+          "update": {
+            "relative_l2_error": 0.08906148117470862,
+            "cosine_similarity": 0.9960340283723279,
+            "relative_l2_limit": 0.15,
+            "cosine_limit": 0.985
+          }
+        }
+      },
+      {
+        "variant": "torch-sdpa-eager-fused-parity.json",
+        "verified": true,
+        "vector_errors": {
+          "gradient": {
+            "relative_l2_error": 0.006561570066477771,
+            "cosine_similarity": 0.9999784732148357,
+            "relative_l2_limit": 0.02,
+            "cosine_limit": 0.99
+          },
+          "update": {
+            "relative_l2_error": 0.09035370930793246,
+            "cosine_similarity": 0.9959181259275882,
+            "relative_l2_limit": 0.15,
+            "cosine_limit": 0.985
+          }
+        }
+      },
+      {
+        "variant": "torch-reference-compiled-fused-parity.json",
+        "verified": true,
+        "vector_errors": {
+          "gradient": {
+            "relative_l2_error": 0.006559201342946146,
+            "cosine_similarity": 0.9999784896374795,
+            "relative_l2_limit": 0.02,
+            "cosine_limit": 0.99
+          },
+          "update": {
+            "relative_l2_error": 0.08906148104148214,
+            "cosine_similarity": 0.9960340284889644,
+            "relative_l2_limit": 0.15,
+            "cosine_limit": 0.985
+          }
+        }
+      },
+      {
+        "variant": "torch-reference-eager-fused-parity.json",
+        "verified": true,
+        "vector_errors": {
+          "gradient": {
+            "relative_l2_error": 0.006597773897570476,
+            "cosine_similarity": 0.9999782344541753,
+            "relative_l2_limit": 0.02,
+            "cosine_limit": 0.99
+          },
+          "update": {
+            "relative_l2_error": 0.09038358657600516,
+            "cosine_similarity": 0.9959154036636387,
+            "relative_l2_limit": 0.15,
+            "cosine_limit": 0.985
+          }
+        }
+      },
+      {
+        "variant": "torch-sdpa-compiled-parity.json",
+        "verified": true,
+        "vector_errors": {
+          "gradient": {
+            "relative_l2_error": 0.006516094107558766,
+            "cosine_similarity": 0.9999787711480236,
+            "relative_l2_limit": 0.02,
+            "cosine_limit": 0.99
+          },
+          "update": {
+            "relative_l2_error": 0.08893716572068347,
+            "cosine_similarity": 0.9960450999413532,
+            "relative_l2_limit": 0.15,
+            "cosine_limit": 0.985
+          }
+        }
+      },
+      {
+        "variant": "torch-sdpa-eager-parity.json",
+        "verified": true,
+        "vector_errors": {
+          "gradient": {
+            "relative_l2_error": 0.006561570066477771,
+            "cosine_similarity": 0.9999784732148357,
+            "relative_l2_limit": 0.02,
+            "cosine_limit": 0.99
+          },
+          "update": {
+            "relative_l2_error": 0.09035371030771622,
+            "cosine_similarity": 0.9959181257527612,
+            "relative_l2_limit": 0.15,
+            "cosine_limit": 0.985
+          }
+        }
+      },
+      {
+        "variant": "torch-sdpa-compiled-fused-parity.json",
+        "verified": true,
+        "vector_errors": {
+          "gradient": {
+            "relative_l2_error": 0.006516094107558766,
+            "cosine_similarity": 0.9999787711480236,
+            "relative_l2_limit": 0.02,
+            "cosine_limit": 0.99
+          },
+          "update": {
+            "relative_l2_error": 0.08893716433917404,
+            "cosine_similarity": 0.9960451001516615,
+            "relative_l2_limit": 0.15,
+            "cosine_limit": 0.985
+          }
+        }
+      },
+      {
+        "variant": "torch-reference-eager-parity.json",
+        "verified": true,
+        "vector_errors": {
+          "gradient": {
+            "relative_l2_error": 0.006597773897570476,
+            "cosine_similarity": 0.9999782344541753,
+            "relative_l2_limit": 0.02,
+            "cosine_limit": 0.99
+          },
+          "update": {
+            "relative_l2_error": 0.09038358525529554,
+            "cosine_similarity": 0.9959154036791865,
+            "relative_l2_limit": 0.15,
+            "cosine_limit": 0.985
+          }
+        }
+      }
+    ]
+  },
+  "tiny_mps_sft": {
+    "steps": 80,
+    "initial_loss": 5.608182,
+    "final_loss": 0.027425,
+    "greedy_prompt": "Say hi.",
+    "greedy_response": "Hi!"
+  },
+  "asan": "Runtime remains unverified on this machine; see the existing performance report.",
+  "serving": [
+    {
+      "variant": "vllm-metal",
+      "exact_greedy_reference_match": false,
+      "workloads": [
+        {
+          "concurrency": 1,
+          "median_output_tokens_per_second": 93.54963678109989,
+          "median_ttft_ms": 51.535499980673194,
+          "p95_ttft_ms": 53.50724997697398,
+          "median_request_ms": 683.9879580074921,
+          "p95_request_ms": 688.9192080125213,
+          "median_observed_token_interval_ms": 10.303375020157546
+        },
+        {
+          "concurrency": 4,
+          "median_output_tokens_per_second": 187.7814945905302,
+          "median_ttft_ms": 169.8091669823043,
+          "p95_ttft_ms": 170.6296670017764,
+          "median_request_ms": 1358.856333012227,
+          "p95_request_ms": 1364.1251250519417,
+          "median_observed_token_interval_ms": 19.36362503329292
+        },
+        {
+          "concurrency": 8,
+          "median_output_tokens_per_second": 221.720228186482,
+          "median_ttft_ms": 299.1321660229005,
+          "p95_ttft_ms": 320.8477080333978,
+          "median_request_ms": 2301.4877500245348,
+          "p95_request_ms": 2311.2511670333333,
+          "median_observed_token_interval_ms": 32.19995799008757
+        }
+      ]
+    },
+    {
+      "variant": "vllm-metal-compiled-mlp",
+      "exact_greedy_reference_match": false,
+      "workloads": [
+        {
+          "concurrency": 1,
+          "median_output_tokens_per_second": 92.26840610487326,
+          "median_ttft_ms": 52.542207995429635,
+          "p95_ttft_ms": 53.97199996514246,
+          "median_request_ms": 693.5444169794209,
+          "p95_request_ms": 693.9443330047652,
+          "median_observed_token_interval_ms": 10.372624965384603
+        },
+        {
+          "concurrency": 4,
+          "median_output_tokens_per_second": 189.0320374659761,
+          "median_ttft_ms": 163.53125002933666,
+          "p95_ttft_ms": 172.9276250116527,
+          "median_request_ms": 1349.545166012831,
+          "p95_request_ms": 1355.2843329962343,
+          "median_observed_token_interval_ms": 19.0815000096336
+        },
+        {
+          "concurrency": 8,
+          "median_output_tokens_per_second": 223.34614665973533,
+          "median_ttft_ms": 296.7525840504095,
+          "p95_ttft_ms": 318.5199170256965,
+          "median_request_ms": 2288.2222500047646,
+          "p95_request_ms": 2294.8555829934776,
+          "median_observed_token_interval_ms": 31.939250009600073
+        }
+      ]
+    },
+    {
+      "variant": "native",
+      "exact_greedy_reference_match": true,
+      "workloads": [
+        {
+          "concurrency": 1,
+          "median_output_tokens_per_second": 113.95538793715761,
+          "median_ttft_ms": 33.98004098562524,
+          "p95_ttft_ms": 34.11037498153746,
+          "median_request_ms": 561.5564169711433,
+          "p95_request_ms": 569.5834999787621,
+          "median_observed_token_interval_ms": 8.313167025335133
+        },
+        {
+          "concurrency": 4,
+          "median_output_tokens_per_second": 204.01046595148685,
+          "median_ttft_ms": 83.70816597016528,
+          "p95_ttft_ms": 130.01124997390434,
+          "median_request_ms": 1245.0884580030106,
+          "p95_request_ms": 1264.7488749935292,
+          "median_observed_token_interval_ms": 17.836624989286065
+        },
+        {
+          "concurrency": 8,
+          "median_output_tokens_per_second": 226.7731252805625,
+          "median_ttft_ms": 225.6561669637449,
+          "p95_ttft_ms": 229.27708295173943,
+          "median_request_ms": 2249.7971249977127,
+          "p95_request_ms": 2262.262791977264,
+          "median_observed_token_interval_ms": 32.25729102268815
+        }
+      ]
+    }
+  ],
+  "full_model_fp32_fused_adamw": {
+    "verified": true,
+    "vector_errors": {
+      "gradient": {
+        "relative_l2_error": 2.2611459829476376e-06,
+        "cosine_similarity": 0.9999999999974442,
+        "relative_l2_limit": 0.005,
+        "cosine_limit": 0.99
+      },
+      "update": {
+        "relative_l2_error": 0.0001090860991990268,
+        "cosine_similarity": 0.9999999940501121,
+        "relative_l2_limit": 0.02,
+        "cosine_limit": 0.99
+      }
+    },
+    "checked_tensors": null
+  }
+}

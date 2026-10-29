@@ -1,0 +1,41 @@
+[  6%] Building OBJCXX object CMakeFiles/mini_mla.dir/src/backends/mps_backend.mm.o
+[  6%] Building CXX object CMakeFiles/mini_mla.dir/src/train/trainer.cpp.o
+[  6%] Building CXX object CMakeFiles/mini_mla.dir/src/infer/inference.cpp.o
+[  8%] Building CXX object CMakeFiles/mini_mla.dir/src/serve/server.cpp.o
+[ 10%] Linking CXX static library libmini_mla.a
+[ 43%] Built target mini_mla
+[ 45%] Building CXX object CMakeFiles/mini_mla_info.dir/apps/info_main.cpp.o
+[ 50%] Linking CXX executable bin/test_tensor
+[ 50%] Building CXX object CMakeFiles/mini_mla_serve.dir/apps/serve_main.cpp.o
+[ 52%] Building CXX object CMakeFiles/mini_mla_generate.dir/apps/generate_main.cpp.o
+[ 56%] Building CXX object CMakeFiles/mini_mla_inspect.dir/apps/inspect_main.cpp.o
+[ 56%] Building CXX object CMakeFiles/mini_mla_tokenize.dir/apps/tokenize_main.cpp.o
+[ 58%] Building CXX object CMakeFiles/mini_mla_train.dir/apps/train_main.cpp.o
+[ 60%] Building CXX object CMakeFiles/mini_mla_bench.dir/apps/bench_main.cpp.o
+[ 63%] Built target test_tensor
+[ 65%] Linking CXX executable bin/test_ops
+[ 67%] Built target test_ops
+[ 69%] Linking CXX executable bin/test_model
+[ 71%] Built target test_model
+[ 73%] Linking CXX executable bin/test_files
+[ 76%] Built target test_files
+[ 78%] Building CXX object CMakeFiles/test_training.dir/tests/test_training.cpp.o
+[ 80%] Linking CXX executable bin/mini_mla_serve
+[ 82%] Linking CXX executable bin/mini_mla_info
+[ 84%] Linking CXX executable bin/mini_mla_train
+[ 86%] Linking CXX executable bin/mini_mla_tokenize
+[ 86%] Built target mini_mla_serve
+[ 89%] Linking CXX executable bin/mini_mla_generate
+[ 89%] Built target mini_mla_info
+[ 91%] Linking CXX executable bin/mini_mla_inspect
+[ 93%] Building CXX object CMakeFiles/test_mps.dir/tests/test_mps.cpp.o
+[ 93%] Built target mini_mla_train
+[ 93%] Built target mini_mla_tokenize
+[ 93%] Built target mini_mla_generate
+[ 93%] Built target mini_mla_inspect
+[ 95%] Linking CXX executable bin/mini_mla_bench
+[ 95%] Built target mini_mla_bench
+[ 97%] Linking CXX executable bin/test_training
+[ 97%] Built target test_training
+[100%] Linking CXX executable bin/test_mps
+[100%] Built target test_mps

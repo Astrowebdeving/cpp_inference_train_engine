@@ -1,0 +1,19 @@
+[ 40%] Built target mini_mla
+[ 51%] Built target mini_mla_train
+[ 53%] Built target mini_mla_info
+[ 57%] Built target mini_mla_inspect
+[ 57%] Built target mini_mla_tokenize
+[ 65%] Built target mini_mla_generate
+[ 65%] Built target mini_mla_serve
+[ 73%] Built target mini_mla_bench
+[ 75%] Built target mini_mla_gemma
+[ 81%] Built target test_ops
+[ 85%] Built target test_tensor
+[ 87%] Built target test_model
+[ 89%] Building CXX object CMakeFiles/test_training.dir/tests/test_training.cpp.o
+[ 93%] Building CXX object CMakeFiles/test_mps.dir/tests/test_mps.cpp.o
+[ 95%] Built target test_files
+[ 97%] Linking CXX executable bin/test_training
+[100%] Linking CXX executable bin/test_mps
+[100%] Built target test_training
+[100%] Built target test_mps

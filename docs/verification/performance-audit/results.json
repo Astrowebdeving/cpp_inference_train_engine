@@ -1,0 +1,106 @@
+{
+  "recorded_utc": "2026-10-09T05:02:21.022940+00:00",
+  "platform": "macOS-26.7.1-arm64-arm-64bit",
+  "cpp_cases": 67,
+  "python_cases": 9,
+  "release_ctest_targets_passed": 7,
+  "ubsan_cpu_tools_targets_passed": 6,
+  "ubsan_mps": "disabled, skipped",
+  "gemma_engine_checks": 51,
+  "gemma_http_checks": 9,
+  "gemma_cache_cases": [
+    {
+      "case": "packed-sliding-wrap",
+      "steps": 6,
+      "bitwise_equal_logits": true,
+      "reused_batches": 6
+    },
+    {
+      "case": "packed-reorder",
+      "steps": 2,
+      "bitwise_equal_logits": true,
+      "reused_batches": 1
+    },
+    {
+      "case": "packed-shrink",
+      "steps": 2,
+      "bitwise_equal_logits": true,
+      "reused_batches": 1
+    },
+    {
+      "case": "packed-mixed-replacement",
+      "steps": 6,
+      "bitwise_equal_logits": true,
+      "reused_batches": 5
+    },
+    {
+      "case": "packed-different-ring-cursors",
+      "steps": 4,
+      "bitwise_equal_logits": true,
+      "reused_batches": 3
+    },
+    {
+      "case": "packed-mixed-enter-ring",
+      "steps": 6,
+      "bitwise_equal_logits": true,
+      "reused_batches": 5
+    }
+  ],
+  "gemma_max_relative_logit_error": 0.01129803080436406,
+  "full_model_muon_parameters_checked": 132,
+  "full_model_muon_checks": 396,
+  "muon_update_max_relative_l2": 1.6247840133715186e-05,
+  "muon_update_min_cosine": 0.9999999998680054,
+  "muon_learning": {
+    "initialization": "random",
+    "precision": "fp16",
+    "backend": "mps",
+    "order": "gram",
+    "steps": 80,
+    "initial_loss": 5.608182430267334,
+    "final_loss": 0.13129451870918274,
+    "prompt": "Say hi.",
+    "response": "Hi!",
+    "verification": "smoke.py checked response and completed resume/export"
+  },
+  "source_sha256": {
+    "include/mini_mla/execution.hpp": "5cb95a811b517ad97880835054042d3e3a83cb3b5827e42cc51179f237df058a",
+    "include/mini_mla/trainer.hpp": "be8d3075baaa7dc8bf1f123a7678222cc139da2f90171ac05748f46d0e95b913",
+    "include/mini_mla/gemma.hpp": "46e2913cb1e242041180ec8816054c7ea378517fbf218284f97f266e398795f2",
+    "include/mini_mla/optimizer.hpp": "b8cb1004207e926cd1a06253fe75f56bdbbe70530a06819f568d38d8379e708f",
+    "src/backends/mps_backend.mm": "591e5fd52066e80da2102234c39d0f50dc670e305e15f8dcb8606e6f8c563efb",
+    "src/backends/adamw.metal": "b56628f4a4864af1550d411fb79b730f3ef4d8a0477fd235136d36e8515cee25",
+    "src/backends/flash_attention.metal": "dd211216bc69d92bd16dc72cf4204a60ec6f510cedb5c8f017be9426ff30a623",
+    "src/train/optimizer.cpp": "f61853df0c4cb32d92eb96ce69c5b4aec9a44152b2e1e991d33d6635782f31a4",
+    "src/train/trainer.cpp": "f0c53704f2aea073dc19b767b066f4b55022219def3a9f2bf7bca3238674c39a",
+    "src/infer/gemma.cpp": "36ca00f7eda017c95b71b7d93ccba36d7fa59f9dc3b058c12b677096e488b1a1",
+    "apps/app_utils.hpp": "137be9c8bfec5710eb21dd8f7af9ad078e6cf5dcea19a5c33fc5b225586e19ad",
+    "apps/train_main.cpp": "fc5589bfc243939d038714a8459694011dbba1b1e89b2dacf081538447f64b48",
+    "apps/bench_main.cpp": "d18036e3f43918ffba140932e47a22e769ffac39e77c26213a1f63e2504ca67c",
+    "apps/gemma_main.cpp": "341c1bcf23afb490694b80b4a8dd79a322c9738aaf6d3c91ae7b910d99c22066",
+    "tools/gemma_runtime.py": "93088932d7dae21b8ddc89e4c98462adc204af7451aabb3a546a6541b8043bf5",
+    "tools/gemma_server.py": "9724593a03a70f7e17683ff204738ff304341eef9b665b810e7aec354bdf601e",
+    "tools/compare_serving.py": "6dba53e0c315ea16cbd0ba7a78f518373895a1557537c0f8e91f3a1ebcaddd14",
+    "tools/smoke.py": "a5ed0a1b03771816c3d7b198f9ab5a36f10fe7d6926dd1d2e760f1b58a81e0ba",
+    "tests/test_training.cpp": "e70e1cbf6364f3c074bc5bcfa62097ce06ff2ceafc0d4c2d21a588b87aab91cb",
+    "tests/test_mps.cpp": "d292920b529948c0b11934cb7139eb388e0b3475fb59339ffeacfd55c90d0487",
+    "tests/test_tools.py": "84d59c559b90f9f36099a51822487c72954196e37ac25b5b23dd161935c9ae56",
+    "tests/test_gemma.py": "a3049366d393ff51aa4209842ea5286d39409be7ab250850c610d528f0d96eeb",
+    "tests/test_gemma_http.py": "0d60dd9cf7c64c5393a3971970f438598495218ea678614d08fe397d5355feba",
+    "config/mla36m-v1.json": "5a02506bf5bb2a0c9fab76fb5aaa8efb57ee5e118a71eca005d9fc20ceec87eb",
+    "config/muon-metal.json": "356ca6ff175fdc0b75530dde5f2f2263720c68e4d2b4469577efa7afa92b47ff",
+    "CMakeLists.txt": "681c435d2ff902577aa85b3fc3a32e785d4a97c4dc856a1c172c38a33044cf9c"
+  },
+  "binary_sha256": {
+    "mini_mla_gemma": "a3ab13c72520967267bf4f6f3a809330dc65c7fd911977f0202661fe9555622e",
+    "mini_mla_train": "cdc96cbbe9d4247589b12df2899840522fa49fb54a747b2fcd620fc379e31cfb",
+    "mini_mla_bench": "410ad1501c51a4d457217e71e3e94a5471acdb254e6a9e579f84c32b60ab6711",
+    "test_mps": "e08b440bb26403a6a81f658a08ccb10a7af7f48d34e83453ebff117d93b1afb7"
+  },
+  "benchmarks": "../../benchmarks/performance-audit/comparison.json",
+  "limits": [
+    "ASan remains unverified on this host; this audit used CPU UBSan and actual Metal tests.",
+    "Checkpoint replay gates cover small tested models; full-model first-update agreement does not establish identical long-term training.",
+    "Gemma is inference-only; training throughput concerns the custom MLA model."
+  ]
+}

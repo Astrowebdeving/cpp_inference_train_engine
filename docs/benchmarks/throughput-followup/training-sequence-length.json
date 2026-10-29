@@ -1,0 +1,110 @@
+{
+  "AdamW FP16, 32 x 256": {
+    "original": {
+      "ms": 426.24,
+      "tokens_per_second": 19219,
+      "runs_ms": [
+        427.05,
+        425.43
+      ]
+    },
+    "final (default)": {
+      "ms": 273.41,
+      "tokens_per_second": 29962,
+      "runs_ms": [
+        273.42,
+        273.4
+      ]
+    }
+  },
+  "AdamW FP16, 8 x 512": {
+    "original": {
+      "ms": 213.7,
+      "tokens_per_second": 19167,
+      "runs_ms": [
+        213.59,
+        213.81
+      ]
+    },
+    "final (default)": {
+      "ms": 159.09,
+      "tokens_per_second": 25746,
+      "runs_ms": [
+        159.04,
+        159.14
+      ]
+    }
+  },
+  "AdamW FP16, 4 x 1024": {
+    "original": {
+      "ms": 237.69,
+      "tokens_per_second": 17233,
+      "runs_ms": [
+        237.05,
+        238.33
+      ]
+    },
+    "final (default)": {
+      "ms": 185.37,
+      "tokens_per_second": 22096,
+      "runs_ms": [
+        185.21,
+        185.54
+      ]
+    }
+  },
+  "AdamW FP16, 1 x 1024": {
+    "original": {
+      "ms": 54.38,
+      "tokens_per_second": 18830,
+      "runs_ms": [
+        54.3,
+        54.47
+      ]
+    },
+    "final (default)": {
+      "ms": 51.07,
+      "tokens_per_second": 20052,
+      "runs_ms": [
+        51.04,
+        51.09
+      ]
+    }
+  },
+  "AdamW FP16, 1 x 1536": {
+    "original": {
+      "ms": 118.28,
+      "tokens_per_second": 12986,
+      "runs_ms": [
+        118.24,
+        118.31
+      ]
+    },
+    "final (default)": {
+      "ms": 85.2,
+      "tokens_per_second": 18029,
+      "runs_ms": [
+        85.23,
+        85.16
+      ]
+    }
+  },
+  "AdamW FP16, 1 x 2040": {
+    "original": {
+      "ms": 171.74,
+      "tokens_per_second": 11879,
+      "runs_ms": [
+        171.57,
+        171.9
+      ]
+    },
+    "final (default)": {
+      "ms": 128.73,
+      "tokens_per_second": 15847,
+      "runs_ms": [
+        128.69,
+        128.77
+      ]
+    }
+  }
+}

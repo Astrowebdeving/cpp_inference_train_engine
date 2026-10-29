@@ -1,0 +1,5 @@
+Apple M2 Max / MPSGraph / fp32; 35763840 parameters; mode=pretrain
+step=1 loss=10.256630 lr=0.0003 grad=87.9117 tok/s=80.5
+step=2 loss=8.911550 lr=0.0003 grad=76.8493 tok/s=1019.0
+step=3 loss=7.864143 lr=0.0002325 grad=24.8626 tok/s=1333.8
+step=4 loss=7.274985 lr=9.75e-05 grad=12.0448 tok/s=1569.0

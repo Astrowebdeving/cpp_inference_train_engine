@@ -1,0 +1,28 @@
+{
+  "weights.bin": {
+    "max_abs_error": 1.1920928955078125e-07,
+    "different_elements": 1875300,
+    "elements": 35763840,
+    "passed_tolerance": true
+  },
+  "optimizer.bin": {
+    "max_abs_error": 3.725290298461914e-09,
+    "different_elements": 51675929,
+    "elements": 71527680,
+    "passed_tolerance": true
+  },
+  "trainer_state_differences": {
+    "best_validation": {
+      "before": 5.307705625240458,
+      "after": 5.307705660717507
+    }
+  },
+  "data_and_rng_exact": true,
+  "backend": "mps",
+  "precision": "fp32",
+  "replayed_steps": [
+    7,
+    12
+  ],
+  "bit_exact": false
+}

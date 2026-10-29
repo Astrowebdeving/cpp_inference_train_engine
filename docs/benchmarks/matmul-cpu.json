@@ -1,0 +1,1 @@
+{"backend":"cpu","baseline_median_ms":12.807791,"batch":1,"compiler":"Apple LLVM 17.0.0 (clang-1700.6.4.2)","correctness_error":0,"dimensions":[256,1360,512],"gflops":2373.4652384344481,"kind":"matmul","median_ms":0.15020900000000001,"p95_ms":0.155333,"peak_rss_bytes":12664832,"precision":"fp32","repetitions":20,"sequence_length":32,"speedup":85.266468720249776,"warmup":3}

@@ -1,0 +1,11 @@
+test_dataset_splits_are_reproducible_and_content_based (__main__.Tools.test_dataset_splits_are_reproducible_and_content_based) ... ok
+test_grpo_improves_fixed_seed_rewards_and_resumes_exactly (__main__.Tools.test_grpo_improves_fixed_seed_rewards_and_resumes_exactly) ... ok
+test_native_debug_state_matches_independent_pytorch (__main__.Tools.test_native_debug_state_matches_independent_pytorch) ... ok
+test_preference_training_increases_margin (__main__.Tools.test_preference_training_increases_margin) ... ok
+test_sft_overfits_and_resume_matches_uninterrupted (__main__.Tools.test_sft_overfits_and_resume_matches_uninterrupted) ... ok
+test_tokenizers_match_heap_and_slow_reference (__main__.Tools.test_tokenizers_match_heap_and_slow_reference) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 4.666s
+
+OK

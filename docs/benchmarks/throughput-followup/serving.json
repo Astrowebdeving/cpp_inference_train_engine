@@ -1,0 +1,159 @@
+{
+  "method": "tools/compare_serving.py --native-only, 128-token prompts, 64 generated tokens, one warmup and five bursts per concurrency, real HTTP/SSE. Both runs use the same engine binary; only the Python serving layer differs. Run back to back in one session.",
+  "original_serving_layer": {
+    "workloads": {
+      "1": {
+        "output_tokens_per_second_median": 109.86,
+        "output_tokens_per_second_runs": [
+          109.55,
+          109.81,
+          109.86,
+          110.57,
+          110.89
+        ],
+        "first_token_ms": {
+          "min": 33.8,
+          "median": 34.1,
+          "p95": 34.3
+        },
+        "request_latency_ms": {
+          "median": 582.5,
+          "p95": 584.1
+        }
+      },
+      "4": {
+        "output_tokens_per_second_median": 205.22,
+        "output_tokens_per_second_runs": [
+          203.9,
+          204.64,
+          205.22,
+          207.07,
+          207.93
+        ],
+        "first_token_ms": {
+          "min": 82.5,
+          "median": 83.7,
+          "p95": 131.4
+        },
+        "request_latency_ms": {
+          "median": 1237.9,
+          "p95": 1250.6
+        }
+      },
+      "8": {
+        "output_tokens_per_second_median": 223.37,
+        "output_tokens_per_second_runs": [
+          217.72,
+          222.06,
+          223.37,
+          225.77,
+          225.85
+        ],
+        "first_token_ms": {
+          "min": 61.0,
+          "median": 230.7,
+          "p95": 243.5
+        },
+        "request_latency_ms": {
+          "median": 2289.1,
+          "p95": 2350.4
+        }
+      }
+    },
+    "exact_greedy_reference_match": true
+  },
+  "final_serving_layer": {
+    "workloads": {
+      "1": {
+        "output_tokens_per_second_median": 111.13,
+        "output_tokens_per_second_runs": [
+          110.44,
+          110.82,
+          111.13,
+          111.33,
+          113.06
+        ],
+        "first_token_ms": {
+          "min": 35.3,
+          "median": 36.3,
+          "p95": 36.7
+        },
+        "request_latency_ms": {
+          "median": 575.8,
+          "p95": 579.4
+        }
+      },
+      "4": {
+        "output_tokens_per_second_median": 210.53,
+        "output_tokens_per_second_runs": [
+          209.56,
+          210.4,
+          210.53,
+          211.63,
+          212.18
+        ],
+        "first_token_ms": {
+          "min": 111.2,
+          "median": 111.7,
+          "p95": 113.0
+        },
+        "request_latency_ms": {
+          "median": 1215.0,
+          "p95": 1221.2
+        }
+      },
+      "8": {
+        "output_tokens_per_second_median": 228.95,
+        "output_tokens_per_second_runs": [
+          225.65,
+          226.96,
+          228.95,
+          229.61,
+          239.25
+        ],
+        "first_token_ms": {
+          "min": 203.8,
+          "median": 214.0,
+          "p95": 219.8
+        },
+        "request_latency_ms": {
+          "median": 2234.0,
+          "p95": 2267.6
+        }
+      }
+    },
+    "exact_greedy_reference_match": true
+  },
+  "long_generation_scheduler_only": {
+    "method": "scripts/sched_profile.py: scheduler without HTTP, 1,024 generated tokens per request; wall time minus engine-reported time is host overhead. One run per layer, back to back.",
+    "original": {
+      "1x1024": {
+        "wall_ms": 9940.1,
+        "engine_ms": 9508.5,
+        "outside_engine_ms": 431.6,
+        "tokens_per_second": 103.0
+      },
+      "8x1024": {
+        "wall_ms": 36333.2,
+        "engine_ms": 33133.6,
+        "outside_engine_ms": 3199.5,
+        "tokens_per_second": 225.5
+      }
+    },
+    "final": {
+      "1x1024": {
+        "wall_ms": 9527.1,
+        "engine_ms": 9397.4,
+        "outside_engine_ms": 129.7,
+        "tokens_per_second": 107.5
+      },
+      "8x1024": {
+        "wall_ms": 34029.4,
+        "engine_ms": 33287.4,
+        "outside_engine_ms": 742.0,
+        "tokens_per_second": 240.7
+      }
+    }
+  },
+  "engine_note": "src/infer/gemma.cpp and apps/gemma_main.cpp are unchanged. A decode step is 96-98% MLX kernel evaluation (batch one: 0.34 ms graph construction, 7.5-8.3 ms evaluation; process round trip 0.04 ms)."
+}

@@ -1,0 +1,4 @@
+#pragma once
+namespace mini_mla::metal {
+inline constexpr char adamw_source[] = R"mini_mla_msl(@MINI_MLA_ADAMW_SOURCE@)mini_mla_msl";
+}

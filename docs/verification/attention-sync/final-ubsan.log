@@ -1,0 +1,17 @@
+Test project /private/tmp/mla-attention-work/build-ubsan
+    Start 1: tensor
+1/6 Test #1: tensor ...........................   Passed    0.01 sec
+    Start 2: ops
+2/6 Test #2: ops ..............................   Passed    0.01 sec
+    Start 3: model
+3/6 Test #3: model ............................   Passed    0.01 sec
+    Start 4: files
+4/6 Test #4: files ............................   Passed    0.07 sec
+    Start 5: training
+5/6 Test #5: training .........................   Passed    0.10 sec
+    Start 6: tools
+6/6 Test #6: tools ............................   Passed   28.29 sec
+
+100% tests passed, 0 tests failed out of 6
+
+Total Test time (real) =  28.50 sec

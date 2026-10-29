@@ -1,0 +1,72 @@
+{
+  "AdamW FP16, seq 256, microbatch 2 x accum 16": {
+    "original": {
+      "ms": 426.06,
+      "tokens_per_second": 19227,
+      "runs_ms": [
+        425.66,
+        426.47
+      ]
+    },
+    "final, no merge": {
+      "ms": 360.37,
+      "tokens_per_second": 22732,
+      "runs_ms": [
+        360.79,
+        359.94
+      ]
+    },
+    "final (default, 4096/pass)": {
+      "ms": 289.28,
+      "tokens_per_second": 28319,
+      "runs_ms": [
+        289.21,
+        289.35
+      ]
+    },
+    "final, 8192/pass": {
+      "ms": 274.29,
+      "tokens_per_second": 29866,
+      "runs_ms": [
+        274.19,
+        274.39
+      ]
+    }
+  },
+  "AdamW FP16, seq 128, microbatch 2 x accum 16": {
+    "original": {
+      "ms": 299.96,
+      "tokens_per_second": 13655,
+      "runs_ms": [
+        300.24,
+        299.69
+      ]
+    },
+    "final (default, 4096/pass)": {
+      "ms": 140.6,
+      "tokens_per_second": 29132,
+      "runs_ms": [
+        141.03,
+        140.17
+      ]
+    }
+  },
+  "Muon FP16, seq 256, microbatch 2 x accum 16": {
+    "original (gram)": {
+      "ms": 471.48,
+      "tokens_per_second": 17375,
+      "runs_ms": [
+        467.95,
+        475.01
+      ]
+    },
+    "final (default)": {
+      "ms": 327.51,
+      "tokens_per_second": 25013,
+      "runs_ms": [
+        327.18,
+        327.85
+      ]
+    }
+  }
+}

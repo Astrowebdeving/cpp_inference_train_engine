@@ -1,0 +1,73 @@
+{
+  "recorded_utc": "2026-10-08T02:41:22.644331+00:00",
+  "cpp_cases": 67,
+  "python_cases": 9,
+  "ctest_targets_passed": 7,
+  "ubsan_cpu_tools_targets_passed": 6,
+  "ubsan_mps": "disabled, skipped",
+  "muon_parity": {
+    "layouts": [
+      "individual",
+      "batched"
+    ],
+    "gpu_precisions": [
+      "fp32",
+      "fp16"
+    ],
+    "cpu_precision": "fp32",
+    "cpu_weight_moment_absolute_tolerance": 5e-05,
+    "gpu_layout_weight_moment_absolute_tolerance": 2e-05,
+    "cases": [
+      "Nesterov on and off",
+      "3 and 5 iterations",
+      "clipping on and off",
+      "nonzero initial moments",
+      "zero-gradient updates with zero and nonzero momentum",
+      "signed accumulation",
+      "two further updates after checkpoint reload"
+    ],
+    "small_model_resume": "bitwise weights and moments"
+  },
+  "learning": {
+    "command": [
+      "python3",
+      "tools/smoke.py",
+      "--backend",
+      "mps",
+      "--precision",
+      "fp16",
+      "--optimizer",
+      "muon",
+      "--output",
+      "artifacts/muon-metal-sft-20261007"
+    ],
+    "initialization": "random",
+    "steps": 80,
+    "initial_loss": 5.608182430267334,
+    "final_loss": 0.13143208622932434,
+    "prompt": "Say hi.",
+    "response": "Hi!"
+  },
+  "benchmark": "../../benchmarks/muon-metal/comparison.json",
+  "source_sha256": {
+    "include/mini_mla/execution.hpp": "6168b7d727a30e203df254e5f75c86c99061ff4b69cf2073ed9903b92b686171",
+    "include/mini_mla/trainer.hpp": "65a651b3d537971a1abcd028e668dd593381e12732de459e92d4f72ca3e99cac",
+    "src/backends/mps_backend.mm": "fd349d560f381a81eaafa0c6273fec0158f8adf8f038ec9c134e6711a0d07ca5",
+    "src/infer/inference.cpp": "b582fff0342b2e856893d9c2e1bfc477794c73cf1000522562e1cf89a828fe56",
+    "src/train/trainer.cpp": "2a2277243a5fcd5a6317be94843f6a294077f5d9b398fe3029b66f710336d4aa",
+    "apps/app_utils.hpp": "94f2bf8a4e12181195e67ca999f67c63997c184993096802d614b4c77d764a4c",
+    "apps/train_main.cpp": "e76d3d838febc2e95e22da08fe57abd3b17cfa6edc3e17b0dd61a84e3369158a",
+    "apps/bench_main.cpp": "896e12525b68057826e0728cc16c401a3013da7e656d48f7d03a98f4ecafb517",
+    "tests/test_training.cpp": "2ac5cfe52cf080febd7cae24364e224d01e7f01430cb5dbac8e002f8af98938a",
+    "tests/test_mps.cpp": "b6a38a93d89076124ca12de3b4a3c6fbef8bd8b210bb64c51cc80132b09a48be",
+    "tests/test_tools.py": "fe2479b297b3761d49adae0fdb94829693db6a42b7245e409d8e22af77c876ab",
+    "tools/smoke.py": "a5ed0a1b03771816c3d7b198f9ab5a36f10fe7d6926dd1d2e760f1b58a81e0ba",
+    "config/muon-metal.json": "c7414d0b6cc98bd8068a987f8986a153fd4f55607e2158909fcb0ba4e4f4fc66"
+  },
+  "binary_sha256": {
+    "mini_mla_train": "fa7742b0a86d9c025b9ec13ff8a8989b462bcebafbbb07d9ac55de0c90f35450",
+    "mini_mla_bench": "28aa47b449859d685d67c2d99af3d27a15a258bfd6dc99a63e4da9a4ef36e1aa",
+    "mini_mla_generate": "5d7bfe8d4cbe82c9d4a94927fe9cd8bdf094d27ce1b05b1148211feea9d1e1a1",
+    "test_mps": "655cf50d725d26907fc1b85699ec7612bdef18b162f3c51a0017b3f608b5cc48"
+  }
+}

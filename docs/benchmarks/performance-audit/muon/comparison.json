@@ -1,0 +1,1272 @@
+{
+  "recorded_utc": "2026-10-09T04:19:22Z",
+  "platform": "macOS-26.7.1-arm64-arm-64bit",
+  "commands": {
+    "chain-parity": [
+      "/Users/tu15/alex_cpp/CPP_Completed/build/bin/mini_mla_bench",
+      "--kind",
+      "train",
+      "--config",
+      "/Users/tu15/alex_cpp/CPP_Completed/config/mla36m-v1.json",
+      "--backend",
+      "mps",
+      "--precision",
+      "fp16",
+      "--attention",
+      "reference",
+      "--sequence-length",
+      "128",
+      "--microbatch",
+      "8",
+      "--grad-accum",
+      "1",
+      "--submission-window",
+      "4",
+      "--time-zero-grad",
+      "--optimizer",
+      "muon",
+      "--muon-layout",
+      "batched",
+      "--muon-ns-order",
+      "chain",
+      "--warmup",
+      "0",
+      "--repetitions",
+      "1",
+      "--comparison-data",
+      "/Users/tu15/alex_cpp/CPP_Completed/artifacts/performance-audit/muon/chain-parity-tensors"
+    ],
+    "gram-parity": [
+      "/Users/tu15/alex_cpp/CPP_Completed/build/bin/mini_mla_bench",
+      "--kind",
+      "train",
+      "--config",
+      "/Users/tu15/alex_cpp/CPP_Completed/config/mla36m-v1.json",
+      "--backend",
+      "mps",
+      "--precision",
+      "fp16",
+      "--attention",
+      "reference",
+      "--sequence-length",
+      "128",
+      "--microbatch",
+      "8",
+      "--grad-accum",
+      "1",
+      "--submission-window",
+      "4",
+      "--time-zero-grad",
+      "--optimizer",
+      "muon",
+      "--muon-layout",
+      "batched",
+      "--muon-ns-order",
+      "gram",
+      "--warmup",
+      "0",
+      "--repetitions",
+      "1",
+      "--comparison-data",
+      "/Users/tu15/alex_cpp/CPP_Completed/artifacts/performance-audit/muon/gram-parity-tensors"
+    ],
+    "chain-first": [
+      "/Users/tu15/alex_cpp/CPP_Completed/build/bin/mini_mla_bench",
+      "--kind",
+      "train",
+      "--config",
+      "/Users/tu15/alex_cpp/CPP_Completed/config/mla36m-v1.json",
+      "--backend",
+      "mps",
+      "--precision",
+      "fp16",
+      "--attention",
+      "reference",
+      "--sequence-length",
+      "128",
+      "--microbatch",
+      "8",
+      "--grad-accum",
+      "1",
+      "--submission-window",
+      "4",
+      "--time-zero-grad",
+      "--optimizer",
+      "muon",
+      "--muon-layout",
+      "batched",
+      "--muon-ns-order",
+      "chain",
+      "--warmup",
+      "3",
+      "--repetitions",
+      "30"
+    ],
+    "gram-first": [
+      "/Users/tu15/alex_cpp/CPP_Completed/build/bin/mini_mla_bench",
+      "--kind",
+      "train",
+      "--config",
+      "/Users/tu15/alex_cpp/CPP_Completed/config/mla36m-v1.json",
+      "--backend",
+      "mps",
+      "--precision",
+      "fp16",
+      "--attention",
+      "reference",
+      "--sequence-length",
+      "128",
+      "--microbatch",
+      "8",
+      "--grad-accum",
+      "1",
+      "--submission-window",
+      "4",
+      "--time-zero-grad",
+      "--optimizer",
+      "muon",
+      "--muon-layout",
+      "batched",
+      "--muon-ns-order",
+      "gram",
+      "--warmup",
+      "3",
+      "--repetitions",
+      "30"
+    ],
+    "gram-repeat": [
+      "/Users/tu15/alex_cpp/CPP_Completed/build/bin/mini_mla_bench",
+      "--kind",
+      "train",
+      "--config",
+      "/Users/tu15/alex_cpp/CPP_Completed/config/mla36m-v1.json",
+      "--backend",
+      "mps",
+      "--precision",
+      "fp16",
+      "--attention",
+      "reference",
+      "--sequence-length",
+      "128",
+      "--microbatch",
+      "8",
+      "--grad-accum",
+      "1",
+      "--submission-window",
+      "4",
+      "--time-zero-grad",
+      "--optimizer",
+      "muon",
+      "--muon-layout",
+      "batched",
+      "--muon-ns-order",
+      "gram",
+      "--warmup",
+      "3",
+      "--repetitions",
+      "30"
+    ],
+    "chain-repeat": [
+      "/Users/tu15/alex_cpp/CPP_Completed/build/bin/mini_mla_bench",
+      "--kind",
+      "train",
+      "--config",
+      "/Users/tu15/alex_cpp/CPP_Completed/config/mla36m-v1.json",
+      "--backend",
+      "mps",
+      "--precision",
+      "fp16",
+      "--attention",
+      "reference",
+      "--sequence-length",
+      "128",
+      "--microbatch",
+      "8",
+      "--grad-accum",
+      "1",
+      "--submission-window",
+      "4",
+      "--time-zero-grad",
+      "--optimizer",
+      "muon",
+      "--muon-layout",
+      "batched",
+      "--muon-ns-order",
+      "chain",
+      "--warmup",
+      "3",
+      "--repetitions",
+      "30"
+    ]
+  },
+  "results": {
+    "chain-parity": {
+      "attention_effective": "reference",
+      "attention_requested": "reference",
+      "backend": "mps",
+      "batch": 8,
+      "compiler": "Apple LLVM 17.0.0 (clang-1700.6.4.2)",
+      "correctness_error": 2.435627377295191e-05,
+      "cpu_correctness_checked": true,
+      "device": "Apple M2 Max / MPSGraph / fp16",
+      "grad_accum": 1,
+      "gradient_reset_timed": true,
+      "graph_submissions_per_update": 2,
+      "host_waits_per_update": 1,
+      "initial_loss": 9.803749084472656,
+      "kind": "train",
+      "last_gradient_norm": 7.674749851226807,
+      "last_loss": 9.803749084472656,
+      "median_ms": 316.991625,
+      "metal_kernel_submissions_per_update": 0,
+      "muon_layout": "batched",
+      "muon_ns_order": "chain",
+      "optimizer": {
+        "beta1": 0.8999999761581421,
+        "beta2": 0.949999988079071,
+        "clip_norm": 1,
+        "epsilon": 9.99999993922529e-09,
+        "kind": "hybrid_muon_adamw",
+        "momentum": 0.949999988079071,
+        "muon_variant": "moonlight-fp32-v1",
+        "nesterov": true,
+        "ns_steps": 5,
+        "weight_decay": 0.10000000149011612
+      },
+      "p95_ms": 316.991625,
+      "peak_rss_bytes": 2076901376,
+      "precision": "fp16",
+      "repetitions": 1,
+      "sequence_length": 128,
+      "submission_window": 4,
+      "tokens_per_second": 3230.3692566010222,
+      "warmup": 0
+    },
+    "gram-parity": {
+      "attention_effective": "reference",
+      "attention_requested": "reference",
+      "backend": "mps",
+      "batch": 8,
+      "compiler": "Apple LLVM 17.0.0 (clang-1700.6.4.2)",
+      "correctness_error": 2.435627377295191e-05,
+      "cpu_correctness_checked": true,
+      "device": "Apple M2 Max / MPSGraph / fp16",
+      "grad_accum": 1,
+      "gradient_reset_timed": true,
+      "graph_submissions_per_update": 2,
+      "host_waits_per_update": 1,
+      "initial_loss": 9.803749084472656,
+      "kind": "train",
+      "last_gradient_norm": 7.674749851226807,
+      "last_loss": 9.803749084472656,
+      "median_ms": 816.944875,
+      "metal_kernel_submissions_per_update": 0,
+      "muon_layout": "batched",
+      "muon_ns_order": "gram",
+      "optimizer": {
+        "beta1": 0.8999999761581421,
+        "beta2": 0.949999988079071,
+        "clip_norm": 1,
+        "epsilon": 9.99999993922529e-09,
+        "kind": "hybrid_muon_adamw",
+        "momentum": 0.949999988079071,
+        "muon_variant": "moonlight-fp32-v1",
+        "nesterov": true,
+        "ns_steps": 5,
+        "weight_decay": 0.10000000149011612
+      },
+      "p95_ms": 816.944875,
+      "peak_rss_bytes": 2077949952,
+      "precision": "fp16",
+      "repetitions": 1,
+      "sequence_length": 128,
+      "submission_window": 4,
+      "tokens_per_second": 1253.4505464643498,
+      "warmup": 0
+    },
+    "chain-first": {
+      "attention_effective": "reference",
+      "attention_requested": "reference",
+      "backend": "mps",
+      "batch": 8,
+      "compiler": "Apple LLVM 17.0.0 (clang-1700.6.4.2)",
+      "correctness_error": 2.435627377295191e-05,
+      "cpu_correctness_checked": true,
+      "device": "Apple M2 Max / MPSGraph / fp16",
+      "grad_accum": 1,
+      "gradient_reset_timed": true,
+      "graph_submissions_per_update": 2,
+      "host_waits_per_update": 1,
+      "initial_loss": 9.803749084472656,
+      "kind": "train",
+      "last_gradient_norm": 0.34470322728157043,
+      "last_loss": 0.12383604049682617,
+      "median_ms": 97.163917,
+      "metal_kernel_submissions_per_update": 0,
+      "muon_layout": "batched",
+      "muon_ns_order": "chain",
+      "optimizer": {
+        "beta1": 0.8999999761581421,
+        "beta2": 0.949999988079071,
+        "clip_norm": 1,
+        "epsilon": 9.99999993922529e-09,
+        "kind": "hybrid_muon_adamw",
+        "momentum": 0.949999988079071,
+        "muon_variant": "moonlight-fp32-v1",
+        "nesterov": true,
+        "ns_steps": 5,
+        "weight_decay": 0.10000000149011612
+      },
+      "p95_ms": 99.148209,
+      "peak_rss_bytes": 2082160640,
+      "precision": "fp16",
+      "repetitions": 30,
+      "sequence_length": 128,
+      "submission_window": 4,
+      "tokens_per_second": 10538.89171635598,
+      "warmup": 3
+    },
+    "gram-first": {
+      "attention_effective": "reference",
+      "attention_requested": "reference",
+      "backend": "mps",
+      "batch": 8,
+      "compiler": "Apple LLVM 17.0.0 (clang-1700.6.4.2)",
+      "correctness_error": 2.435627377295191e-05,
+      "cpu_correctness_checked": true,
+      "device": "Apple M2 Max / MPSGraph / fp16",
+      "grad_accum": 1,
+      "gradient_reset_timed": true,
+      "graph_submissions_per_update": 2,
+      "host_waits_per_update": 1,
+      "initial_loss": 9.803749084472656,
+      "kind": "train",
+      "last_gradient_norm": 0.3425079584121704,
+      "last_loss": 0.12519380450248718,
+      "median_ms": 90.060125,
+      "metal_kernel_submissions_per_update": 0,
+      "muon_layout": "batched",
+      "muon_ns_order": "gram",
+      "optimizer": {
+        "beta1": 0.8999999761581421,
+        "beta2": 0.949999988079071,
+        "clip_norm": 1,
+        "epsilon": 9.99999993922529e-09,
+        "kind": "hybrid_muon_adamw",
+        "momentum": 0.949999988079071,
+        "muon_variant": "moonlight-fp32-v1",
+        "nesterov": true,
+        "ns_steps": 5,
+        "weight_decay": 0.10000000149011612
+      },
+      "p95_ms": 90.756,
+      "peak_rss_bytes": 2081718272,
+      "precision": "fp16",
+      "repetitions": 30,
+      "sequence_length": 128,
+      "submission_window": 4,
+      "tokens_per_second": 11370.181864615444,
+      "warmup": 3
+    },
+    "gram-repeat": {
+      "attention_effective": "reference",
+      "attention_requested": "reference",
+      "backend": "mps",
+      "batch": 8,
+      "compiler": "Apple LLVM 17.0.0 (clang-1700.6.4.2)",
+      "correctness_error": 2.435627377295191e-05,
+      "cpu_correctness_checked": true,
+      "device": "Apple M2 Max / MPSGraph / fp16",
+      "grad_accum": 1,
+      "gradient_reset_timed": true,
+      "graph_submissions_per_update": 2,
+      "host_waits_per_update": 1,
+      "initial_loss": 9.803749084472656,
+      "kind": "train",
+      "last_gradient_norm": 0.3425079584121704,
+      "last_loss": 0.12519380450248718,
+      "median_ms": 89.304625,
+      "metal_kernel_submissions_per_update": 0,
+      "muon_layout": "batched",
+      "muon_ns_order": "gram",
+      "optimizer": {
+        "beta1": 0.8999999761581421,
+        "beta2": 0.949999988079071,
+        "clip_norm": 1,
+        "epsilon": 9.99999993922529e-09,
+        "kind": "hybrid_muon_adamw",
+        "momentum": 0.949999988079071,
+        "muon_variant": "moonlight-fp32-v1",
+        "nesterov": true,
+        "ns_steps": 5,
+        "weight_decay": 0.10000000149011612
+      },
+      "p95_ms": 90.890125,
+      "peak_rss_bytes": 2081259520,
+      "precision": "fp16",
+      "repetitions": 30,
+      "sequence_length": 128,
+      "submission_window": 4,
+      "tokens_per_second": 11466.371422532708,
+      "warmup": 3
+    },
+    "chain-repeat": {
+      "attention_effective": "reference",
+      "attention_requested": "reference",
+      "backend": "mps",
+      "batch": 8,
+      "compiler": "Apple LLVM 17.0.0 (clang-1700.6.4.2)",
+      "correctness_error": 2.435627377295191e-05,
+      "cpu_correctness_checked": true,
+      "device": "Apple M2 Max / MPSGraph / fp16",
+      "grad_accum": 1,
+      "gradient_reset_timed": true,
+      "graph_submissions_per_update": 2,
+      "host_waits_per_update": 1,
+      "initial_loss": 9.803749084472656,
+      "kind": "train",
+      "last_gradient_norm": 0.34470322728157043,
+      "last_loss": 0.12383604049682617,
+      "median_ms": 97.16725,
+      "metal_kernel_submissions_per_update": 0,
+      "muon_layout": "batched",
+      "muon_ns_order": "chain",
+      "optimizer": {
+        "beta1": 0.8999999761581421,
+        "beta2": 0.949999988079071,
+        "clip_norm": 1,
+        "epsilon": 9.99999993922529e-09,
+        "kind": "hybrid_muon_adamw",
+        "momentum": 0.949999988079071,
+        "muon_variant": "moonlight-fp32-v1",
+        "nesterov": true,
+        "ns_steps": 5,
+        "weight_decay": 0.10000000149011612
+      },
+      "p95_ms": 97.9865,
+      "peak_rss_bytes": 2083045376,
+      "precision": "fp16",
+      "repetitions": 30,
+      "sequence_length": 128,
+      "submission_window": 4,
+      "tokens_per_second": 10538.530214655659,
+      "warmup": 3
+    }
+  },
+  "parity": {
+    "status": "passed",
+    "checks": 396,
+    "parameters": 132,
+    "max_update_relative_l2": 1.6247840133715186e-05,
+    "min_update_cosine": 0.9999999998680054,
+    "max_absolute_weight_difference": 7.450580596923828e-09,
+    "gates": {
+      "initial_weights_and_gradients": "bitwise equality",
+      "every_update_relative_l2": 0.001,
+      "every_update_cosine": 0.99999,
+      "absolute_weight_difference": 2e-06
+    },
+    "results": [
+      {
+        "parameter": "token_embedding",
+        "update_relative_l2": 0.0,
+        "update_cosine": 0.9999999999999999,
+        "max_absolute_weight_difference": 0.0
+      },
+      {
+        "parameter": "final_norm",
+        "update_relative_l2": 0.0,
+        "update_cosine": 0.9999999999999999,
+        "max_absolute_weight_difference": 0.0
+      },
+      {
+        "parameter": "layers.0.attn.norm",
+        "update_relative_l2": 0.0,
+        "update_cosine": 1.0,
+        "max_absolute_weight_difference": 0.0
+      },
+      {
+        "parameter": "layers.0.attn.w_dq",
+        "update_relative_l2": 6.8725310536054225e-06,
+        "update_cosine": 0.9999999999763842,
+        "max_absolute_weight_difference": 7.450580596923828e-09
+      },
+      {
+        "parameter": "layers.0.attn.q_norm",
+        "update_relative_l2": 0.0,
+        "update_cosine": 0.9999999999999998,
+        "max_absolute_weight_difference": 0.0
+      },
+      {
+        "parameter": "layers.0.attn.w_uq",
+        "update_relative_l2": 6.959544342460119e-06,
+        "update_cosine": 0.9999999999757833,
+        "max_absolute_weight_difference": 7.450580596923828e-09
+      },
+      {
+        "parameter": "layers.0.attn.w_dkv",
+        "update_relative_l2": 7.946101265992973e-06,
+        "update_cosine": 0.9999999999684301,
+        "max_absolute_weight_difference": 7.450580596923828e-09
+      },
+      {
+        "parameter": "layers.0.attn.kv_norm",
+        "update_relative_l2": 0.0,
+        "update_cosine": 1.0,
+        "max_absolute_weight_difference": 0.0
+      },
+      {
+        "parameter": "layers.0.attn.w_uk",
+        "update_relative_l2": 6.32941179201572e-06,
+        "update_cosine": 0.9999999999799697,
+        "max_absolute_weight_difference": 7.450580596923828e-09
+      },
+      {
+        "parameter": "layers.0.attn.w_uv",
+        "update_relative_l2": 7.826463985997482e-06,
+        "update_cosine": 0.9999999999693746,
+        "max_absolute_weight_difference": 7.450580596923828e-09
+      },
+      {
+        "parameter": "layers.0.attn.w_o",
+        "update_relative_l2": 1.2239933826781512e-05,
+        "update_cosine": 0.9999999999250928,
+        "max_absolute_weight_difference": 5.3551048040390015e-09
+      },
+      {
+        "parameter": "layers.0.ffn.norm",
+        "update_relative_l2": 0.0,
+        "update_cosine": 1.0,
+        "max_absolute_weight_difference": 0.0
+      },
+      {
+        "parameter": "layers.0.ffn.w_gate",
+        "update_relative_l2": 8.276412855108141e-06,
+        "update_cosine": 0.9999999999657544,
+        "max_absolute_weight_difference": 7.450580596923828e-09
+      },
+      {
+        "parameter": "layers.0.ffn.w_up",
+        "update_relative_l2": 8.348425248431743e-06,
+        "update_cosine": 0.9999999999651539,
+        "max_absolute_weight_difference": 7.450580596923828e-09
+      },
+      {
+        "parameter": "layers.0.ffn.w_down",
+        "update_relative_l2": 4.457789581291156e-06,
+        "update_cosine": 0.9999999999900703,
+        "max_absolute_weight_difference": 1.979060471057892e-09
+      },
+      {
+        "parameter": "layers.1.attn.norm",
+        "update_relative_l2": 0.0,
+        "update_cosine": 1.0,
+        "max_absolute_weight_difference": 0.0
+      },
+      {
+        "parameter": "layers.1.attn.w_dq",
+        "update_relative_l2": 6.912039589442266e-06,
+        "update_cosine": 0.9999999999761177,
+        "max_absolute_weight_difference": 7.450580596923828e-09
+      },
+      {
+        "parameter": "layers.1.attn.q_norm",
+        "update_relative_l2": 0.0,
+        "update_cosine": 0.9999999999999998,
+        "max_absolute_weight_difference": 0.0
+      },
+      {
+        "parameter": "layers.1.attn.w_uq",
+        "update_relative_l2": 6.854674747391371e-06,
+        "update_cosine": 0.999999999976507,
+        "max_absolute_weight_difference": 7.450580596923828e-09
+      },
+      {
+        "parameter": "layers.1.attn.w_dkv",
+        "update_relative_l2": 8.656038471842965e-06,
+        "update_cosine": 0.9999999999625414,
+        "max_absolute_weight_difference": 7.450580596923828e-09
+      },
+      {
+        "parameter": "layers.1.attn.kv_norm",
+        "update_relative_l2": 0.0,
+        "update_cosine": 1.0,
+        "max_absolute_weight_difference": 0.0
+      },
+      {
+        "parameter": "layers.1.attn.w_uk",
+        "update_relative_l2": 6.397540690090103e-06,
+        "update_cosine": 0.9999999999795363,
+        "max_absolute_weight_difference": 7.450580596923828e-09
+      },
+      {
+        "parameter": "layers.1.attn.w_uv",
+        "update_relative_l2": 8.6368551644617e-06,
+        "update_cosine": 0.9999999999627027,
+        "max_absolute_weight_difference": 7.450580596923828e-09
+      },
+      {
+        "parameter": "layers.1.attn.w_o",
+        "update_relative_l2": 1.404300664349127e-05,
+        "update_cosine": 0.999999999901398,
+        "max_absolute_weight_difference": 5.587935447692871e-09
+      },
+      {
+        "parameter": "layers.1.ffn.norm",
+        "update_relative_l2": 0.0,
+        "update_cosine": 1.0,
+        "max_absolute_weight_difference": 0.0
+      },
+      {
+        "parameter": "layers.1.ffn.w_gate",
+        "update_relative_l2": 8.277835668868176e-06,
+        "update_cosine": 0.9999999999657402,
+        "max_absolute_weight_difference": 7.450580596923828e-09
+      },
+      {
+        "parameter": "layers.1.ffn.w_up",
+        "update_relative_l2": 8.265294601763176e-06,
+        "update_cosine": 0.9999999999658439,
+        "max_absolute_weight_difference": 7.450580596923828e-09
+      },
+      {
+        "parameter": "layers.1.ffn.w_down",
+        "update_relative_l2": 4.437196505966922e-06,
+        "update_cosine": 0.9999999999901621,
+        "max_absolute_weight_difference": 2.0954757928848267e-09
+      },
+      {
+        "parameter": "layers.2.attn.norm",
+        "update_relative_l2": 0.0,
+        "update_cosine": 1.0,
+        "max_absolute_weight_difference": 0.0
+      },
+      {
+        "parameter": "layers.2.attn.w_dq",
+        "update_relative_l2": 6.887492179093954e-06,
+        "update_cosine": 0.9999999999762815,
+        "max_absolute_weight_difference": 7.450580596923828e-09
+      },
+      {
+        "parameter": "layers.2.attn.q_norm",
+        "update_relative_l2": 0.0,
+        "update_cosine": 0.9999999999999998,
+        "max_absolute_weight_difference": 0.0
+      },
+      {
+        "parameter": "layers.2.attn.w_uq",
+        "update_relative_l2": 6.840219037602588e-06,
+        "update_cosine": 0.999999999976606,
+        "max_absolute_weight_difference": 7.450580596923828e-09
+      },
+      {
+        "parameter": "layers.2.attn.w_dkv",
+        "update_relative_l2": 8.867654892329568e-06,
+        "update_cosine": 0.9999999999606826,
+        "max_absolute_weight_difference": 7.450580596923828e-09
+      },
+      {
+        "parameter": "layers.2.attn.kv_norm",
+        "update_relative_l2": 0.0,
+        "update_cosine": 1.0,
+        "max_absolute_weight_difference": 0.0
+      },
+      {
+        "parameter": "layers.2.attn.w_uk",
+        "update_relative_l2": 6.293485634275646e-06,
+        "update_cosine": 0.999999999980196,
+        "max_absolute_weight_difference": 3.725290298461914e-09
+      },
+      {
+        "parameter": "layers.2.attn.w_uv",
+        "update_relative_l2": 9.114127994297798e-06,
+        "update_cosine": 0.9999999999584683,
+        "max_absolute_weight_difference": 7.450580596923828e-09
+      },
+      {
+        "parameter": "layers.2.attn.w_o",
+        "update_relative_l2": 1.4818739611101194e-05,
+        "update_cosine": 0.9999999998902039,
+        "max_absolute_weight_difference": 5.471520125865936e-09
+      },
+      {
+        "parameter": "layers.2.ffn.norm",
+        "update_relative_l2": 0.0,
+        "update_cosine": 1.0000000000000002,
+        "max_absolute_weight_difference": 0.0
+      },
+      {
+        "parameter": "layers.2.ffn.w_gate",
+        "update_relative_l2": 8.181456171933762e-06,
+        "update_cosine": 0.999999999966537,
+        "max_absolute_weight_difference": 7.450580596923828e-09
+      },
+      {
+        "parameter": "layers.2.ffn.w_up",
+        "update_relative_l2": 8.205220221939534e-06,
+        "update_cosine": 0.9999999999663419,
+        "max_absolute_weight_difference": 7.450580596923828e-09
+      },
+      {
+        "parameter": "layers.2.ffn.w_down",
+        "update_relative_l2": 4.446485484773366e-06,
+        "update_cosine": 0.9999999999901211,
+        "max_absolute_weight_difference": 1.862645149230957e-09
+      },
+      {
+        "parameter": "layers.3.attn.norm",
+        "update_relative_l2": 0.0,
+        "update_cosine": 1.0,
+        "max_absolute_weight_difference": 0.0
+      },
+      {
+        "parameter": "layers.3.attn.w_dq",
+        "update_relative_l2": 6.9986561110082545e-06,
+        "update_cosine": 0.9999999999755154,
+        "max_absolute_weight_difference": 7.450580596923828e-09
+      },
+      {
+        "parameter": "layers.3.attn.q_norm",
+        "update_relative_l2": 0.0,
+        "update_cosine": 1.0000000000000002,
+        "max_absolute_weight_difference": 0.0
+      },
+      {
+        "parameter": "layers.3.attn.w_uq",
+        "update_relative_l2": 6.828919831701998e-06,
+        "update_cosine": 0.9999999999766835,
+        "max_absolute_weight_difference": 7.450580596923828e-09
+      },
+      {
+        "parameter": "layers.3.attn.w_dkv",
+        "update_relative_l2": 9.495580824814602e-06,
+        "update_cosine": 0.9999999999549182,
+        "max_absolute_weight_difference": 7.450580596923828e-09
+      },
+      {
+        "parameter": "layers.3.attn.kv_norm",
+        "update_relative_l2": 0.0,
+        "update_cosine": 1.0000000000000002,
+        "max_absolute_weight_difference": 0.0
+      },
+      {
+        "parameter": "layers.3.attn.w_uk",
+        "update_relative_l2": 6.3403702152389255e-06,
+        "update_cosine": 0.9999999999799003,
+        "max_absolute_weight_difference": 7.450580596923828e-09
+      },
+      {
+        "parameter": "layers.3.attn.w_uv",
+        "update_relative_l2": 9.608902511541814e-06,
+        "update_cosine": 0.9999999999538359,
+        "max_absolute_weight_difference": 3.725290298461914e-09
+      },
+      {
+        "parameter": "layers.3.attn.w_o",
+        "update_relative_l2": 1.5441523084913864e-05,
+        "update_cosine": 0.9999999998807809,
+        "max_absolute_weight_difference": 5.587935447692871e-09
+      },
+      {
+        "parameter": "layers.3.ffn.norm",
+        "update_relative_l2": 0.0,
+        "update_cosine": 1.0,
+        "max_absolute_weight_difference": 0.0
+      },
+      {
+        "parameter": "layers.3.ffn.w_gate",
+        "update_relative_l2": 8.250301435886525e-06,
+        "update_cosine": 0.9999999999659684,
+        "max_absolute_weight_difference": 7.450580596923828e-09
+      },
+      {
+        "parameter": "layers.3.ffn.w_up",
+        "update_relative_l2": 8.265833039407534e-06,
+        "update_cosine": 0.9999999999658398,
+        "max_absolute_weight_difference": 7.450580596923828e-09
+      },
+      {
+        "parameter": "layers.3.ffn.w_down",
+        "update_relative_l2": 4.462816316255234e-06,
+        "update_cosine": 0.9999999999900485,
+        "max_absolute_weight_difference": 1.862645149230957e-09
+      },
+      {
+        "parameter": "layers.4.attn.norm",
+        "update_relative_l2": 0.0,
+        "update_cosine": 1.0,
+        "max_absolute_weight_difference": 0.0
+      },
+      {
+        "parameter": "layers.4.attn.w_dq",
+        "update_relative_l2": 6.806959375508949e-06,
+        "update_cosine": 0.9999999999768331,
+        "max_absolute_weight_difference": 7.450580596923828e-09
+      },
+      {
+        "parameter": "layers.4.attn.q_norm",
+        "update_relative_l2": 0.0,
+        "update_cosine": 1.0,
+        "max_absolute_weight_difference": 0.0
+      },
+      {
+        "parameter": "layers.4.attn.w_uq",
+        "update_relative_l2": 6.773371689148204e-06,
+        "update_cosine": 0.9999999999770609,
+        "max_absolute_weight_difference": 7.450580596923828e-09
+      },
+      {
+        "parameter": "layers.4.attn.w_dkv",
+        "update_relative_l2": 9.998109641187417e-06,
+        "update_cosine": 0.9999999999500208,
+        "max_absolute_weight_difference": 7.450580596923828e-09
+      },
+      {
+        "parameter": "layers.4.attn.kv_norm",
+        "update_relative_l2": 0.0,
+        "update_cosine": 1.0000000000000002,
+        "max_absolute_weight_difference": 0.0
+      },
+      {
+        "parameter": "layers.4.attn.w_uk",
+        "update_relative_l2": 6.385410966570339e-06,
+        "update_cosine": 0.9999999999796134,
+        "max_absolute_weight_difference": 7.450580596923828e-09
+      },
+      {
+        "parameter": "layers.4.attn.w_uv",
+        "update_relative_l2": 9.621394177468169e-06,
+        "update_cosine": 0.9999999999537146,
+        "max_absolute_weight_difference": 7.450580596923828e-09
+      },
+      {
+        "parameter": "layers.4.attn.w_o",
+        "update_relative_l2": 1.5674231382975977e-05,
+        "update_cosine": 0.9999999998771604,
+        "max_absolute_weight_difference": 6.05359673500061e-09
+      },
+      {
+        "parameter": "layers.4.ffn.norm",
+        "update_relative_l2": 0.0,
+        "update_cosine": 1.0,
+        "max_absolute_weight_difference": 0.0
+      },
+      {
+        "parameter": "layers.4.ffn.w_gate",
+        "update_relative_l2": 8.245613437479666e-06,
+        "update_cosine": 0.9999999999660097,
+        "max_absolute_weight_difference": 7.450580596923828e-09
+      },
+      {
+        "parameter": "layers.4.ffn.w_up",
+        "update_relative_l2": 8.269155428250906e-06,
+        "update_cosine": 0.9999999999658123,
+        "max_absolute_weight_difference": 7.450580596923828e-09
+      },
+      {
+        "parameter": "layers.4.ffn.w_down",
+        "update_relative_l2": 4.453801436724207e-06,
+        "update_cosine": 0.9999999999900885,
+        "max_absolute_weight_difference": 1.862645149230957e-09
+      },
+      {
+        "parameter": "layers.5.attn.norm",
+        "update_relative_l2": 0.0,
+        "update_cosine": 1.0,
+        "max_absolute_weight_difference": 0.0
+      },
+      {
+        "parameter": "layers.5.attn.w_dq",
+        "update_relative_l2": 6.9510182735222675e-06,
+        "update_cosine": 0.9999999999758421,
+        "max_absolute_weight_difference": 7.450580596923828e-09
+      },
+      {
+        "parameter": "layers.5.attn.q_norm",
+        "update_relative_l2": 0.0,
+        "update_cosine": 1.0,
+        "max_absolute_weight_difference": 0.0
+      },
+      {
+        "parameter": "layers.5.attn.w_uq",
+        "update_relative_l2": 6.778917077105595e-06,
+        "update_cosine": 0.9999999999770233,
+        "max_absolute_weight_difference": 3.725290298461914e-09
+      },
+      {
+        "parameter": "layers.5.attn.w_dkv",
+        "update_relative_l2": 9.769540026242002e-06,
+        "update_cosine": 0.9999999999522792,
+        "max_absolute_weight_difference": 7.450580596923828e-09
+      },
+      {
+        "parameter": "layers.5.attn.kv_norm",
+        "update_relative_l2": 0.0,
+        "update_cosine": 0.9999999999999999,
+        "max_absolute_weight_difference": 0.0
+      },
+      {
+        "parameter": "layers.5.attn.w_uk",
+        "update_relative_l2": 6.262975820518319e-06,
+        "update_cosine": 0.9999999999803898,
+        "max_absolute_weight_difference": 7.450580596923828e-09
+      },
+      {
+        "parameter": "layers.5.attn.w_uv",
+        "update_relative_l2": 1.0029841868006315e-05,
+        "update_cosine": 0.9999999999497017,
+        "max_absolute_weight_difference": 7.450580596923828e-09
+      },
+      {
+        "parameter": "layers.5.attn.w_o",
+        "update_relative_l2": 1.607941061761855e-05,
+        "update_cosine": 0.9999999998707276,
+        "max_absolute_weight_difference": 5.820766091346741e-09
+      },
+      {
+        "parameter": "layers.5.ffn.norm",
+        "update_relative_l2": 0.0,
+        "update_cosine": 1.0,
+        "max_absolute_weight_difference": 0.0
+      },
+      {
+        "parameter": "layers.5.ffn.w_gate",
+        "update_relative_l2": 8.307692104314164e-06,
+        "update_cosine": 0.999999999965493,
+        "max_absolute_weight_difference": 7.450580596923828e-09
+      },
+      {
+        "parameter": "layers.5.ffn.w_up",
+        "update_relative_l2": 8.271932768573157e-06,
+        "update_cosine": 0.9999999999657903,
+        "max_absolute_weight_difference": 7.450580596923828e-09
+      },
+      {
+        "parameter": "layers.5.ffn.w_down",
+        "update_relative_l2": 4.466540773511993e-06,
+        "update_cosine": 0.9999999999900395,
+        "max_absolute_weight_difference": 2.3283064365386963e-09
+      },
+      {
+        "parameter": "layers.6.attn.norm",
+        "update_relative_l2": 0.0,
+        "update_cosine": 1.0,
+        "max_absolute_weight_difference": 0.0
+      },
+      {
+        "parameter": "layers.6.attn.w_dq",
+        "update_relative_l2": 6.942379138833537e-06,
+        "update_cosine": 0.9999999999759034,
+        "max_absolute_weight_difference": 7.450580596923828e-09
+      },
+      {
+        "parameter": "layers.6.attn.q_norm",
+        "update_relative_l2": 0.0,
+        "update_cosine": 1.0,
+        "max_absolute_weight_difference": 0.0
+      },
+      {
+        "parameter": "layers.6.attn.w_uq",
+        "update_relative_l2": 6.853198286503809e-06,
+        "update_cosine": 0.9999999999765169,
+        "max_absolute_weight_difference": 7.450580596923828e-09
+      },
+      {
+        "parameter": "layers.6.attn.w_dkv",
+        "update_relative_l2": 9.616164605398482e-06,
+        "update_cosine": 0.9999999999537648,
+        "max_absolute_weight_difference": 7.450580596923828e-09
+      },
+      {
+        "parameter": "layers.6.attn.kv_norm",
+        "update_relative_l2": 0.0,
+        "update_cosine": 1.0,
+        "max_absolute_weight_difference": 0.0
+      },
+      {
+        "parameter": "layers.6.attn.w_uk",
+        "update_relative_l2": 6.403782760198035e-06,
+        "update_cosine": 0.9999999999794968,
+        "max_absolute_weight_difference": 7.450580596923828e-09
+      },
+      {
+        "parameter": "layers.6.attn.w_uv",
+        "update_relative_l2": 9.644757371983328e-06,
+        "update_cosine": 0.999999999953491,
+        "max_absolute_weight_difference": 7.450580596923828e-09
+      },
+      {
+        "parameter": "layers.6.attn.w_o",
+        "update_relative_l2": 1.5618840227704306e-05,
+        "update_cosine": 0.9999999998780271,
+        "max_absolute_weight_difference": 6.51925802230835e-09
+      },
+      {
+        "parameter": "layers.6.ffn.norm",
+        "update_relative_l2": 0.0,
+        "update_cosine": 1.0000000000000002,
+        "max_absolute_weight_difference": 0.0
+      },
+      {
+        "parameter": "layers.6.ffn.w_gate",
+        "update_relative_l2": 8.291821584240086e-06,
+        "update_cosine": 0.9999999999656244,
+        "max_absolute_weight_difference": 7.450580596923828e-09
+      },
+      {
+        "parameter": "layers.6.ffn.w_up",
+        "update_relative_l2": 8.262480511464444e-06,
+        "update_cosine": 0.999999999965867,
+        "max_absolute_weight_difference": 7.450580596923828e-09
+      },
+      {
+        "parameter": "layers.6.ffn.w_down",
+        "update_relative_l2": 4.472932793516129e-06,
+        "update_cosine": 0.9999999999900034,
+        "max_absolute_weight_difference": 1.862645149230957e-09
+      },
+      {
+        "parameter": "layers.7.attn.norm",
+        "update_relative_l2": 0.0,
+        "update_cosine": 1.0000000000000002,
+        "max_absolute_weight_difference": 0.0
+      },
+      {
+        "parameter": "layers.7.attn.w_dq",
+        "update_relative_l2": 6.771486015997006e-06,
+        "update_cosine": 0.9999999999770758,
+        "max_absolute_weight_difference": 3.725290298461914e-09
+      },
+      {
+        "parameter": "layers.7.attn.q_norm",
+        "update_relative_l2": 0.0,
+        "update_cosine": 0.9999999999999998,
+        "max_absolute_weight_difference": 0.0
+      },
+      {
+        "parameter": "layers.7.attn.w_uq",
+        "update_relative_l2": 6.879020772475685e-06,
+        "update_cosine": 0.9999999999763398,
+        "max_absolute_weight_difference": 7.450580596923828e-09
+      },
+      {
+        "parameter": "layers.7.attn.w_dkv",
+        "update_relative_l2": 9.550640851270645e-06,
+        "update_cosine": 0.9999999999543928,
+        "max_absolute_weight_difference": 7.450580596923828e-09
+      },
+      {
+        "parameter": "layers.7.attn.kv_norm",
+        "update_relative_l2": 0.0,
+        "update_cosine": 1.0,
+        "max_absolute_weight_difference": 0.0
+      },
+      {
+        "parameter": "layers.7.attn.w_uk",
+        "update_relative_l2": 6.22572704114582e-06,
+        "update_cosine": 0.9999999999806218,
+        "max_absolute_weight_difference": 7.450580596923828e-09
+      },
+      {
+        "parameter": "layers.7.attn.w_uv",
+        "update_relative_l2": 9.832815818372874e-06,
+        "update_cosine": 0.9999999999516617,
+        "max_absolute_weight_difference": 7.450580596923828e-09
+      },
+      {
+        "parameter": "layers.7.attn.w_o",
+        "update_relative_l2": 1.622695131329391e-05,
+        "update_cosine": 0.9999999998683441,
+        "max_absolute_weight_difference": 6.05359673500061e-09
+      },
+      {
+        "parameter": "layers.7.ffn.norm",
+        "update_relative_l2": 0.0,
+        "update_cosine": 1.0000000000000002,
+        "max_absolute_weight_difference": 0.0
+      },
+      {
+        "parameter": "layers.7.ffn.w_gate",
+        "update_relative_l2": 8.286299403997344e-06,
+        "update_cosine": 0.9999999999656721,
+        "max_absolute_weight_difference": 7.450580596923828e-09
+      },
+      {
+        "parameter": "layers.7.ffn.w_up",
+        "update_relative_l2": 8.279627138253314e-06,
+        "update_cosine": 0.9999999999657285,
+        "max_absolute_weight_difference": 7.450580596923828e-09
+      },
+      {
+        "parameter": "layers.7.ffn.w_down",
+        "update_relative_l2": 4.4805465982299995e-06,
+        "update_cosine": 0.9999999999899697,
+        "max_absolute_weight_difference": 1.862645149230957e-09
+      },
+      {
+        "parameter": "layers.8.attn.norm",
+        "update_relative_l2": 0.0,
+        "update_cosine": 1.0,
+        "max_absolute_weight_difference": 0.0
+      },
+      {
+        "parameter": "layers.8.attn.w_dq",
+        "update_relative_l2": 6.903430318858306e-06,
+        "update_cosine": 0.9999999999761714,
+        "max_absolute_weight_difference": 7.450580596923828e-09
+      },
+      {
+        "parameter": "layers.8.attn.q_norm",
+        "update_relative_l2": 0.0,
+        "update_cosine": 0.9999999999999998,
+        "max_absolute_weight_difference": 0.0
+      },
+      {
+        "parameter": "layers.8.attn.w_uq",
+        "update_relative_l2": 6.859514745189831e-06,
+        "update_cosine": 0.9999999999764737,
+        "max_absolute_weight_difference": 7.450580596923828e-09
+      },
+      {
+        "parameter": "layers.8.attn.w_dkv",
+        "update_relative_l2": 9.542728235848251e-06,
+        "update_cosine": 0.9999999999544688,
+        "max_absolute_weight_difference": 7.450580596923828e-09
+      },
+      {
+        "parameter": "layers.8.attn.kv_norm",
+        "update_relative_l2": 0.0,
+        "update_cosine": 1.0,
+        "max_absolute_weight_difference": 0.0
+      },
+      {
+        "parameter": "layers.8.attn.w_uk",
+        "update_relative_l2": 6.385679138715428e-06,
+        "update_cosine": 0.9999999999796139,
+        "max_absolute_weight_difference": 3.725290298461914e-09
+      },
+      {
+        "parameter": "layers.8.attn.w_uv",
+        "update_relative_l2": 9.419945585959804e-06,
+        "update_cosine": 0.9999999999556336,
+        "max_absolute_weight_difference": 7.450580596923828e-09
+      },
+      {
+        "parameter": "layers.8.attn.w_o",
+        "update_relative_l2": 1.6247840133715186e-05,
+        "update_cosine": 0.9999999998680054,
+        "max_absolute_weight_difference": 6.28642737865448e-09
+      },
+      {
+        "parameter": "layers.8.ffn.norm",
+        "update_relative_l2": 0.0,
+        "update_cosine": 1.0,
+        "max_absolute_weight_difference": 0.0
+      },
+      {
+        "parameter": "layers.8.ffn.w_gate",
+        "update_relative_l2": 8.27224328135307e-06,
+        "update_cosine": 0.9999999999657867,
+        "max_absolute_weight_difference": 7.450580596923828e-09
+      },
+      {
+        "parameter": "layers.8.ffn.w_up",
+        "update_relative_l2": 8.257378672105465e-06,
+        "update_cosine": 0.9999999999659102,
+        "max_absolute_weight_difference": 7.450580596923828e-09
+      },
+      {
+        "parameter": "layers.8.ffn.w_down",
+        "update_relative_l2": 4.47420747694919e-06,
+        "update_cosine": 0.9999999999899971,
+        "max_absolute_weight_difference": 1.862645149230957e-09
+      },
+      {
+        "parameter": "layers.9.attn.norm",
+        "update_relative_l2": 0.0,
+        "update_cosine": 0.9999999999999999,
+        "max_absolute_weight_difference": 0.0
+      },
+      {
+        "parameter": "layers.9.attn.w_dq",
+        "update_relative_l2": 6.976866785419381e-06,
+        "update_cosine": 0.9999999999756619,
+        "max_absolute_weight_difference": 7.450580596923828e-09
+      },
+      {
+        "parameter": "layers.9.attn.q_norm",
+        "update_relative_l2": 0.0,
+        "update_cosine": 1.0,
+        "max_absolute_weight_difference": 0.0
+      },
+      {
+        "parameter": "layers.9.attn.w_uq",
+        "update_relative_l2": 6.7691903031701295e-06,
+        "update_cosine": 0.9999999999770893,
+        "max_absolute_weight_difference": 7.450580596923828e-09
+      },
+      {
+        "parameter": "layers.9.attn.w_dkv",
+        "update_relative_l2": 9.436926707341072e-06,
+        "update_cosine": 0.9999999999554728,
+        "max_absolute_weight_difference": 7.450580596923828e-09
+      },
+      {
+        "parameter": "layers.9.attn.kv_norm",
+        "update_relative_l2": 0.0,
+        "update_cosine": 1.0000000000000002,
+        "max_absolute_weight_difference": 0.0
+      },
+      {
+        "parameter": "layers.9.attn.w_uk",
+        "update_relative_l2": 6.306624210324209e-06,
+        "update_cosine": 0.9999999999801149,
+        "max_absolute_weight_difference": 7.450580596923828e-09
+      },
+      {
+        "parameter": "layers.9.attn.w_uv",
+        "update_relative_l2": 9.43531854151416e-06,
+        "update_cosine": 0.9999999999554879,
+        "max_absolute_weight_difference": 7.450580596923828e-09
+      },
+      {
+        "parameter": "layers.9.attn.w_o",
+        "update_relative_l2": 1.5913650048170706e-05,
+        "update_cosine": 0.9999999998733788,
+        "max_absolute_weight_difference": 6.6356733441352844e-09
+      },
+      {
+        "parameter": "layers.9.ffn.norm",
+        "update_relative_l2": 0.0,
+        "update_cosine": 1.0,
+        "max_absolute_weight_difference": 0.0
+      },
+      {
+        "parameter": "layers.9.ffn.w_gate",
+        "update_relative_l2": 8.329414350939365e-06,
+        "update_cosine": 0.9999999999653117,
+        "max_absolute_weight_difference": 7.450580596923828e-09
+      },
+      {
+        "parameter": "layers.9.ffn.w_up",
+        "update_relative_l2": 8.291580518545397e-06,
+        "update_cosine": 0.9999999999656266,
+        "max_absolute_weight_difference": 7.450580596923828e-09
+      },
+      {
+        "parameter": "layers.9.ffn.w_down",
+        "update_relative_l2": 4.5040390264348145e-06,
+        "update_cosine": 0.9999999999898643,
+        "max_absolute_weight_difference": 2.7939677238464355e-09
+      }
+    ]
+  },
+  "source_sha256": {
+    "src/backends/mps_backend.mm": "591e5fd52066e80da2102234c39d0f50dc670e305e15f8dcb8606e6f8c563efb",
+    "src/train/optimizer.cpp": "f61853df0c4cb32d92eb96ce69c5b4aec9a44152b2e1e991d33d6635782f31a4",
+    "include/mini_mla/execution.hpp": "5cb95a811b517ad97880835054042d3e3a83cb3b5827e42cc51179f237df058a",
+    "apps/bench_main.cpp": "d18036e3f43918ffba140932e47a22e769ffac39e77c26213a1f63e2504ca67c",
+    "config/mla36m-v1.json": "5a02506bf5bb2a0c9fab76fb5aaa8efb57ee5e118a71eca005d9fc20ceec87eb"
+  },
+  "binary_sha256": "410ad1501c51a4d457217e71e3e94a5471acdb254e6a9e579f84c32b60ab6711"
+}

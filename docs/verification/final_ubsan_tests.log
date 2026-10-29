@@ -1,0 +1,17 @@
+Test project /Users/tu15/alex_cpp/CPP_Completed/build-ubsan
+    Start 1: tensor
+1/6 Test #1: tensor ...........................   Passed    0.03 sec
+    Start 2: ops
+2/6 Test #2: ops ..............................   Passed    0.01 sec
+    Start 3: model
+3/6 Test #3: model ............................   Passed    0.02 sec
+    Start 4: files
+4/6 Test #4: files ............................   Passed    0.10 sec
+    Start 5: training
+5/6 Test #5: training .........................   Passed    0.09 sec
+    Start 6: tools
+6/6 Test #6: tools ............................   Passed   34.02 sec
+
+100% tests passed, 0 tests failed out of 6
+
+Total Test time (real) =  34.39 sec

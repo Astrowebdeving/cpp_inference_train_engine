@@ -1,0 +1,10 @@
+{"bytes":704,"documents":8,"documents_by_split":{"train":8,"val":0},"format":"mini-mla-dataset-v1","mode":"sft","sources":[{"path":"/Users/tu15/alex_cpp/CPP_Completed/examples/chat.jsonl","sha256":"8ef54243a178584d66bf127d30069b6c2822b4ebc0590992d3fb9513285141e4"}],"split_rule":"sha256-document-first64-v1","tokenizer_sha256":"23c8f13ec96d53e8af288634117c26d684964ebb37db16700d07aa2f263a2dff","tokens_by_split":{"train":0,"val":0},"truncated_samples":0,"validation_fraction":0.0}
+Apple M2 Max / MPSGraph / fp16; 26704 parameters; mode=sft
+step=1 loss=5.608195 lr=0.003 grad=3.9184 tok/s=714.3
+step=20 loss=1.015168 lr=0.00539143 grad=1.2497 tok/s=38382.4
+step=40 loss=0.145458 lr=0.00351726 grad=0.4868 tok/s=38013.8
+step=60 loss=0.039485 lr=0.00150957 grad=0.1471 tok/s=38242.9
+step=80 loss=0.027504 lr=0.00060219 grad=0.1036 tok/s=37214.4
+Apple M2 Max / MPSGraph / fp16; 26704 parameters; mode=sft
+Model: /private/tmp/mla-attention-work/flash-sft/run/model-latest
+Say hi. -> Hi!

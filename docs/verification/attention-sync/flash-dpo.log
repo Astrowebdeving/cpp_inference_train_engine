@@ -1,0 +1,9 @@
+Apple M2 Max / MPSGraph / fp16; 26704 parameters; mode=dpo
+step=1 loss=0.693147 lr=0.001 grad=3.0238 tok/s=596.1
+step=2 loss=0.542766 lr=0.001 grad=2.1843 tok/s=16115.2
+step=3 loss=0.457485 lr=0.000955436 grad=2.7230 tok/s=17945.5
+step=4 loss=0.366608 lr=0.00083057 grad=1.9932 tok/s=17451.1
+step=5 loss=0.299480 lr=0.000650134 grad=1.5763 tok/s=14928.4
+step=6 loss=0.257860 lr=0.000449866 grad=1.2681 tok/s=14649.5
+step=7 loss=0.237858 lr=0.00026943 grad=1.0679 tok/s=18187.8
+step=8 loss=0.228963 lr=0.000144564 grad=1.0644 tok/s=20870.8

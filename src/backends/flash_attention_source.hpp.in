@@ -1,0 +1,4 @@
+#pragma once
+namespace mini_mla::metal {
+inline constexpr char flash_attention_source[] = R"mini_mla_msl(@MINI_MLA_FLASH_SOURCE@)mini_mla_msl";
+}

@@ -1,0 +1,56 @@
+{
+  "AdamW FP16, 16 x 128": {
+    "original": {
+      "ms": 83.56,
+      "tokens_per_second": 24509,
+      "runs_ms": [
+        83.44,
+        83.68
+      ]
+    },
+    "final (default)": {
+      "ms": 75.36,
+      "tokens_per_second": 27176,
+      "runs_ms": [
+        75.33,
+        75.39
+      ]
+    }
+  },
+  "AdamW FP16, 32 x 128": {
+    "original": {
+      "ms": 163.83,
+      "tokens_per_second": 25001,
+      "runs_ms": [
+        163.4,
+        164.26
+      ]
+    },
+    "final (default)": {
+      "ms": 140.93,
+      "tokens_per_second": 29063,
+      "runs_ms": [
+        140.97,
+        140.9
+      ]
+    }
+  },
+  "AdamW FP16, 64 x 128": {
+    "original": {
+      "ms": 307.78,
+      "tokens_per_second": 26617,
+      "runs_ms": [
+        308.27,
+        307.28
+      ]
+    },
+    "final (default)": {
+      "ms": 264.28,
+      "tokens_per_second": 30998,
+      "runs_ms": [
+        263.97,
+        264.58
+      ]
+    }
+  }
+}

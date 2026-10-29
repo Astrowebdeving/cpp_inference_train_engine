@@ -1,0 +1,213 @@
+UpdateCTestConfiguration  from :/Users/tu15/alex_cpp/CPP_Completed/build/DartConfiguration.tcl
+Test project /Users/tu15/alex_cpp/CPP_Completed/build
+Constructing a list of tests
+Done constructing a list of tests
+Updating test list for fixtures
+Added 0 tests to meet fixture requirements
+Checking test dependency graph...
+Checking test dependency graph end
+test 1
+    Start 1: tensor
+
+1: Test command: /Users/tu15/alex_cpp/CPP_Completed/build/bin/test_tensor
+1: Working Directory: /Users/tu15/alex_cpp/CPP_Completed
+1: Test timeout computed to be: 180
+1: RUN  shape_make_accepts_valid_ranks
+1: ok   shape_make_accepts_valid_ranks
+1: RUN  shape_make_rejects_excess_rank
+1: ok   shape_make_rejects_excess_rank
+1: RUN  shape_make_rejects_negative_dims
+1: ok   shape_make_rejects_negative_dims
+1: RUN  shape_numel_is_the_product_of_dims
+1: ok   shape_numel_is_the_product_of_dims
+1: RUN  shape_numel_of_scalar_is_one
+1: ok   shape_numel_of_scalar_is_one
+1: RUN  shape_numel_allows_zero_sized_dims
+1: ok   shape_numel_allows_zero_sized_dims
+1: RUN  shape_numel_detects_overflow
+1: ok   shape_numel_detects_overflow
+1: RUN  strides_are_row_major
+1: ok   strides_are_row_major
+1: RUN  strides_of_rank_one_is_unit
+1: ok   strides_of_rank_one_is_unit
+1: RUN  strides_of_rank_zero_does_not_underflow
+1: ok   strides_of_rank_zero_does_not_underflow
+1: RUN  desc_make_contiguous_fills_strides_and_metadata
+1: ok   desc_make_contiguous_fills_strides_and_metadata
+1: RUN  desc_make_contiguous_propagates_byte_offset
+1: ok   desc_make_contiguous_propagates_byte_offset
+1: RUN  required_bytes_of_dense_tensor
+1: ok   required_bytes_of_dense_tensor
+1: RUN  required_bytes_includes_byte_offset
+1: ok   required_bytes_includes_byte_offset
+1: RUN  required_bytes_of_strided_view_exceeds_numel_times_itemsize
+1: ok   required_bytes_of_strided_view_exceeds_numel_times_itemsize
+1: RUN  required_bytes_of_empty_tensor_is_just_the_offset
+1: ok   required_bytes_of_empty_tensor_is_just_the_offset
+1: RUN  buffer_allocate_returns_usable_memory
+1: ok   buffer_allocate_returns_usable_memory
+1: RUN  buffer_honours_requested_alignment
+1: ok   buffer_honours_requested_alignment
+1: RUN  buffer_rejects_bad_alignment
+1: ok   buffer_rejects_bad_alignment
+1: RUN  buffer_zero_bytes_is_a_valid_empty_buffer
+1: ok   buffer_zero_bytes_is_a_valid_empty_buffer
+1: RUN  buffer_default_constructed_is_empty_and_safe
+1: ok   buffer_default_constructed_is_empty_and_safe
+1: RUN  buffer_move_transfers_ownership
+1: ok   buffer_move_transfers_ownership
+1: RUN  buffer_move_assignment_releases_the_old_allocation
+1: ok   buffer_move_assignment_releases_the_old_allocation
+1: RUN  cpu_backend_reports_a_device
+1: ok   cpu_backend_reports_a_device
+1: RUN  cpu_backend_round_trips_data
+1: ok   cpu_backend_round_trips_data
+1: RUN  cpu_backend_rejects_oversized_transfers
+1: ok   cpu_backend_rejects_oversized_transfers
+1: RUN  contiguity_dense_tensor_is_contiguous
+1: ok   contiguity_dense_tensor_is_contiguous
+1: RUN  contiguity_strided_window_is_not_contiguous
+1: ok   contiguity_strided_window_is_not_contiguous
+1: RUN  contiguity_ignores_extent_one_dimensions
+1: ok   contiguity_ignores_extent_one_dimensions
+1: RUN  contiguity_empty_tensor_is_vacuously_contiguous
+1: ok   contiguity_empty_tensor_is_vacuously_contiguous
+1: RUN  mutable_views_alias_owned_storage_and_check_layout
+1: ok   mutable_views_alias_owned_storage_and_check_layout
+1: 
+1: 31/31 tests passed
+1/7 Test #1: tensor ...........................   Passed    0.02 sec
+test 2
+    Start 2: ops
+
+2: Test command: /Users/tu15/alex_cpp/CPP_Completed/build/bin/test_ops
+2: Working Directory: /Users/tu15/alex_cpp/CPP_Completed
+2: Test timeout computed to be: 180
+2: RUN  blas_matches_naive_and_transposes
+2: ok   blas_matches_naive_and_transposes
+2: RUN  rope_inverse_preserves_vectors
+2: ok   rope_inverse_preserves_vectors
+2: RUN  stable_cross_entropy_and_prompt_mask
+2: ok   stable_cross_entropy_and_prompt_mask
+2: 
+2: 3/3 tests passed
+2/7 Test #2: ops ..............................   Passed    0.01 sec
+test 3
+    Start 3: model
+
+3: Test command: /Users/tu15/alex_cpp/CPP_Completed/build/bin/test_model
+3: Working Directory: /Users/tu15/alex_cpp/CPP_Completed
+3: Test timeout computed to be: 180
+3: RUN  exact_full_parameter_count
+3: ok   exact_full_parameter_count
+3: RUN  full_model_analytical_gradients_match_finite_differences
+3: ok   full_model_analytical_gradients_match_finite_differences
+3: RUN  causal_attention_has_no_future_leak
+3: ok   causal_attention_has_no_future_leak
+3: 
+3: 3/3 tests passed
+3/7 Test #3: model ............................   Passed    0.02 sec
+test 4
+    Start 4: files
+
+4: Test command: /Users/tu15/alex_cpp/CPP_Completed/build/bin/test_files
+4: Working Directory: /Users/tu15/alex_cpp/CPP_Completed
+4: Test timeout computed to be: 180
+4: RUN  json_rejects_malformed_and_round_trips_unicode
+4: ok   json_rejects_malformed_and_round_trips_unicode
+4: RUN  tokenizer_raw_bytes_and_specials_are_unambiguous
+4: ok   tokenizer_raw_bytes_and_specials_are_unambiguous
+4: RUN  bpe_merge_priority_and_invalid_tables
+4: ok   bpe_merge_priority_and_invalid_tables
+4: RUN  checkpoints_restore_weights_optimizer_and_state_exactly
+4: ok   checkpoints_restore_weights_optimizer_and_state_exactly
+4: RUN  checkpoint_checksum_completion_and_half_export
+4: ok   checkpoint_checksum_completion_and_half_export
+4: RUN  data_permutation_prefetch_and_resume_are_exact
+4: ok   data_permutation_prefetch_and_resume_are_exact
+4: RUN  sft_targets_have_assistant_and_eos_loss_only
+4: ok   sft_targets_have_assistant_and_eos_loss_only
+4: 
+4: 7/7 tests passed
+4/7 Test #4: files ............................   Passed    0.11 sec
+test 5
+    Start 5: training
+
+5: Test command: /Users/tu15/alex_cpp/CPP_Completed/build/bin/test_training
+5: Working Directory: /Users/tu15/alex_cpp/CPP_Completed
+5: Test timeout computed to be: 180
+5: RUN  full_decoder_overfits_a_small_sequence
+5: ok   full_decoder_overfits_a_small_sequence
+5: RUN  compressed_decode_matches_full_recomputation
+5: ok   compressed_decode_matches_full_recomputation
+5: RUN  sampling_is_seeded_and_respects_filters
+5: ok   sampling_is_seeded_and_respects_filters
+5: RUN  weight_changes_invalidate_decode_cache
+5: ok   weight_changes_invalidate_decode_cache
+5: RUN  dpo_loss_gradient_and_initial_baseline
+5: ok   dpo_loss_gradient_and_initial_baseline
+5: RUN  grpo_clipping_and_kl_gradients
+5: ok   grpo_clipping_and_kl_gradients
+5: RUN  completion_masks_and_cosine_schedule
+5: ok   completion_masks_and_cosine_schedule
+5: RUN  muon_routes_only_hidden_matrices
+5: ok   muon_routes_only_hidden_matrices
+5: RUN  malformed_optimizer_state_cannot_mutate_weights
+5: ok   malformed_optimizer_state_cannot_mutate_weights
+5: RUN  execution_options_preserve_legacy_resume_and_reject_invalid_steps
+5: ok   execution_options_preserve_legacy_resume_and_reject_invalid_steps
+5: 
+5: 10/10 tests passed
+5/7 Test #5: training .........................   Passed    0.03 sec
+test 6
+    Start 6: mps
+
+6: Test command: /Users/tu15/alex_cpp/CPP_Completed/build/bin/test_mps
+6: Working Directory: /Users/tu15/alex_cpp/CPP_Completed
+6: Test timeout computed to be: 180
+6: {"attention":["reference","flash"],"device":"Apple M2 Max","flash_head_width_limit":128,"os":"Version 26.7.1 (Build 25G241)","precision":["fp32","fp16"],"submission_window_limit":16,"unified_memory":true,"working_set_bytes":55662788608}
+6: RUN  mps_forward_gradients_and_adamw_match_cpu
+6: Checking GPU forward
+6: Checking GPU backward step 0
+6: Checking GPU backward step 1
+6: Checking GPU backward step 2
+6: ok   mps_forward_gradients_and_adamw_match_cpu
+6: RUN  mps_cached_decode_and_fp16_match_full_recomputation
+6: ok   mps_cached_decode_and_fp16_match_full_recomputation
+6: RUN  mps_muon_matches_cpu_and_half_training_learns
+6: ok   mps_muon_matches_cpu_and_half_training_learns
+6: RUN  flash_matches_cpu_and_submission_windows_preserve_every_gradient
+6: ok   flash_matches_cpu_and_submission_windows_preserve_every_gradient
+6: RUN  flash_matrix_heads_match_cpu_in_both_precisions
+6: ok   flash_matrix_heads_match_cpu_in_both_precisions
+6: RUN  mps_invalid_late_job_is_rejected_before_submission
+6: ok   mps_invalid_late_job_is_rejected_before_submission
+6: RUN  flash_prefill_cache_decode_and_shorter_replacement_match_cpu
+6: ok   flash_prefill_cache_decode_and_shorter_replacement_match_cpu
+6: 
+6: 7/7 tests passed
+6/7 Test #6: mps ..............................   Passed    5.71 sec
+test 7
+    Start 7: tools
+
+7: Test command: /opt/homebrew/Frameworks/Python.framework/Versions/3.14/bin/python3.14 "tests/test_tools.py" "/Users/tu15/alex_cpp/CPP_Completed/build/bin"
+7: Working Directory: /Users/tu15/alex_cpp/CPP_Completed
+7: Test timeout computed to be: 180
+7: test_http_streaming_validation_and_concurrency (__main__.Server.test_http_streaming_validation_and_concurrency) ... ok
+7: test_dataset_splits_are_reproducible_and_content_based (__main__.Tools.test_dataset_splits_are_reproducible_and_content_based) ... ok
+7: test_grpo_improves_fixed_seed_rewards_and_resumes_exactly (__main__.Tools.test_grpo_improves_fixed_seed_rewards_and_resumes_exactly) ... ok
+7: test_native_debug_state_matches_independent_pytorch (__main__.Tools.test_native_debug_state_matches_independent_pytorch) ... ok
+7: test_preference_training_increases_margin (__main__.Tools.test_preference_training_increases_margin) ... ok
+7: test_sft_overfits_and_resume_matches_uninterrupted (__main__.Tools.test_sft_overfits_and_resume_matches_uninterrupted) ... ok
+7: test_tokenizers_match_heap_and_slow_reference (__main__.Tools.test_tokenizers_match_heap_and_slow_reference) ... ok
+7: test_training_comparison_checks_gradients_and_updates_before_timing (__main__.Tools.test_training_comparison_checks_gradients_and_updates_before_timing) ... ok
+7: 
+7: ----------------------------------------------------------------------
+7: Ran 8 tests in 22.685s
+7: 
+7: OK
+7/7 Test #7: tools ............................   Passed   23.08 sec
+
+100% tests passed, 0 tests failed out of 7
+
+Total Test time (real) =  29.04 sec

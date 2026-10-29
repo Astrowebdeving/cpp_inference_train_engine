@@ -1,0 +1,1 @@
+{"model_type":"mla_dense_decoder","version":1,"vocab_size":264,"max_sequence_length":64,"n_layers":2,"d_model":32,"n_heads":2,"head_dim_nope":12,"head_dim_rope":4,"head_dim_value":16,"q_lora_rank":16,"kv_lora_rank":8,"d_ff":64,"norm_epsilon":0.00001,"rope_theta":10000,"norm":"rmsnorm","activation":"swiglu","mla_latent_norms":true,"tie_word_embeddings":true,"bias":false}

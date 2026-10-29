@@ -1,0 +1,1 @@
+/Users/tu15/alex_cpp/CPP_Completed/build/bin/mini_mla_bench --config config/mla36m-v1.json --warmup 3 --repetitions 20 --kind prefill --backend mps --precision fp32 --sequence-length 128 --output /Users/tu15/alex_cpp/CPP_Completed/docs/benchmarks/prefill-mps-fp32-128.json

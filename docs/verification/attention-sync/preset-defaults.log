@@ -1,0 +1,2 @@
+CPU / Accelerate; 26704 parameters; mode=sft
+step=1 loss=5.608174 lr=0.006 grad=3.9179 tok/s=152139.5

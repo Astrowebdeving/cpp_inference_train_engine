@@ -1,0 +1,1 @@
+{"format":"mini-mla-tokenizer","merges":[],"pretokenizer":"bytes-v1","specials":{"<|assistant|>":260,"<|bos|>":257,"<|eos|>":258,"<|pad|>":256,"<|sep|>":263,"<|system|>":261,"<|tool|>":262,"<|user|>":259},"version":1,"vocab_size":264}

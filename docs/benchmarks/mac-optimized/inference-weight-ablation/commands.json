@@ -1,0 +1,94 @@
+[
+  {
+    "name": "before-prefill",
+    "command": [
+      "/private/tmp/mini_mla_bench-before-optimizer",
+      "--kind",
+      "prefill",
+      "--config",
+      "/Users/tu15/alex_cpp/CPP_Completed/config/mla36m-v1.json",
+      "--backend",
+      "mps",
+      "--precision",
+      "fp16",
+      "--sequence-length",
+      "128",
+      "--warmup",
+      "3",
+      "--repetitions",
+      "30",
+      "--output",
+      "/Users/tu15/alex_cpp/CPP_Completed/artifacts/inference-weight-ablation/before-prefill.json"
+    ],
+    "binary_sha256": "6e9c182c90781701ecd0ffe9f96c36651497099b3e32cace6d93634a0de06ee2"
+  },
+  {
+    "name": "before-decode",
+    "command": [
+      "/private/tmp/mini_mla_bench-before-optimizer",
+      "--kind",
+      "decode",
+      "--config",
+      "/Users/tu15/alex_cpp/CPP_Completed/config/mla36m-v1.json",
+      "--backend",
+      "mps",
+      "--precision",
+      "fp16",
+      "--sequence-length",
+      "256",
+      "--warmup",
+      "3",
+      "--repetitions",
+      "30",
+      "--output",
+      "/Users/tu15/alex_cpp/CPP_Completed/artifacts/inference-weight-ablation/before-decode.json"
+    ],
+    "binary_sha256": "6e9c182c90781701ecd0ffe9f96c36651497099b3e32cace6d93634a0de06ee2"
+  },
+  {
+    "name": "after-prefill",
+    "command": [
+      "/Users/tu15/alex_cpp/CPP_Completed/build/bin/mini_mla_bench",
+      "--kind",
+      "prefill",
+      "--config",
+      "/Users/tu15/alex_cpp/CPP_Completed/config/mla36m-v1.json",
+      "--backend",
+      "mps",
+      "--precision",
+      "fp16",
+      "--sequence-length",
+      "128",
+      "--warmup",
+      "3",
+      "--repetitions",
+      "30",
+      "--output",
+      "/Users/tu15/alex_cpp/CPP_Completed/artifacts/inference-weight-ablation/after-prefill.json"
+    ],
+    "binary_sha256": "f5d491e8a3738a722e25ba2f65d5badd570da54fec9c5bc4e4c0e683c1b15e50"
+  },
+  {
+    "name": "after-decode",
+    "command": [
+      "/Users/tu15/alex_cpp/CPP_Completed/build/bin/mini_mla_bench",
+      "--kind",
+      "decode",
+      "--config",
+      "/Users/tu15/alex_cpp/CPP_Completed/config/mla36m-v1.json",
+      "--backend",
+      "mps",
+      "--precision",
+      "fp16",
+      "--sequence-length",
+      "256",
+      "--warmup",
+      "3",
+      "--repetitions",
+      "30",
+      "--output",
+      "/Users/tu15/alex_cpp/CPP_Completed/artifacts/inference-weight-ablation/after-decode.json"
+    ],
+    "binary_sha256": "f5d491e8a3738a722e25ba2f65d5badd570da54fec9c5bc4e4c0e683c1b15e50"
+  }
+]
