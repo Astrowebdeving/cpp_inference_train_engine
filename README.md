@@ -2,6 +2,42 @@
 
 A standalone training and inference engine for Apple-silicon Macs. Runtime code is C++20 and Objective-C++; CPU execution uses Accelerate, and GPU execution uses Metal/MPSGraph.
 
+**Recorded M2 Max results: approximately 22% higher single-request Gemma throughput than vLLM-Metal, and up to 2.13× training throughput over this engine's previous version.**
+
+## Performance
+
+Measured on an Apple M2 Max with 64 GiB unified memory and macOS 26.7.1. The comparisons below name their baselines separately: external serving-stack results and improvements to the native engine.
+
+### Compared with vLLM-Metal
+
+An earlier same-checkpoint HTTP/SSE comparison against the actual **vLLM-Metal 0.30.0** server used Gemma 4 E2B, packed 4-bit weights, BF16 activations, 128 input tokens and 64 generated tokens. The table uses the better vLLM throughput from the two recorded trials at each concurrency.
+
+| Concurrent requests | Native output tokens/s | vLLM-Metal output tokens/s | Native throughput lead |
+| --- | ---: | ---: | ---: |
+| 1 | 114.0 | 93.5 | **21.8%** |
+| 4 | 204.0 | 189.0 | **7.9%** |
+| 8 | 226.8 | 223.3 | **1.5%** |
+
+At one request, median time to first token was **34.0 ms versus 51.5 ms: 34% lower**. Each concurrency had one warmup and three measured bursts, with prefix caching and speculative decoding disabled. The small eight-request lead is within plausible run variability. Greedy outputs differed between backends, so the timing result does not establish quality equivalence. This comparison predates the latest serving-layer improvements; [raw results, versions, commands and token outputs](docs/benchmarks/mac-optimized/serving-repeat/comparison.json) are retained.
+
+### Improvements to this engine
+
+The later optimization pass alternated previous and updated binaries in the same session. Training uses the full 35.8M MLA model, FP16 compute and FP32 master weights and optimizer state. Training times are steady-state update periods, including gradient reset, forward, backward and optimizer work; compilation is excluded.
+
+| Workload | Previous | Updated | Throughput gain |
+| --- | ---: | ---: | ---: |
+| AdamW, 8 sequences × 128 tokens | 48.27 ms | 41.79 ms | **15.5%** |
+| Muon, 8 sequences × 128 tokens | 88.54 ms | 73.64 ms | **20.2%** |
+| AdamW, 32 sequences × 256 tokens | 426.2 ms | 273.4 ms | **55.9%** |
+| AdamW, 2 × 128 tokens, 16 accumulated microbatches | 300.0 ms | 140.6 ms | **113% · 2.13×** |
+| MLA cached decode, 1,024-token context | 4.16 ms/token | 3.58 ms/token | **16.1%** |
+
+The gains come from pipelined updates, coalesced accumulation, flattened matrix products with an FP32 vocabulary projection, fewer RoPE operations, and composed Muon iterations. The Gemma serving-layer update separately improved eight-request HTTP throughput from **223.4 to 229.0 tokens/s**, and long-output scheduler throughput from **225.5 to 240.7 tokens/s**.
+
+These training gains compare against the previous native engine. The strongest matched compiled/fused PyTorch comparison predates these changes; a new matched comparison is needed before claiming that the updated trainer beats it. Numerical gates cover loss, gradients, updates and checkpoint replay. See the [optimization report and per-workload records](docs/throughput_followup.md) for methods, precision differences and rejected experiments.
+
+## Engine
+
 The default model has **35,763,840 parameters**: 10 decoder blocks, width 512, 8 MLA heads, query rank 192, KV rank 128, RMSNorm, SwiGLU, adjacent-pair RoPE, and a tied 16,384-token embedding. The small configuration exists for fast, reproducible correctness checks.
 
 Implemented paths include pretraining, assistant-masked SFT, DPO with a frozen reference, online GRPO with clipped policy ratios and KL regularization, AdamW, optional hybrid Muon/AdamW, complete training checkpoints, FP16 exports, compressed-cache generation, and a local streaming HTTP server. FP16 GPU computation retains FP32 master weights, gradients, optimizer state, and loss calculations.
@@ -10,8 +46,6 @@ The optional [Mac training and serving guide](docs/mac_training_and_serving.md) 
 
 The follow-up [performance audit](docs/performance_audit.md) covers packed-batch KV reuse, fewer serving round trips and the faster Metal Muon multiplication order, with retained comparison paths and full-model numerical checks.
 
-The [throughput follow-up](docs/throughput_followup.md) measures where each path spends its time and adds pipelined updates, coalesced gradient accumulation, flattened matrix products with an FP32 vocabulary projection, a six-operation RoPE, a composed Muon iteration and a leaner Gemma serving layer. Training is 15–20% faster at the audit's benchmark shape and 34–56% faster at longer sequences; it also lists what was tried and rejected.
-
 The supplied data is deliberately small. It demonstrates learning and reproducibility; training a useful language model still requires an appropriate corpus and evaluation set.
 
 ## Build and run
@@ -19,7 +53,8 @@ The supplied data is deliberately small. It demonstrates learning and reproducib
 Requirements: an Apple-silicon Mac, Xcode Command Line Tools, CMake 3.28+, and Python 3.10+. Python's standard library is sufficient for tokenization, dataset preparation, checkpoint inspection, and the smoke test. PyTorch is used only by the optional independent test oracle.
 
 ```sh
-cd /path/to/your/checkout
+git clone https://github.com/Astrowebdeving/cpp_inference_train_engine.git
+cd cpp_inference_train_engine
 cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
 cmake --build build -j 8
 build/bin/mini_mla_info
@@ -171,3 +206,7 @@ See [architecture](docs/architecture.md), [formats and numerical conventions](do
 New training runs default to `--attention auto --submission-window 4`. The submission window batches GPU work before reading losses on the CPU. Explicit `--attention flash` enables tiled Metal attention with a complete backward pass; `--attention reference` retains the whole-model MPSGraph path. The Flash implementation uses linear attention storage but is slower in the measured workloads on this Mac. See the [usage and explanation guide](docs/attention_and_synchronization.md) and [measured comparisons](docs/performance.md#attention-and-submission-measurements).
 
 The latest recorded full verification passed 71 C++ cases, ten Python tools cases, 51 Gemma engine checks, nine HTTP checks and seven scheduler checks. These are recorded runs on an M2 Max; they do not establish compatibility or maximum performance on every Mac. See the [verification record](docs/verification/throughput-followup/results.json) and [throughput follow-up](docs/throughput_followup.md) for the measured changes, numerical gates and limitations. Benchmark records retain their original commands and machine paths as historical provenance.
+
+## License
+
+The engine is [MIT licensed](LICENSE). Downloaded model weights and external dependencies retain their upstream licenses and terms; they are not included in the source distribution.
